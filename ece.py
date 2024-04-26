@@ -3,19 +3,28 @@ import pandas as pd
 
 
 def calculate_ece(df, n_bins=10):
-    # Create bins for the confidence levels
-    df['confidence_bin'] = pd.cut(df['confidence'], bins=np.linspace(0, 100, n_bins + 1), include_lowest=True,
-                                  labels=False)
+    # Create equally sized bins
+    df['bin'] = pd.qcut(df['confidence'], q=n_bins, labels=False, duplicates='drop')
 
-    # Group by the confidence bin
-    grouped = df.groupby('confidence_bin').agg(
-        avg_confidence=('confidence', 'mean'),
-        accuracy=('correct', 'mean'),
-        bin_count=('index', 'size')
-    )
+    # Calculate ECE
+    ece = 0
+    total_samples = len(df)
 
-    # Calculate ECE as the weighted average of absolute differences between avg_confidence and accuracy
-    ece = (grouped['bin_count'] * abs(grouped['avg_confidence'] / 100 - grouped['accuracy'])).sum() / df[
-        'index'].count()
+    for bin in range(n_bins):
+        bin_df = df[df['bin'] == bin]
+        if not bin_df.empty:
+            bin_size = len(bin_df)
+            prob_in_bin = bin_size / total_samples
+            accuracy_in_bin = bin_df['correct'].mean()
+            avg_confidence_in_bin = bin_df['confidence'].mean()
+            ece += np.abs(avg_confidence_in_bin - accuracy_in_bin) * prob_in_bin
 
     return ece
+
+
+dataFrame = pd.read_csv('cleaned_gsm8k_few_shot_cot_number.csv')
+ece_value = calculate_ece(dataFrame)
+print(f"Expected Calibration Error (ECE): {ece_value}")
+
+
+#%%
