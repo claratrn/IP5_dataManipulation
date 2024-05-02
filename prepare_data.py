@@ -1,14 +1,7 @@
 import json
-import logging
-
 import pandas as pd
-
-from ece import calculate_ece
-from tools.generate_csv import save_data, generate_csv_filename
-
-# Your JSON-like data
-
-json_file_path = "gsm8k/few_shot_cot_number/20240425-231430863620_856fdf912d3f42a9909ce199385211dc.json"
+import os
+from tools.generate_csv import generate_csv_filename, save_data
 
 
 def prepare_data(file_path):
@@ -18,15 +11,24 @@ def prepare_data(file_path):
 
     # Create DataFrame
     df = pd.DataFrame({
-        "confidence": [int(item["response"]["confidence"]) for item in results],
-        "predicted label": [item["response"]["final answer"] for item in results],
-        "true label": [item["true_answer"] for item in results]
+        "confidence": [int(item["response"]["confidence"]) for item in results if "confidence" in item["response"]],
+        "predicted label": [item["response"]["final answer"] for item in results if "final answer" in item["response"]],
+        "true label": [str(item["true_answer"]).strip() for item in results if "true_answer" in item]
     })
 
+    # Drop rows where any of the required fields are missing
+    df = df.dropna(subset=['confidence', 'predicted label', 'true label'])
+
+    # Calculate correctness
     df['correct'] = df['predicted label'] == df['true label']
 
-    csv_file_path = generate_csv_filename(json_file_path)
+    # Generate filename and save data to CSV
+    csv_file_path = generate_csv_filename(file_path)
     save_data(df, csv_file_path)
 
 
+json_file_path = "commonsense_qa/multi_step_multiple_choice/20240426-003728888189_7dc90fff41e444969f519a1abb1922e6.json"
+print("Current Working Directory: ", os.getcwd())
 prepare_data(json_file_path)
+
+#%%

@@ -1,30 +1,29 @@
-import numpy as np
 import pandas as pd
+from netcal.metrics import ECE
+import numpy as np
+
+file_path = "cleaned_data/cleaned_commonsense_qa_multi_step_multiple_choice.csv"
+dataFrame = pd.read_csv(file_path)
+
+# Scale confidence values from 0-100 to 0-1
+dataFrame['confidence'] = dataFrame['confidence'] / 100
 
 
-def calculate_ece(df, n_bins=10):
-    # Create equally sized bins
-    df['bin'] = pd.qcut(df['confidence'], q=n_bins, labels=False, duplicates='drop')
+# y_true collection of data that is true
+# y_conf confidence score associated with each prediction
 
-    # Calculate ECE
-    ece = 0
-    total_samples = len(df)
-
-    for bin in range(n_bins):
-        bin_df = df[df['bin'] == bin]
-        if not bin_df.empty:
-            bin_size = len(bin_df)
-            prob_in_bin = bin_size / total_samples
-            accuracy_in_bin = bin_df['correct'].mean()
-            avg_confidence_in_bin = bin_df['confidence'].mean()
-            ece += np.abs(avg_confidence_in_bin - accuracy_in_bin) * prob_in_bin
-
-    return ece
+def calculate_ece(true_labels, confidence_scores, n_bins=10):
+    ece = ECE(n_bins)
+    score = ece.measure(np.array(confidence_scores), np.array(true_labels))
+    return score
 
 
-dataFrame = pd.read_csv('cleaned_gsm8k_few_shot_cot_number.csv')
-ece_value = calculate_ece(dataFrame)
-print(f"Expected Calibration Error (ECE): {ece_value}")
+# Assuming 'correct' column is a boolean where True indicates a correct prediction
+true = dataFrame['correct'].values
+confs = dataFrame['confidence'].values
 
+ece_score = calculate_ece(true, confs)
+print("ECE:", ece_score)
 
-#%%
+ECE: 0.33333333333333337
+# %%
