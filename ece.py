@@ -18,7 +18,6 @@ def calculate_ece(true_labels, confidence_scores, n_bins=10):
     return score
 
 
-# Assuming 'correct' column is a boolean where True indicates a correct prediction
 true = dataFrame['correct'].values
 confs = dataFrame['confidence'].values
 
