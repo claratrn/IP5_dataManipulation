@@ -1,16 +1,14 @@
-# Filename: data_processing.py
-import json
-import pandas as pd
 import os
 
 
 def generate_csv_filename(json_file_path):
-    directory_path = os.path.dirname(json_file_path)
-    base_directory = directory_path.replace('/', '_')
-    if not isinstance(base_directory, str):
-        base_directory = str(base_directory)
+    absolute_path = os.path.abspath(json_file_path)
+    parts = absolute_path.split(os.sep)
+    start_index = parts.index('openAi') if 'openAi' in parts else 0
+    path_parts = parts[start_index:-1]
+    base_filename = 'cleaned_' + '_'.join(path_parts) + '.csv'
 
-    new_filename = os.path.join('cleaned_data', 'cleaned_' + base_directory + '.csv')
+    new_filename = os.path.join('..', 'cleaned_data', base_filename)
     return new_filename
 
 
