@@ -111,7 +111,9 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
 
 
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
-    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset,file_name)
+    y_true = np.array([1 if x else 0 for x in y_true])
+
+    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
@@ -170,13 +172,12 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-# plot_metric_boxplots(all_metrics, output_dir, 'ece')
-# plot_metric_boxplots(all_metrics, output_dir, 'auroc')
-# plot_metric_boxplots(all_metrics, output_dir, 'auprc')
+plot_metric_boxplots(all_metrics, visual_dir, 'ece')
+plot_metric_boxplots(all_metrics, visual_dir, 'auroc')
+plot_metric_boxplots(all_metrics, visual_dir, 'auprc')
 
 output_path = os.path.join(output_dir, 'commonsense_experiments_metrics.csv')
 all_metrics.to_csv(output_path, index=False)
 print(f"All metrics saved to {output_path}")
-
 
 #%%

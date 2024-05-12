@@ -2,14 +2,16 @@ import numpy as np
 from sklearn.metrics import roc_auc_score, average_precision_score, roc_curve, auc, precision_recall_curve
 from netcal.metrics import ECE
 
-
+# y_true:correct , y_confs: confidence score
 def compute_conf_metrics(y_true, y_confs, elicitation_method):
     result_metrics = {'method': elicitation_method}
+    y_true = np.array([1 if correct else 0 for correct in y_true])
     # confidence scores already normalized 0 to 1
     y_confs = np.array(y_confs)
 
     # Compute accuracy
     accuracy = sum(y_true) / len(y_true)
+    print(len(y_true))
     print("Accuracy:", accuracy)
     result_metrics['acc'] = accuracy
 
@@ -39,3 +41,5 @@ def compute_conf_metrics(y_true, y_confs, elicitation_method):
     result_metrics.update({'acc': accuracy, 'auroc': roc_auc, 'auprc': auprc, 'ece': ece_score})
 
     return result_metrics
+
+#%%
