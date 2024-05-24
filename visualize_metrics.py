@@ -9,7 +9,7 @@ import numpy as np
 from tools.compute_metrics import compute_conf_metrics
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/commonsense_qa"
+directory_path = "cleaned_data/gsm8k"
 output_dir = "result_metrics/All_metrics"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
@@ -104,12 +104,28 @@ def get_ece_from_all_metrics(all_metrics, method):
 #     plt.savefig((os.path.join(visual_dir, f'{file_name}_ECE_{method}.png')), dpi=600)
 #
 
+def determine_outlier_threshold(y_confs, n_bins=20):
+    # Create histogram bins for y_confidences
+    bin_edges = np.linspace(0, 1, n_bins + 1)
+    bin_counts, _ = np.histogram(y_confs, bins=n_bins, range=(0, 1))
 
+    # Calculate mean and standard deviation of bin counts
+    mean_count = np.mean(bin_counts)
+    std_count = np.std(bin_counts)
+
+    # Determine threshold using mean and standard deviation
+    threshold = mean_count - 2 * std_count
+
+    print(f"Mean bin count: {mean_count}")
+    print(f"Standard deviation of bin counts: {std_count}")
+    print(f"Outlier threshold: {threshold}")
+
+    return threshold
 def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
+    outlier_threshold = determine_outlier_threshold(y_confs)
     n_bins = 20
     plt.figure(figsize=(10, 6), dpi=600)
     plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
-
 
     # Create histogram bins for y_confidences
     bin_edges = np.linspace(0, 1, n_bins + 1)
@@ -133,6 +149,7 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     # Plot the reliability diagram
     for i in range(n_bins):
         if not np.isnan(accuracy_per_bin[i]):
+            color = 'tab:blue' if bin_counts[i] > outlier_threshold else 'tab:orange'
             plt.bar(bin_centers[i], accuracy_per_bin[i], width=1/n_bins, color='tab:blue', edgecolor='black', alpha=0.7)
         else:
             plt.bar(bin_centers[i], 0, width=1/n_bins, color='white', edgecolor='black', alpha=0.7)  # Invisible bar for empty bins
@@ -148,6 +165,8 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     legend_elements = [
         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
         plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
+        plt.Rectangle((0, 0), 1, 1, color='tab:orange', label='Outlier'),
+
     ]
     plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=3)
 
@@ -290,7 +309,7 @@ for file_name in os.listdir(directory_path):
         metrics = compute_conf_metrics(correct, confids, method)
         metrics_df = pd.DataFrame([metrics])
         all_metrics = pd.concat([all_metrics, metrics_df], ignore_index=True)
-       # plot_all_visualisations(correct, confids, method, model, dataset, file_name)
+        plot_all_visualisations(correct, confids, method, model, dataset, file_name)
 
         print(all_metrics.head())
 
@@ -298,4 +317,4 @@ output_path = os.path.join(output_dir, 'allmetrics_commonsens_qa.csv')
 all_metrics.to_csv(output_path, index=False)
 print(f"All metrics saved to {output_path}")
 
-# %%
+#%%
