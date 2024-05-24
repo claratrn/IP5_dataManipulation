@@ -9,14 +9,16 @@ import numpy as np
 from tools.compute_metrics import compute_conf_metrics
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/"
-output_dir = "result_metrics"
+directory_path = "cleaned_data/commonsense_qa"
+output_dir = "result_metrics/All_metrics"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
 
 #################### VISUALIZATION FUNCTIONS ####################
 # y_true:correct , y_confs: confidence score
+
+
 def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name):
     y_confs = np.array(y_confs, dtype=float)
     print("Original confidence scores (first 5 entries):", y_confs[:5])
@@ -34,7 +36,7 @@ def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name
     n_correct, bins_correct, patches_correct = plt.hist(correct_confs, bins=bins, alpha=0.7, color='green',
                                                         label='Correct', bottom=n_wrong)
 
-    # Annotating bars with the number of observations
+    # # Annotating bars with the number of observations
     #  for count, x in zip(n_wrong + n_correct, bins_correct[:-1]):
     #      if count > 0:  # Only annotate non-zero bars to avoid clutter
     #          plt.text(x + (bins_correct[1] - bins_correct[0]) / 2, count, str(int(count)), ha='center', va='bottom')
@@ -48,12 +50,118 @@ def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name
     plt.close()
 
 
+def get_ece_from_all_metrics(all_metrics, method):
+    print("Columns in all_metrics DataFrame:", all_metrics.columns)  # Debugging line
+    print("Contents of all_metrics DataFrame:", all_metrics)  # Debugging line
+    # Check if the DataFrame contains the desired method
+    if method in all_metrics['method'].values:
+        # Extract the ECE score for the specified method
+        ece_score = all_metrics.loc[all_metrics['method'] == method, 'ece'].iloc[0]
+        return ece_score
+    else:
+        return None
+
+#
+# def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
+#     from netcal.presentation import ReliabilityDiagram
+#     n_bins = 20
+#     diagram = ReliabilityDiagram(n_bins)
+#
+#     plt.figure()
+#     diagram.plot(np.array(y_confs), np.array(y_true))
+#
+#     bin_counts, bin_edges = np.histogram(y_confs, bins=n_bins, range=(0, 1))
+#     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+#     for i in range(n_bins):
+#         if bin_counts[i] == 0:
+#             plt.bar(bin_centers[i], 1, width=1/n_bins, color='white', edgecolor='black', alpha=0.0)
+#
+#
+#     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
+#     ece_score = get_ece_from_all_metrics(all_metrics, method) * 100
+#     plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+#
+#     legend_elements = [
+#         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
+#         plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
+#         plt.Rectangle((0, 0), 1, 1, color='tab:red', label='Gap'),
+#
+#     ]
+#     plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.5), fancybox=True, shadow=True,
+#                ncol=3)
+#
+#     tick_positions = np.linspace(0, 1, n_bins + 1)
+#
+#     tick_labels = [f"{pos:.2f}" for pos in tick_positions]
+#     plt.xticks(tick_positions, tick_labels, rotation=45)
+#
+# # Add buffer around the plot
+#     plt.xlim(-0.05, 1.05)
+#     plt.ylim(0, 1.05)
+#     plt.subplots_adjust(bottom=0.25, hspace=0.5)
+#     plt.xlabel("Confidence")
+#     plt.ylabel("Accuracy")
+#     plt.savefig((os.path.join(visual_dir, f'{file_name}_ECE_{method}.png')), dpi=600)
+#
+
+
 def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     n_bins = 20
-    diagram = ReliabilityDiagram(n_bins)
-    plt.figure(figsize=(12, 8))
-    diagram.plot(np.array(y_confs), np.array(y_true))
+    plt.figure(figsize=(10, 6), dpi=600)
+    plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
+
+
+    # Create histogram bins for y_confidences
+    bin_edges = np.linspace(0, 1, n_bins + 1)
+    bin_counts, bin_edges = np.histogram(y_confs, bins=n_bins, range=(0, 1))
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    accuracy_per_bin = np.zeros(n_bins)
+
+    print("Bin counts:", bin_counts, method)
+    print("Bin edges:", bin_edges, method)
+
+
+# Calculate the accuracy per bin only if there are elements in the bin
+    for i in range(n_bins):
+        in_bin = (y_confs >= bin_edges[i]) & (y_confs <= bin_edges[i+1]) if i == n_bins - 1 else (y_confs >= bin_edges[i]) & (y_confs < bin_edges[i+1])
+        if in_bin.any():  # Check if there are any elements in the bin
+            accuracy_per_bin[i] = np.mean(y_true[in_bin])
+        else:
+            accuracy_per_bin[i] = np.nan  # Assign NaN for empty bins
+    print("Accuracy per bin:", accuracy_per_bin, method)
+
+    # Plot the reliability diagram
+    for i in range(n_bins):
+        if not np.isnan(accuracy_per_bin[i]):
+            plt.bar(bin_centers[i], accuracy_per_bin[i], width=1/n_bins, color='tab:blue', edgecolor='black', alpha=0.7)
+        else:
+            plt.bar(bin_centers[i], 0, width=1/n_bins, color='white', edgecolor='black', alpha=0.7)  # Invisible bar for empty bins
+
+
+    # Plot perfect calibration line
+    plt.plot([0, 1], [0, 1], 'r--')
+
     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
+    ece_score = get_ece_from_all_metrics(all_metrics, method) * 100
+    plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+
+    legend_elements = [
+        plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
+        plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
+    ]
+    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=3)
+
+    tick_positions = np.linspace(0, 1, n_bins + 1)
+    tick_labels = [f"{pos:.2f}" for pos in tick_positions]
+    plt.xticks(tick_positions, tick_labels, rotation=45)
+
+    # Add buffer around the plot
+    plt.xlim(-0.05, 1.05)
+    plt.ylim(0, 1.05)
+    plt.subplots_adjust(bottom=0.25, hspace=0.5)
+    plt.xlabel("Confidence")
+    plt.ylabel("Accuracy")
+
     plt.savefig(os.path.join(visual_dir, f'{file_name}_ECE_{method}.png'))
     plt.close()
 
@@ -85,11 +193,16 @@ def plot_precision_recall_curve(y_true, y_scores, method, model, dataset, file_n
     plt.title(f'Precision-Recall Curve - {method} {dataset} {model}')
     plt.legend(loc="lower left")
     plt.xticks(np.arange(0, 1.1, 0.1))
+    plt.yticks(np.arange(0, 1.1, 0.1))
     plt.savefig(os.path.join(visual_dir, f'{file_name}_PRC_{method}.png'))
     plt.close()
 
 
-commonsense_metrics = pd.read_csv('result_metrics/commonsense_experiments_metrics.csv')
+# df_commonsense = pd.read_csv('result_metrics/commonsense_experiments_metrics.csv')
+# df_gsm8k = pd.read_csv('result_metrics/gsm8k_experiments_metrics.csv')
+# metrics_combined = pd.concat([df_commonsense, df_gsm8k])
+#
+colors = ['lightblue', 'lightgreen', 'lightcoral', 'lightyellow']
 
 
 def plot_metric_boxplots(metrics_df, output_dir, metric_name):
@@ -100,7 +213,10 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
     methods = metrics_df['method'].unique()
     data_to_plot = [metrics_df[metrics_df['method'] == method][metric_name] for method in methods]
 
-    plt.boxplot(data_to_plot, labels=methods, notch=True, patch_artist=True)
+    bplot = plt.boxplot(data_to_plot, labels=methods, notch=False, patch_artist=True)
+    for patch, color in zip(bplot['boxes'], colors):
+        patch.set_facecolor(color)
+
     plt.title(f'Comparison of {metric_name} by Elicitation Method')
     plt.ylabel(metric_name)
     plt.xlabel('Method')
@@ -110,13 +226,19 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
     plt.close()
 
 
-def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
-    y_true = np.array([1 if x else 0 for x in y_true])
+# metrics = ['auroc', 'auprc', 'ece']
+# for metric in metrics:
+#     plot_metric_boxplots(metrics_combined, visual_dir, metric)
+#     print("All boxplots saved to: ", visual_dir)
+#
 
-    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
+    # y_true = np.array([1 if x else 0 for x in y_true])
+    # plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    print("All visualisations saved to: ", visual_dir)
 
 
 def determine_method(file_name):
@@ -168,16 +290,12 @@ for file_name in os.listdir(directory_path):
         metrics = compute_conf_metrics(correct, confids, method)
         metrics_df = pd.DataFrame([metrics])
         all_metrics = pd.concat([all_metrics, metrics_df], ignore_index=True)
-        plot_all_visualisations(correct, confids, method, model, dataset, file_name)
+       # plot_all_visualisations(correct, confids, method, model, dataset, file_name)
 
         print(all_metrics.head())
 
-plot_metric_boxplots(all_metrics, visual_dir, 'ece')
-plot_metric_boxplots(all_metrics, visual_dir, 'auroc')
-plot_metric_boxplots(all_metrics, visual_dir, 'auprc')
-
-output_path = os.path.join(output_dir, 'commonsense_experiments_metrics.csv')
+output_path = os.path.join(output_dir, 'allmetrics_commonsens_qa.csv')
 all_metrics.to_csv(output_path, index=False)
 print(f"All metrics saved to {output_path}")
 
-#%%
+# %%

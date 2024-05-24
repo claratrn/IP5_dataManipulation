@@ -31,14 +31,23 @@ def compute_conf_metrics(y_true, y_confs, elicitation_method):
     print("AUC PRC score:", auprc)
     result_metrics['auprc'] = auprc
 
+    # AUPRC-Positive
+    auprc_p = average_precision_score(y_true, y_confs)
+    print("AUC PRC Positive score:", auprc_p)
+    result_metrics['auprc_p'] = auprc_p
+
+    auprc_n = average_precision_score(1- y_true, 1 - y_confs)
+    print("AUC PRC Negative score:", auprc_n)
+    result_metrics['auprc_n'] = auprc_n
+
     # Compute ECE
-    n_bins = 10
+    n_bins = 20
     ece = ECE(n_bins)
     ece_score = ece.measure(y_confs, y_true)
     print("ECE score:", ece_score)
     result_metrics['ece'] = ece_score
 
-    result_metrics.update({'acc': accuracy, 'auroc': roc_auc, 'auprc': auprc, 'ece': ece_score})
+    result_metrics.update({'acc': accuracy, 'auroc': roc_auc, 'auprc': auprc, 'auprd-p': auprc_p, 'auprc-n': auprc_n, 'ece': ece_score})
 
     return result_metrics
 
