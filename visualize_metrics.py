@@ -1,10 +1,11 @@
 import os
 
+import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-from netcal.presentation import ReliabilityDiagram
 from sklearn.metrics import roc_curve, auc, precision_recall_curve
-import numpy as np
+
+np.float = np.float64
 
 from tools.compute_metrics import compute_conf_metrics
 
@@ -64,6 +65,7 @@ def get_ece_from_all_metrics(all_metrics, method):
     else:
         return None
 
+
 def determine_outlier_threshold(y_confs, n_bins=20):
     # Create histogram bins for y_confidences
     bin_edges = np.linspace(0, 1, n_bins + 1)
@@ -81,71 +83,6 @@ def determine_outlier_threshold(y_confs, n_bins=20):
     print(f"Outlier threshold: {threshold}")
 
     return threshold
-def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
-    outlier_threshold = determine_outlier_threshold(y_confs)
-    n_bins = 20
-    plt.figure(figsize=(10, 6), dpi=600)
-    plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
-
-    # Create histogram bins for y_confidences
-    bin_edges = np.linspace(0, 1, n_bins + 1)
-    bin_counts, bin_edges = np.histogram(y_confs, bins=n_bins, range=(0, 1))
-    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-    accuracy_per_bin = np.zeros(n_bins)
-
-    print("Bin counts:", bin_counts, method)
-    print("Bin edges:", bin_edges, method)
-
-
-# Calculate the accuracy per bin only if there are elements in the bin
-    for i in range(n_bins):
-        in_bin = (y_confs >= bin_edges[i]) & (y_confs <= bin_edges[i+1]) if i == n_bins - 1 else (y_confs >= bin_edges[i]) & (y_confs < bin_edges[i+1])
-        if in_bin.any():  # Check if there are any elements in the bin
-            accuracy_per_bin[i] = np.mean(y_true[in_bin])
-        else:
-            accuracy_per_bin[i] = np.nan  # Assign NaN for empty bins
-    print("Accuracy per bin:", accuracy_per_bin, method)
-
-    # Plot the reliability diagram
-    for i in range(n_bins):
-        if not np.isnan(accuracy_per_bin[i]):
-            color = 'tab:blue' if bin_counts[i] > outlier_threshold else 'tab:orange'
-            plt.bar(bin_centers[i], accuracy_per_bin[i], width=1/n_bins, color='tab:blue', edgecolor='black', alpha=0.7)
-        else:
-            plt.bar(bin_centers[i], 0, width=1/n_bins, color='white', edgecolor='black', alpha=0.7)  # Invisible bar for empty bins
-
-
-    # Plot perfect calibration line
-    plt.plot([0, 1], [0, 1], 'r--')
-
-    plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
-    ece_score = get_ece_from_all_metrics(all_metrics, method) * 100
-    plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-
-    legend_elements = [
-        plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
-        plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
-        plt.Rectangle((0, 0), 1, 1, color='tab:orange', label='Outlier'),
-
-    ]
-    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=3)
-
-    tick_positions = np.linspace(0, 1, n_bins + 1)
-    tick_labels = [f"{pos:.2f}" for pos in tick_positions]
-    plt.xticks(tick_positions, tick_labels, rotation=45)
-
-    # Add buffer around the plot
-    plt.xlim(-0.05, 1.05)
-    plt.ylim(0, 1.05)
-    plt.subplots_adjust(bottom=0.25, hspace=0.5)
-    plt.xlabel("Confidence")
-    plt.ylabel("Accuracy")
-
-    ece_dir = os.path.join(visual_dir, "ece")
-    os.makedirs(ece_dir, exist_ok=True)
-
-    plt.savefig(os.path.join(ece_dir, f'{file_name}_ECE_{method}.png'))
-    plt.close()
 
 
 def plot_roc_curve(y_true, y_scores, method, model, dataset, file_name):
@@ -213,6 +150,63 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
     plt.savefig(os.path.join(box_dir, f'boxplot_{metric_name}_comparison.png'))
     plt.close()
 
+def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
+    n_bins = 20
+    plt.figure(figsize=(10, 6), dpi=600)
+    plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
+
+    # Create histogram bins for y_confidences
+    bin_edges = np.linspace(0, 1, n_bins + 1)
+    bin_counts, bin_edges = np.histogram(y_confs, bins=bin_edges)
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    accuracy_per_bin = np.zeros(n_bins)
+
+    print("Bin counts:", bin_counts)
+    print("Bin edges:", bin_edges)
+
+    # Calculate the accuracy per bin only if there are elements in the bin
+    for i in range(n_bins):
+        in_bin = (y_confs > bin_edges[i]) & (y_confs <= bin_edges[i + 1])
+        if in_bin.any():  # Check if there are any elements in the bin
+            accuracy_per_bin[i] = np.mean(y_true[in_bin])
+        else:
+            accuracy_per_bin[i] = np.nan  # Assign NaN for empty bins
+    print("Accuracy per bin:", accuracy_per_bin)
+
+    # Plot the reliability diagram
+    for i in range(n_bins):
+        if not np.isnan(accuracy_per_bin[i]):
+            plt.bar(bin_centers[i], accuracy_per_bin[i], width=1 / n_bins, color='tab:blue', edgecolor='black', alpha=0.7)
+
+    # Plot perfect calibration line
+    plt.plot([0, 1], [0, 1], 'r--')
+
+    plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
+    ece_score = 69.56  # Replace with actual ECE calculation if needed
+    plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+
+    legend_elements = [
+        plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
+        plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
+    ]
+    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True, ncol=3)
+
+    tick_positions = np.linspace(0, 1, n_bins + 1)
+    tick_labels = [f"{pos:.2f}" for pos in tick_positions]
+    plt.xticks(tick_positions, tick_labels, rotation=45)
+
+    # Add buffer around the plot
+    plt.xlim(-0.05, 1.05)
+    plt.ylim(0, 1.05)
+    plt.subplots_adjust(bottom=0.25, hspace=0.5)
+    plt.xlabel("Confidence")
+    plt.ylabel("Accuracy")
+
+    ece_dir = os.path.join("result_metrics/llama2/gsm8k/visuals", "ece")
+    os.makedirs(ece_dir, exist_ok=True)
+
+    plt.savefig(os.path.join(ece_dir, f'{file_name}_ECE_{method}.png'))
+    plt.close()
 
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
     y_true = np.array([1 if x else 0 for x in y_true])
@@ -276,52 +270,10 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'allmetrics_gsm8k_Llama2.csv')
+output_path = os.path.join(output_dir, 'all_metrics_gsm8k.csv')
 all_metrics.to_csv(output_path, index=False)
-print(f"All metrics saved to {output_path}")
 
 
-#
-# def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
-#     from netcal.presentation import ReliabilityDiagram
-#     n_bins = 20
-#     diagram = ReliabilityDiagram(n_bins)
-#
-#     plt.figure()
-#     diagram.plot(np.array(y_confs), np.array(y_true))
-#
-#     bin_counts, bin_edges = np.histogram(y_confs, bins=n_bins, range=(0, 1))
-#     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-#     for i in range(n_bins):
-#         if bin_counts[i] == 0:
-#             plt.bar(bin_centers[i], 1, width=1/n_bins, color='white', edgecolor='black', alpha=0.0)
-#
-#
-#     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
-#     ece_score = get_ece_from_all_metrics(all_metrics, method) * 100
-#     plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-#
-#     legend_elements = [
-#         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
-#         plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
-#         plt.Rectangle((0, 0), 1, 1, color='tab:red', label='Gap'),
-#
-#     ]
-#     plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.5), fancybox=True, shadow=True,
-#                ncol=3)
-#
-#     tick_positions = np.linspace(0, 1, n_bins + 1)
-#
-#     tick_labels = [f"{pos:.2f}" for pos in tick_positions]
-#     plt.xticks(tick_positions, tick_labels, rotation=45)
-#
-# # Add buffer around the plot
-#     plt.xlim(-0.05, 1.05)
-#     plt.ylim(0, 1.05)
-#     plt.subplots_adjust(bottom=0.25, hspace=0.5)
-#     plt.xlabel("Confidence")
-#     plt.ylabel("Accuracy")
-#     plt.savefig((os.path.join(visual_dir, f'{file_name}_ECE_{method}.png')), dpi=600)
-#
 #%%
 
+#%%

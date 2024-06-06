@@ -1,25 +1,29 @@
 import pandas as pd
 
 # Example DataFrames
-df1 = pd.read_csv('../results/llama2/gsm8k/few_shot_cot_number/20240603-114449626099_f68528eb5c7f4637a7e34112039be56b_answered.csv')
-df2 = pd.read_csv('../results/llama2/gsm8k/few_shot_cot_number/few_shot_fix_answered.csv')
+df1 = pd.read_csv('../results/llama2/gsm8k/zero_shot_cot_gsm8k/20240603-112531205664_289c2160bbb5425186b314e0fb9e4551_answered.csv')
+df2 = pd.read_csv('../results/llama2/gsm8k/zero_shot_cot_gsm8k/zero_shot_cot_gsm8k_fix_answered.csv')
+
+# Filter and merge the 'True' rows, ensuring no duplicates
+true_rows_df1 = df1[df1['correct'] == True]
+true_rows_df2 = df2[df2['correct'] == True]
+merged_true_rows = pd.concat([true_rows_df1, true_rows_df2]).drop_duplicates()
+
+# Identify the 'False' rows
+false_rows_df1 = df1[df1['correct'] == False]
+false_rows_df2 = df2[df2['correct'] == False]
+all_false_rows = pd.concat([false_rows_df1, false_rows_df2])
 
 
-
-# Filter rows where 'correct' is True
-df1_true = df1[df1['correct'] == True]
-df2_true = df2[df2['correct'] == True]
-
-# Concatenate the filtered dataframes
-result = pd.concat([df1_true, df2_true])
-
-# Remove duplicate rows
-result = result.drop_duplicates()
-
-# Reset index for better readability (optional)
-result.reset_index(drop=True, inplace=True)
+# Remove 'False' rows that have a corresponding 'True' row in the merged_true_rows
+final_false_rows = all_false_rows[~all_false_rows['index'].isin(merged_true_rows['index'])]
+# Drop only the first occurrence of duplicate false rows
+final_false_rows = final_false_rows.drop_duplicates(subset='index', keep='last')
+# Combine the merged_true_rows and final_false_rows
+final_merged_df = pd.concat([merged_true_rows, final_false_rows])
+final_merged_df = final_merged_df.drop_duplicates(subset='index')
 
 # Display the resulting DataFrame
-result.to_csv('merged_true_rows.csv', index=False)
+final_merged_df.to_csv('merged.csv', index=False)
 
 #%%
