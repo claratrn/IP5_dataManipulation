@@ -38,10 +38,12 @@ def prepare_data(file_path):
     save_data(df, csv_file_path)
 
 
-json_file_path = ("../results/openAi/gsm8k/zero_shot_cot_gsm8k/20240525-174150582952_72dcbbf5bc124790b148e5ddce48fc59.json")
+json_file_path = ("../results/llama2/gsm8k/few_shot_cot_number/few_shot_fix.json")
 
 print("Current Working Directory: ", os.getcwd())
 prepare_data(json_file_path)
 
+
+#%%
 
 #%%

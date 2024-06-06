@@ -1,0 +1,5 @@
+Total number of answered questions in Llama2 dataset: 7300
+Number of questions answered correctly by Llama-2: 1510
+Total number of answered questions in OpenAI dataset: 6741
+Number of questions answered correctly by OpenAI GPT-3.5 Turbo: 5367
+Total number of common mistakes: 1214

@@ -16,6 +16,13 @@ def compute_conf_metrics(y_true, y_confs, elicitation_method):
     result_metrics['acc'] = accuracy
 
     # Check if confidence scores are in the range [0, 1]
+    print("Confidence values before assertion:", y_confs)
+    print("Check if all values are between 0 and 1:", all([0 <= x <= 1 for x in y_confs]))
+
+    out_of_range_values = [x for x in y_confs if not (0 <= x <= 1)]
+    if out_of_range_values:
+        print("Out-of-range confidence values:", out_of_range_values)
+
     assert all([0 <= x <= 1 for x in y_confs]), y_confs
 
     # Convert  to numpy arrays

@@ -9,8 +9,8 @@ import numpy as np
 from tools.compute_metrics import compute_conf_metrics
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/gsm8k"
-output_dir = "result_metrics/gsm8k"
+directory_path = "cleaned_data/Llama2/gsm8k"
+output_dir = "result_metrics/llama2/gsm8k"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -272,11 +272,11 @@ for file_name in os.listdir(directory_path):
         metrics = compute_conf_metrics(correct, confids, method)
         metrics_df = pd.DataFrame([metrics])
         all_metrics = pd.concat([all_metrics, metrics_df], ignore_index=True)
-        # plot_all_visualisations(correct, confids, method, model, dataset, file_name)
+        plot_all_visualisations(correct, confids, method, model, dataset, file_name)
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'allmetrics_gsm8k.csv')
+output_path = os.path.join(output_dir, 'allmetrics_gsm8k_Llama2.csv')
 all_metrics.to_csv(output_path, index=False)
 print(f"All metrics saved to {output_path}")
 
@@ -324,3 +324,4 @@ print(f"All metrics saved to {output_path}")
 #     plt.savefig((os.path.join(visual_dir, f'{file_name}_ECE_{method}.png')), dpi=600)
 #
 #%%
+
