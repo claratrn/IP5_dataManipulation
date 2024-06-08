@@ -8,8 +8,8 @@ def filter_out_of_range(y_true, y_confs):
     return y_true[valid_indices], y_confs[valid_indices]
 
 
-def manual_ece(y_true, y_confs, n_bins):
-    bin_boundaries = np.linspace(0, 1, n_bins + 1)
+def manual_ece(y_true, y_confs, bin_size):
+    bin_boundaries = np.arange(0, 1.05, 0.05)
     bin_lowers = bin_boundaries[:-1]
     bin_uppers = bin_boundaries[1:]
 
@@ -24,12 +24,11 @@ def manual_ece(y_true, y_confs, n_bins):
             bin_ece = np.abs(avg_confidence_in_bin - accuracy_in_bin) * prop_in_bin
             ece += bin_ece
 
-            print(f"Bin {i + 1}:")
-            print(f"  Range: {bin_lower:.2f} - {bin_upper:.2f}")
-            print(f"  Proportion in bin: {prop_in_bin:.2f} ({prop_in_bin * n} samples)")
-            print(f"  Accuracy in bin: {accuracy_in_bin:.2f}")
-            print(f"  Average confidence in bin: {avg_confidence_in_bin:.2f}")
-            print(f"  Bin ECE contribution: {bin_ece:.4f}")
+            # print(f"Bin {i + 1}:")
+            # print(f"  Range: {bin_lower:.2f} - {bin_upper:.2f}")
+            # print(f"  Proportion in bin: {prop_in_bin:.2f} ({prop_in_bin * n} samples)")
+            # print(f"  Accuracy in bin: {accuracy_in_bin:.2f}")
+            # print(f"  Average confidence in bin: {avg_confidence_in_bin:.2f}")
 
     print(f"Total ECE: {ece:.4f}")
     return ece

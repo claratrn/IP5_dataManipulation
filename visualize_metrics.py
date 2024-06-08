@@ -66,25 +66,6 @@ def get_ece_from_all_metrics(all_metrics, method):
         return None
 
 
-def determine_outlier_threshold(y_confs, n_bins=20):
-    # Create histogram bins for y_confidences
-    bin_edges = np.linspace(0, 1, n_bins + 1)
-    bin_counts, _ = np.histogram(y_confs, bins=n_bins, range=(0, 1))
-
-    # Calculate mean and standard deviation of bin counts
-    mean_count = np.mean(bin_counts)
-    std_count = np.std(bin_counts)
-
-    # Determine threshold using mean and standard deviation
-    threshold = mean_count - 2 * std_count
-
-    print(f"Mean bin count: {mean_count}")
-    print(f"Standard deviation of bin counts: {std_count}")
-    print(f"Outlier threshold: {threshold}")
-
-    return threshold
-
-
 def plot_roc_curve(y_true, y_scores, method, model, dataset, file_name):
     fpr, tpr, thresholds = roc_curve(y_true, y_scores)
     roc_auc = auc(fpr, tpr)
@@ -156,7 +137,6 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     n_bins = 20
     plt.figure(figsize=(10, 6), dpi=600)
     plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
-    total_samples = len(y_true)
 
     # Create histogram bins for y_confidences
     bin_edges = np.linspace(0, 1, n_bins + 1)
@@ -164,11 +144,14 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
     accuracy_per_bin = np.zeros(n_bins)
     avg_confidence_per_bin = np.zeros(n_bins)
+    total_samples = np.sum(bin_counts)
 
     print("Bin counts:", bin_counts)
     print("Bin edges:", bin_edges)
+    print("Total samples from bin counts:", total_samples)
 
-    # Calculate the accuracy per bin only if there are elements in the bin
+
+# Calculate the accuracy per bin only if there are elements in the bin
     for i in range(n_bins):
         in_bin = (y_confs > bin_edges[i]) & (y_confs <= bin_edges[i + 1])
         print(f"Bin {i+1} ({bin_edges[i]:.2f} - {bin_edges[i+1]:.2f}): {in_bin.sum()} samples")
@@ -188,7 +171,7 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         if not np.isnan(accuracy_per_bin[i]) and bin_counts[i] > 0:
             color = 'tab:blue' if bin_counts[i] >= sparse_threshold else 'tab:orange'
             plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=1 / n_bins, color=color, edgecolor='black', alpha=0.7)
-            # plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.05, f'{bin_counts[i]}', ha='center')
+            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.05, f'{bin_counts[i]}', ha='center')
 
     # Plot perfect calibration line
     plt.plot([0, 1], [0, 1], 'r--')
@@ -211,6 +194,8 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     tick_positions = np.linspace(0, 1, n_bins + 1)
     tick_labels = [f"{pos:.2f}" for pos in tick_positions]
     plt.xticks(tick_positions, tick_labels, rotation=45)
+
+    plt.gca().set_aspect('equal', adjustable='box')
 
     # Add buffer around the plot
     plt.xlim(-0.05, 1.05)
@@ -291,6 +276,7 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'all_metrics_openAi_commonsense.csv')
+output_path = os.path.join(output_dir, 'all_metrics_llama2_commonsense.csv')
 all_metrics.to_csv(output_path, index=False)
+
 #%%
