@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Load the data from the CSV files
-df_llama2 = pd.read_csv('../results/llama2/gsm8k/zero_shot_cot_gsm8k/20240603-112531205664_289c2160bbb5425186b314e0fb9e4551_answered.csv')
-df_openAi = pd.read_csv('../results/openAi/gsm8k/zero_shot_cot_gsm8k/20240525-174150582952_72dcbbf5bc124790b148e5ddce48fc59_answered.csv')
+df_llama2 = pd.read_csv('../results/llama2/gsm8k/few_shot_cot_number/few_shot_fix_answered.csv')
+df_openAi = pd.read_csv('../results/openAi/gsm8k/few_shot_cot_number/20240526-011547328226_bd607da7b1094ebf88a525b0859baef6_answered.csv')
 
 
 # Filter for incorrect answers

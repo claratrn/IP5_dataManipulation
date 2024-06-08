@@ -65,5 +65,3 @@ json_file_path = "../results/llama2/commonsense_qa/zero_shot_cot_Option_letter/2
 prepare_data(json_file_path)
 
 #%%
-
-#%%
