@@ -9,8 +9,8 @@ import numpy as np
 from tools.compute_metrics import compute_conf_metrics
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/Llama2/gsm8k"
-output_dir = "result_metrics/llama2/gsm8k"
+directory_path = "cleaned_data/Llama2/commonsense_qa"
+output_dir = "result_metrics/llama2/commonsense_qa"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -279,49 +279,5 @@ for file_name in os.listdir(directory_path):
 output_path = os.path.join(output_dir, 'allmetrics_gsm8k_Llama2.csv')
 all_metrics.to_csv(output_path, index=False)
 print(f"All metrics saved to {output_path}")
-
-
-#
-# def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
-#     from netcal.presentation import ReliabilityDiagram
-#     n_bins = 20
-#     diagram = ReliabilityDiagram(n_bins)
-#
-#     plt.figure()
-#     diagram.plot(np.array(y_confs), np.array(y_true))
-#
-#     bin_counts, bin_edges = np.histogram(y_confs, bins=n_bins, range=(0, 1))
-#     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
-#     for i in range(n_bins):
-#         if bin_counts[i] == 0:
-#             plt.bar(bin_centers[i], 1, width=1/n_bins, color='white', edgecolor='black', alpha=0.0)
-#
-#
-#     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
-#     ece_score = get_ece_from_all_metrics(all_metrics, method) * 100
-#     plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-#
-#     legend_elements = [
-#         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
-#         plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
-#         plt.Rectangle((0, 0), 1, 1, color='tab:red', label='Gap'),
-#
-#     ]
-#     plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.5), fancybox=True, shadow=True,
-#                ncol=3)
-#
-#     tick_positions = np.linspace(0, 1, n_bins + 1)
-#
-#     tick_labels = [f"{pos:.2f}" for pos in tick_positions]
-#     plt.xticks(tick_positions, tick_labels, rotation=45)
-#
-# # Add buffer around the plot
-#     plt.xlim(-0.05, 1.05)
-#     plt.ylim(0, 1.05)
-#     plt.subplots_adjust(bottom=0.25, hspace=0.5)
-#     plt.xlabel("Confidence")
-#     plt.ylabel("Accuracy")
-#     plt.savefig((os.path.join(visual_dir, f'{file_name}_ECE_{method}.png')), dpi=600)
-#
 #%%
 

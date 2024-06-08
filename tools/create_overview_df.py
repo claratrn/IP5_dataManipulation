@@ -61,7 +61,7 @@ def prepare_data(file_path):
     return df_answered, df_unanswered
 
 # Example usage
-json_file_path = "../results/llama2/gsm8k/few_shot_cot_number/20240603-114449626099_f68528eb5c7f4637a7e34112039be56b.json"
+json_file_path = "../results/llama2/commonsense_qa/zero_shot_cot_Option_letter/20240603-171253021111_ced379beec2941aaa40d9d2c5dc4f80f.json"
 prepare_data(json_file_path)
 
 #%%
