@@ -15,8 +15,13 @@ def manual_ece(y_true, y_confs, bin_size):
 
     n = len(y_true)
     ece = 0.0
+
     for i, (bin_lower, bin_upper) in enumerate(zip(bin_lowers, bin_uppers)):
-        in_bin = (y_confs > bin_lower) & (y_confs <= bin_upper)
+        if bin_upper == 1.0:  # Include rightmost edge for the last bin
+            in_bin = (y_confs >= bin_lower) & (y_confs <= bin_upper)
+        else:
+            in_bin = (y_confs >= bin_lower) & (y_confs < bin_upper)
+
         prop_in_bin = np.mean(in_bin)
         if prop_in_bin > 0:
             accuracy_in_bin = np.mean(y_true[in_bin])

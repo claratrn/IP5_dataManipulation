@@ -10,15 +10,14 @@ np.float = np.float64
 from tools.compute_metrics import compute_conf_metrics, manual_ece
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/Llama2/commonsense_qa"
-output_dir = "result_metrics/llama2/commonsense_qa"
+directory_path = "cleaned_data/openAi/mmlu"
+output_dir = "result_metrics/openAi/mmlu"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
 
 #################### VISUALIZATION FUNCTIONS ####################
 # y_true:correct , y_confs: confidence score
-
 
 def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name):
     y_confs = np.array(y_confs, dtype=float)
@@ -52,7 +51,6 @@ def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name
 
     plt.savefig(os.path.join(histogram_dir, f'{file_name}_histogram_{method}.png'))
     plt.close()
-
 
 def get_ece_from_all_metrics(all_metrics, method):
     print("Columns in all_metrics DataFrame:", all_metrics.columns)  # Debugging line
@@ -135,7 +133,7 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
 def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     print(method)
     n_bins = 20
-    plt.figure(figsize=(10, 6), dpi=600)
+    plt.figure(figsize=(14, 8), dpi=300)
     plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
 
     # Create histogram bins for y_confidences
@@ -146,14 +144,20 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     avg_confidence_per_bin = np.zeros(n_bins)
     total_samples = np.sum(bin_counts)
 
-    print("Bin counts:", bin_counts)
+    print("Bin counts from visualisation:", bin_counts)
     print("Bin edges:", bin_edges)
     print("Total samples from bin counts:", total_samples)
 
 
 # Calculate the accuracy per bin only if there are elements in the bin
     for i in range(n_bins):
-        in_bin = (y_confs > bin_edges[i]) & (y_confs <= bin_edges[i + 1])
+        if i == 0:
+            in_bin = (y_confs >= bin_edges[i]) & (y_confs < bin_edges[i + 1])
+        elif i == n_bins - 1:
+            in_bin = (y_confs >= bin_edges[i]) & (y_confs <= bin_edges[i + 1])
+        else:
+            in_bin = (y_confs >= bin_edges[i]) & (y_confs < bin_edges[i + 1])
+
         print(f"Bin {i+1} ({bin_edges[i]:.2f} - {bin_edges[i+1]:.2f}): {in_bin.sum()} samples")
 
         if in_bin.any():  # Check if there are any elements in the bin
@@ -171,16 +175,15 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         if not np.isnan(accuracy_per_bin[i]) and bin_counts[i] > 0:
             color = 'tab:blue' if bin_counts[i] >= sparse_threshold else 'tab:orange'
             plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=1 / n_bins, color=color, edgecolor='black', alpha=0.7)
-            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.05, f'{bin_counts[i]}', ha='center')
+            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=8)  # Moved closer to the bar
 
     # Plot perfect calibration line
     plt.plot([0, 1], [0, 1], 'r--')
 
     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
     ece_score = manual_ece(y_true, y_confs, n_bins) * 100
-    plt.text(0.05, 0.90, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-    plt.text(0.05, 0.85, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12,
-             verticalalignment='top')
+    plt.text(0.05, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+    plt.text(0.05, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
 
     legend_elements = [
         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
@@ -213,9 +216,9 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
     y_true = np.array([1 if x else 0 for x in y_true])
     plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     print("All visualisations saved to: ", visual_dir)
 
 
@@ -248,6 +251,8 @@ def determine_dataset(file_name):
         return "gsm8k_test"
     elif "gsm8k" in file_name:
         return "gsm8k"
+    elif "mmlu" in file_name:
+        return "Professional Law"
     else:
         return "unknown"
 
