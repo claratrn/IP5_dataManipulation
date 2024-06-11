@@ -1,0 +1,95 @@
+index,question,answer,provided answer,expected true answer,response details
+106,2015 is coming in 36 hours. What is the date one week from today in MM/DD/YYYY?,"Explanation: 
+
+step 1: Given that 2015 is coming in 36 hours.
+step 2: Adding 36 hours to the current time: We know that 24 hours makes a day, and 36 hours is equal to 1 day and 12 hours. Therefore, if 2015 is coming in 36 hours, then we should add 1 day and 12 hours to the current date and time.
+step 3: Identify the current date: It is not given to us.
+step 4: Adding 1 week to the current date: We need to add 7 days to the date we found earlier to find the date one week from today. 
+
+Final Answer: We don't have the current date to add 1 week to, so we cannot determine the date one week from today. None of the choices are valid and hence the answer is None of the Above.
+
+Confidence Level: 100% since the problem does not provide enough information to solve the question.","Explanation: 
+
+step 1: Given that 2015 is coming in 36 hours.
+step 2: Adding 36 hours to the current time: We know that 24 hours makes a day, and 36 hours is equal to 1 day and 12 hours. Therefore, if 2015 is coming in 36 hours, then we should add 1 day and 12 hours to the current date and time.
+step 3: Identify the current date: It is not given to us.
+step 4: Adding 1 week to the current date: We need to add 7 days to the date we found earlier to find the date one week from today. 
+
+Final Answer: We don't have the current date to add 1 week to, so we cannot determine the date one week from today. None of the choices are valid and hence the answer is None of the Above.
+
+Confidence Level: 100% since the problem does not provide enough information to solve the question.",01/05/2015,"{""final answer"": null, ""confidence"": ""100""}"
+171,"Yesterday, Jan 21, 2011, Jane ate 2 pizzas and 5 wings. What is the date today in MM/DD/YYYY?","Explanation: 
+
+Given that yesterday was Jan 21, 2011, and that Jane ate 2 pizzas and 5 wings.
+
+To determine the current date, we need to determine what date follows Jan 21, 2011.
+
+Incrementing the date by one day from yesterday's date, we get:
+Jan 22, 2011
+
+We do not need to consider the number of pizzas and wings consumed for solving this question.
+
+Final Answer: 01/22/2011, With a Confidence Level of 100%.","Explanation: 
+
+Given that yesterday was Jan 21, 2011, and that Jane ate 2 pizzas and 5 wings.
+
+To determine the current date, we need to determine what date follows Jan 21, 2011.
+
+Incrementing the date by one day from yesterday's date, we get:
+Jan 22, 2011
+
+We do not need to consider the number of pizzas and wings consumed for solving this question.
+
+Final Answer: 01/22/2011, With a Confidence Level of 100%.",01/22/2011,"{""final answer"": null, ""confidence"": ""100""}"
+196,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week from today in MM/DD/YYYY?","Explanation: 
+step 1: Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Therefore, we know that today's date is 6/19/2019.
+step 2: We need to find the date one week from today, which means we need to add 7 days to 6/19/2019.
+step 3: When we add 7 days to 6/19/2019, we get 6/26/2019.
+
+Final Answer: '6/26/2019', With a Confidence Level of 100%","Explanation: 
+step 1: Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Therefore, we know that today's date is 6/19/2019.
+step 2: We need to find the date one week from today, which means we need to add 7 days to 6/19/2019.
+step 3: When we add 7 days to 6/19/2019, we get 6/26/2019.
+
+Final Answer: '6/26/2019', With a Confidence Level of 100%",06/26/2019,"{""final answer"": null, ""confidence"": ""100""}"
+273,Today is 9/7. Jane is watching NFL 2003. What is the date 10 days ago in MM/DD/YYYY?,"Explanation:
+Step 1: We know that today is 9/7.
+Step 2: We need to find the date that was 10 days ago. 
+Step 3: To find the date 10 days ago, we need to subtract 10 days from September 7th.
+Step 4: September has 30 days, so if we subtract 10 days from 7th of September, it will take us to August 28th.
+
+Final Answer: '08/28/YYYY', with a Confidence Level of 95%.","Explanation:
+Step 1: We know that today is 9/7.
+Step 2: We need to find the date that was 10 days ago. 
+Step 3: To find the date 10 days ago, we need to subtract 10 days from September 7th.
+Step 4: September has 30 days, so if we subtract 10 days from 7th of September, it will take us to August 28th.
+
+Final Answer: '08/28/YYYY', with a Confidence Level of 95%.",08/28/2003,"{""final answer"": null, ""confidence"": ""95""}"
+278,Today is 9/7. Jane is watching NFL 2003. What is the date 24 hours later in MM/DD/YYYY?,"Explanation:
+Given that today is 9/7.
+To find the date 24 hours later, we need to add one day to 9/7.
+September has 30 days, so if today is the 7th, tomorrow is the 8th.
+Therefore, the date 24 hours later in MM/DD/YYYY format is '09/08/YYYY'.
+Final Answer: '09/08/YYYY', With a Confidence Level of 100%.","Explanation:
+Given that today is 9/7.
+To find the date 24 hours later, we need to add one day to 9/7.
+September has 30 days, so if today is the 7th, tomorrow is the 8th.
+Therefore, the date 24 hours later in MM/DD/YYYY format is '09/08/YYYY'.
+Final Answer: '09/08/YYYY', With a Confidence Level of 100%.",09/08/2003,"{""final answer"": null, ""confidence"": ""100""}"
+319,Jane is celebrating the last day of Jan 2012. What is the date a month ago in MM/DD/YYYY?,"Explanation: 
+
+Step 1: Given that Jane is celebrating the last day of January 2012.
+Step 2: Identify the date one month prior: To find out the date one month ago, we subtract one month from January 31, 2012. 
+Step 3: Consider the number of days in February: Since the given date is in January, we need to ensure we consider the number of days in February. February 2012 had 29 days since it was a leap year. 
+Step 4: Calculate the date: If we subtract one month from January 31, 2012, we get December 31, 2011. 
+
+Final Answer : '12/31/2011', 
+With a Confidence Level of 95%.","Explanation: 
+
+Step 1: Given that Jane is celebrating the last day of January 2012.
+Step 2: Identify the date one month prior: To find out the date one month ago, we subtract one month from January 31, 2012. 
+Step 3: Consider the number of days in February: Since the given date is in January, we need to ensure we consider the number of days in February. February 2012 had 29 days since it was a leap year. 
+Step 4: Calculate the date: If we subtract one month from January 31, 2012, we get December 31, 2011. 
+
+Final Answer : '12/31/2011', 
+With a Confidence Level of 95%.",12/31/2011,"{""final answer"": null, ""confidence"": ""95""}"

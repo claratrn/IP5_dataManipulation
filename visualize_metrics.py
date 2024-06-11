@@ -175,8 +175,7 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         if not np.isnan(accuracy_per_bin[i]) and bin_counts[i] > 0:
             color = 'tab:blue' if bin_counts[i] >= sparse_threshold else 'tab:orange'
             plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=1 / n_bins, color=color, edgecolor='black', alpha=0.7)
-            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=8)  # Moved closer to the bar
-
+            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=8)
     # Plot perfect calibration line
     plt.plot([0, 1], [0, 1], 'r--')
 

@@ -500,9 +500,9 @@
         {
             "index": 54,
             "question": "Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date today in MM/DD/YYYY?",
-            "answer": "Step 1: February has 29 days in a leap year, which is once every 4 years. Therefore, the next leap year after 2000 was 2004, 2008, 2012, 2016, etc. Jane's 16th birthday should be on February 29, 2016. Confidence: 90%\n\nStep 2: Since we know Jane's 16th birthday is on February 29, 2016, then her birthday's anniversary should occur every 4 years, which is a leap year. Confidence: 95%\n\nStep 3: Counting back 16 years from her 16th birthday, Jane was born on February 29, 2000. Confidence: 99%\n\nThe final answer is February 29, 2000 with a confidence level of 99%.",
+            "answer": "Step 1: February has 29 days in a leap year, which is once every 4 years. Therefore, the next leap year after 2000 was 2004, 2008, 2012, 2016, etc. Jane's 16th birthday should be on February 29, 2016. Confidence: 90%\n\nStep 2: Since we know Jane's 16th birthday is on February 29, 2016, then her birthday's anniversary should occur every 4 years, which is a leap year. Confidence: 95%\n\nStep 3: Counting back 16 years from her 16th birthday, Jane was born on February 29, 2000. Confidence: 99%\n\nThe final answer is 02/29/2000 with a confidence level of 99%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/29/2000",
                 "confidence": "99",
                 "valid": true
             },
@@ -544,9 +544,9 @@
         {
             "index": 58,
             "question": "Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date a month ago in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's birthday is February 29, 2000, which is a leap year. Confidence: 100%\n\nStep 2: To determine the number of days between her birthday (February 29) and her 16th birthday (February 29, 2016), we need to calculate the number of leap years between 2000 and 2016. There are 4 leap years: 2000, 2004, 2008, and 2012. Therefore, the number of days between February 29, 2000, and February 29, 2016 is 16 years times 365 days per year, plus 4 extra leap days. This gives us a total of 5840 days. Confidence: 90%\n\nStep 3: To determine the date one month ago, we subtract 31 days from February 29, 2016. Since it is a leap year, we need to consider that February has 29 days instead of 28. Thus, the date one month before February 29, 2016, is January 29, 2016. Confidence: 100%\n\nThe final answer is January 29, 2016 with a confidence level of 90%.",
+            "answer": "Step 1: Jane's birthday is February 29, 2000, which is a leap year. Confidence: 100%\n\nStep 2: To determine the number of days between her birthday (February 29) and her 16th birthday (February 29, 2016), we need to calculate the number of leap years between 2000 and 2016. There are 4 leap years: 2000, 2004, 2008, and 2012. Therefore, the number of days between February 29, 2000, and February 29, 2016 is 16 years times 365 days per year, plus 4 extra leap days. This gives us a total of 5840 days. Confidence: 90%\n\nStep 3: To determine the date one month ago, we subtract 31 days from February 29, 2016. Since it is a leap year, we need to consider that February has 29 days instead of 28. Thus, the date one month before February 29, 2016, is January 29, 2016. Confidence: 100%\n\nThe final answer is 01/29/2016 with a confidence level of 90%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/29/2016",
                 "confidence": "90",
                 "valid": true
             },
@@ -555,9 +555,9 @@
         {
             "index": 60,
             "question": "Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date one week ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: Jane was born on the last day of February in 2000. Today is her 16-year-old birthday.\nConfidence: 100%\nWe are given that Jane was born in the year 2000 on the last day of February. We are also given that today is her 16th birthday. \n\nStep 2: We need to find the date one week ago from today.\nConfidence: 100%\nTo find the date one week ago from today, we need to subtract 7 days from today's date. \n\nStep 3: Determine today's date.\nConfidence: 100%\nWe are given that Jane's 16th birthday falls on February 29, 2016. \n\nStep 4: Calculate the date one week ago from today.\nConfidence: 100%\nWe subtract 7 days from February 29, 2016 to get:\nFebruary 22, 2016.\n\nThe final answer is February 22, 2016 with a confidence level of 100%.",
+            "answer": "Step 1: Jane was born on the last day of February in 2000. Today is her 16-year-old birthday.\nConfidence: 100%\nWe are given that Jane was born in the year 2000 on the last day of February. We are also given that today is her 16th birthday. \n\nStep 2: We need to find the date one week ago from today.\nConfidence: 100%\nTo find the date one week ago from today, we need to subtract 7 days from today's date. \n\nStep 3: Determine today's date.\nConfidence: 100%\nWe are given that Jane's 16th birthday falls on February 29, 2016. \n\nStep 4: Calculate the date one week ago from today.\nConfidence: 100%\nWe subtract 7 days from February 29, 2016 to get:\nFebruary 22, 2016.\n\nThe final answer is 02/22/2016 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/22/2016",
                 "confidence": "100",
                 "valid": true
             },
@@ -588,9 +588,9 @@
         {
             "index": 63,
             "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date today in MM/DD/YYYY?",
-            "answer": "Step 1: First, we need to determine the date of the last day of February in 2001, which was February 28. \nConfidence: 100%\n\nStep 2: We know that Jane was born on the last day of February in 2001 and she is now 16 years old. To calculate her birthday this year, we need to add 16 years to 2001, which equals 2017. \nConfidence: 100%\n\nStep 3: We know that her birthday is on February 28, so the date today in MM/DD/YYYY would also be February 28, 2017. \nConfidence: 100%\n\nThe final answer is February 28, 2017, with a confidence level of 100%.",
+            "answer": "Step 1: First, we need to determine the date of the last day of February in 2001, which was February 28. \nConfidence: 100%\n\nStep 2: We know that Jane was born on the last day of February in 2001 and she is now 16 years old. To calculate her birthday this year, we need to add 16 years to 2001, which equals 2017. \nConfidence: 100%\n\nStep 3: We know that her birthday is on February 28, so the date today in MM/DD/YYYY would also be February 28, 2017. \nConfidence: 100%\n\nThe final answer is 02/28/2017, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/28/2017",
                 "confidence": "100",
                 "valid": true
             },
@@ -599,9 +599,9 @@
         {
             "index": 64,
             "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date tomorrow in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's birth date is February 28, 2001, which was not a leap year. Confidence: 100%\n\nStep 2: To find tomorrow's date, we add 1 day to today's date. Confidence: 100%\n\nStep 3: Today's date is Jane's 16th birthday, which means she was born on February 29, 2000, a leap year. However, tomorrow's date is in 2017, which is not a leap year. Therefore, we add 1 day to February 28, 2017, to get March 1, 2017. Confidence: 80%\n\nThe final answer is March 1, 2017, with a confidence level of 80%.",
+            "answer": "Step 1: Jane's birth date is February 28, 2001, which was not a leap year. Confidence: 100%\n\nStep 2: To find tomorrow's date, we add 1 day to today's date. Confidence: 100%\n\nStep 3: Today's date is Jane's 16th birthday, which means she was born on February 29, 2000, a leap year. However, tomorrow's date is in 2017, which is not a leap year. Therefore, we add 1 day to February 28, 2017, to get March 1, 2017. Confidence: 80%\n\nThe final answer is 03/01/2017, with a confidence level of 80%.",
             "response": {
-                "final answer": null,
+                "final answer": "03/01/2017",
                 "confidence": "80",
                 "valid": true
             },
@@ -632,9 +632,9 @@
         {
             "index": 67,
             "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date a month ago in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's birthday is on the last day of February, which is February 28th in a non-leap year. We know that she was born in 2001, which is not a leap year. So, her birthday this year would be on February 28th, 2017. Confidence: 100%\n\nStep 2: We know that Jane is now 16 years old. That means she was born in 2001, and so she was born on February 28th, 2001. Confidence: 100%\n\nStep 3: To find the date a month ago, we need to subtract one month from February 28th, 2017. February only has 28 days (in a non-leap year), so the previous month, January, would have 31 - 28 = 3 fewer days. So, the date a month ago would be January 28th, 2017. Confidence: 100%\n\nThe final answer is January 28th, 2017, with a confidence level of 100%.",
+            "answer": "Step 1: Jane's birthday is on the last day of February, which is February 28th in a non-leap year. We know that she was born in 2001, which is not a leap year. So, her birthday this year would be on February 28th, 2017. Confidence: 100%\n\nStep 2: We know that Jane is now 16 years old. That means she was born in 2001, and so she was born on February 28th, 2001. Confidence: 100%\n\nStep 3: To find the date a month ago, we need to subtract one month from February 28th, 2017. February only has 28 days (in a non-leap year), so the previous month, January, would have 31 - 28 = 3 fewer days. So, the date a month ago would be January 28th, 2017. Confidence: 100%\n\nThe final answer is 01/28/2017, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/28/2017",
                 "confidence": "100",
                 "valid": true
             },
@@ -654,9 +654,9 @@
         {
             "index": 69,
             "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date one week ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's birthday was on the last day of February in 2001, so her birthday is February 28th. Since her 16th birthday is today, we can determine today's date by adding 16 years to 2001. Today is February 28th, 2017. Confidence: 100%.\n\nStep 2: To find the date one week ago from today, we can subtract 7 days from today's date. Confidence: 100%.\n\nStep 3: February 2017 has 28 days, so we need to subtract 7 days from 28 to find the date one week ago. 28 - 7 = 21. Therefore, the date one week ago from today is February 21st, 2017. Confidence: 100%.\n\nThe final answer is February 21st, 2017, with a confidence level of 100%.",
+            "answer": "Step 1: Jane's birthday was on the last day of February in 2001, so her birthday is February 28th. Since her 16th birthday is today, we can determine today's date by adding 16 years to 2001. Today is February 28th, 2017. Confidence: 100%.\n\nStep 2: To find the date one week ago from today, we can subtract 7 days from today's date. Confidence: 100%.\n\nStep 3: February 2017 has 28 days, so we need to subtract 7 days from 28 to find the date one week ago. 28 - 7 = 21. Therefore, the date one week ago from today is February 21st, 2017. Confidence: 100%.\n\nThe final answer is 02/21/2017, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/21/2017",
                 "confidence": "100",
                 "valid": true
             },
@@ -665,9 +665,9 @@
         {
             "index": 70,
             "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's birthday is on the last day of February, which has either 28 or 29 days depending on whether it is a leap year. Since she was born in 2001, which is not a leap year, February has 28 days. Confidence: 100%\n\nStep 2: To calculate the date of Jane's 16th birthday, we need to add 16 years to February 28, 2001. February 28th in a non-leap year plus 16 years is February 28th again. Confidence: 100%\n\nStep 3: To find the date one week from today, we need to add 7 days to today's date, which is Jane's birthday. Confidence: 100%\n\nStep 4: Adding 7 days to February 28th results in March 7th. Confidence: 100%\n\nThe final answer is March 7, 2017, with a confidence level of 100%.",
+            "answer": "Step 1: Jane's birthday is on the last day of February, which has either 28 or 29 days depending on whether it is a leap year. Since she was born in 2001, which is not a leap year, February has 28 days. Confidence: 100%\n\nStep 2: To calculate the date of Jane's 16th birthday, we need to add 16 years to February 28, 2001. February 28th in a non-leap year plus 16 years is February 28th again. Confidence: 100%\n\nStep 3: To find the date one week from today, we need to add 7 days to today's date, which is Jane's birthday. Confidence: 100%\n\nStep 4: Adding 7 days to February 28th results in March 7th. Confidence: 100%\n\nThe final answer is 03/07/2017, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "03/07/2017",
                 "confidence": "100",
                 "valid": true
             },
@@ -742,9 +742,9 @@
         {
             "index": 78,
             "question": "Jane and John married on Jan 2, 1958. Today is their golden wedding anniversary. What is the date one week ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: First, we need to determine the date of Jane and John's wedding anniversary, which was January 2, 2008. Confidence: 100%\n\nStep 2: To calculate their golden wedding anniversary date, we need to add 50 years to January 2, 2008.  Confidence: 100%\n\nStep 3: So, the golden wedding anniversary date is January 2, 2008 + 50 years = January 2, 2058. Confidence: 100%\n\nStep 4: Now, we need to find one week before the golden wedding anniversary date which would be January 2, 2058 - 7 days = December 26, 2057. Confidence: 100%\n\nThe final answer is December 26, 2057 with a confidence level of 100%.",
+            "answer": "Step 1: First, we need to determine the date of Jane and John's wedding anniversary, which was January 2, 2008. Confidence: 100%\n\nStep 2: To calculate their golden wedding anniversary date, we need to add 50 years to January 2, 2008.  Confidence: 100%\n\nStep 3: So, the golden wedding anniversary date is January 2, 2008 + 50 years = January 2, 2058. Confidence: 100%\n\nStep 4: Now, we need to find one week before the golden wedding anniversary date which would be January 2, 2058 - 7 days = December 26, 2057. Confidence: 100%\n\nThe final answer is 12/26/2057 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/26/2057",
                 "confidence": "100",
                 "valid": true
             },
@@ -764,9 +764,9 @@
         {
             "index": 80,
             "question": "Jane and John married on Jan 2, 1958. Today is their golden wedding anniversary. What is the date 24 hours later in MM/DD/YYYY?",
-            "answer": "Step 1: To find the date 24 hours after Jan 2, 1958, we need to add 24 hours or 1 day to Jan 2, 1958. \nConfidence: 100%\n\nStep 2: We can add 1 to the day and keep the month and year the same. However, we need to make sure that the resulting date is valid. \nConfidence: 100%\n\nStep 3: Jan has 31 days, and adding 1 to Jan 2 will give Jan 3. Therefore, Jan 3, 1958, is the date 24 hours after Jan 2, 1958.\nConfidence: 100%\n\nThe final answer is Jan 3, 1958, with a confidence level of 100%.",
+            "answer": "Step 1: To find the date 24 hours after Jan 2, 1958, we need to add 24 hours or 1 day to Jan 2, 1958. \nConfidence: 100%\n\nStep 2: We can add 1 to the day and keep the month and year the same. However, we need to make sure that the resulting date is valid. \nConfidence: 100%\n\nStep 3: Jan has 31 days, and adding 1 to Jan 2 will give Jan 3. Therefore, Jan 3, 1958, is the date 24 hours after Jan 2, 1958.\nConfidence: 100%\n\nThe final answer is 01/03/1958, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/03/1958",
                 "confidence": "100",
                 "valid": true
             },
@@ -797,9 +797,9 @@
         {
             "index": 83,
             "question": "Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: Today's date is the 3-year work anniversary of Jane. We can calculate this by adding 3 years to the year she got the job in, which is 2016. So, 2016+3=2019. Confidence: 100%\n\nStep 2: Jane's second day at work was on Dec 2. Since we know the year now, we can say that the spilled coffee incident happened on Dec 2, 2016. Confidence: 100%\n\nStep 3: We are asked for the date yesterday in MM/DD/YYYY format. So, we need to subtract one day from today's date, which is the 3-year work anniversary, to get yesterday's date. Confidence: 100%\n\nStep 4: Yesterday's date would be December 1, 2019. Confidence: 100%\n\nThe final answer is December 1, 2019, with a confidence level of 100%.",
+            "answer": "Step 1: Today's date is the 3-year work anniversary of Jane. We can calculate this by adding 3 years to the year she got the job in, which is 2016. So, 2016+3=2019. Confidence: 100%\n\nStep 2: Jane's second day at work was on Dec 2. Since we know the year now, we can say that the spilled coffee incident happened on Dec 2, 2016. Confidence: 100%\n\nStep 3: We are asked for the date yesterday in MM/DD/YYYY format. So, we need to subtract one day from today's date, which is the 3-year work anniversary, to get yesterday's date. Confidence: 100%\n\nStep 4: Yesterday's date would be December 1, 2019. Confidence: 100%\n\nThe final answer is 12/01/2019, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/01/2019",
                 "confidence": "100",
                 "valid": true
             },
@@ -830,9 +830,9 @@
         {
             "index": 86,
             "question": "Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date one year ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: Today's date is the 3-year work anniversary of Jane, but we don't know today's date yet. We need to calculate it by subtracting 3 years from the year Jane got her job in 2016. Confidence: 100%\n \nStep 2: Today's date is Dec 2, the date when Jane spilled coffee on her laptop. So if we subtract 2 days from today's date, we will get the date when Jane started her job in 2016. We can subtract 3 years from that day to get the date 1 year ago. Confidence: 100%\n\nStep 3: Let's calculate today's date by subtracting 3 years from the year Jane started her job in 2016. \nToday's year would be 2016 + 3 = 2019. We don't know the month and day of today's date yet. Confidence: 100%\n\nStep 4: Let's subtract 2 days from today's date to get the day when Jane started her job. \nIf today is Dec 2, then her second day at work would be Dec 4, 2016. Confidence: 100%\n\nStep 5: Let's subtract 1 year from Dec 4, 2016, to get the date one year ago from today. \nDec 4, 2016 - 1 year = Dec 4, 2015. But the question asks for the date one year ago from today, which is Dec 4, 2018. Confidence: 100%\n\nThe final answer is Dec 4, 2018, with a confidence level of 100%.",
+            "answer": "Step 1: Today's date is the 3-year work anniversary of Jane, but we don't know today's date yet. We need to calculate it by subtracting 3 years from the year Jane got her job in 2016. Confidence: 100%\n \nStep 2: Today's date is Dec 2, the date when Jane spilled coffee on her laptop. So if we subtract 2 days from today's date, we will get the date when Jane started her job in 2016. We can subtract 3 years from that day to get the date 1 year ago. Confidence: 100%\n\nStep 3: Let's calculate today's date by subtracting 3 years from the year Jane started her job in 2016. \nToday's year would be 2016 + 3 = 2019. We don't know the month and day of today's date yet. Confidence: 100%\n\nStep 4: Let's subtract 2 days from today's date to get the day when Jane started her job. \nIf today is Dec 2, then her second day at work would be Dec 4, 2016. Confidence: 100%\n\nStep 5: Let's subtract 1 year from Dec 4, 2016, to get the date one year ago from today. \nDec 4, 2016 - 1 year = Dec 4, 2015. But the question asks for the date one year ago from today, which is Dec 4, 2018. Confidence: 100%\n\nThe final answer is 12/04/2018, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/04/2018",
                 "confidence": "100",
                 "valid": true
             },
@@ -863,9 +863,9 @@
         {
             "index": 89,
             "question": "Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date 24 hours later in MM/DD/YYYY?",
-            "answer": "Step 1: Today's date - December 2, 2016 + 3 years = December 2, 2019. Confidence: 100%\n\nStep 2: The question asks for the date 24 hours later, so we need to add 1 day to December 2, 2019. Confidence: 100%\n\nStep 3: Adding 1 day to December 2, 2019, we get December 3, 2019. Confidence: 100%\n\nThe final answer is December 3, 2019 with a confidence level of 100%.",
+            "answer": "Step 1: Today's date - December 2, 2016 + 3 years = December 2, 2019. Confidence: 100%\n\nStep 2: The question asks for the date 24 hours later, so we need to add 1 day to December 2, 2019. Confidence: 100%\n\nStep 3: Adding 1 day to December 2, 2019, we get December 3, 2019. Confidence: 100%\n\nThe final answer is 12/03/2019 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/03/2019",
                 "confidence": "100",
                 "valid": true
             },
@@ -885,9 +885,9 @@
         {
             "index": 91,
             "question": "Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date tomorrow in MM/DD/YYYY?",
-            "answer": "Step 1: If Jane quit her job on Mar 20, 2020, we know the starting date. Confidence: 100%\n\nStep 2: The problem states that 176 days have passed since Mar 20, 2020. We can add 176 days to Mar 20, 2020 to determine the new date. Confidence: 100%\n\nStep 3: To add 176 days to Mar 20, 2020, we can count forward 176 days on a calendar. Alternatively, we can use a date calculator. For example, if we use the date calculator on timeanddate.com, we find that 176 days after Mar 20, 2020 is Sep 12, 2020. Confidence: 100%\n\nThe final answer is Sep 13, 2020 with a confidence level of 100%.",
+            "answer": "Step 1: If Jane quit her job on Mar 20, 2020, we know the starting date. Confidence: 100%\n\nStep 2: The problem states that 176 days have passed since Mar 20, 2020. We can add 176 days to Mar 20, 2020 to determine the new date. Confidence: 100%\n\nStep 3: To add 176 days to Mar 20, 2020, we can count forward 176 days on a calendar. Alternatively, we can use a date calculator. For example, if we use the date calculator on timeanddate.com, we find that 176 days after Mar 20, 2020 is Sep 12, 2020. Confidence: 100%\n\nThe final answer is 09/13/2020 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "09/13/2020",
                 "confidence": "100",
                 "valid": true
             },
@@ -929,9 +929,9 @@
         {
             "index": 95,
             "question": "Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date one year ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: We need to find out one year ago from today's date. Today's date is (current month/current date/current year).\nConfidence: 100%\n\nStep 2: Subtract one year from today's date. \nConfidence: 100%\n\nStep 3: Convert the resulting date into MM/DD/YYYY format. \nConfidence: 100%\n\nStep 4: Since we need to find the date one year before the current date, we will subtract one year from the current year, which is 2021. Therefore, we get 2020. \nConfidence: 100%\n\nStep 5: The date on March 20, 2020, was 176 days before today's date. \nConfidence: 100%\n\nStep 6: Subtract 176 days from March 20, 2020, to get the date one year before today's date. \nConfidence: 100%\n\nStep 7: To subtract 176 days from March 20, 2020, we will count backward from that date, 176 days. February 24, 2020, is the 177th day before today, so the date one year before today is February 24, 2020. \nConfidence: 100%\n\nThe final answer is February 24, 2020, with a confidence level of 100%.",
+            "answer": "Step 1: We need to find out one year ago from today's date. Today's date is (current month/current date/current year).\nConfidence: 100%\n\nStep 2: Subtract one year from today's date. \nConfidence: 100%\n\nStep 3: Convert the resulting date into MM/DD/YYYY format. \nConfidence: 100%\n\nStep 4: Since we need to find the date one year before the current date, we will subtract one year from the current year, which is 2021. Therefore, we get 2020. \nConfidence: 100%\n\nStep 5: The date on March 20, 2020, was 176 days before today's date. \nConfidence: 100%\n\nStep 6: Subtract 176 days from March 20, 2020, to get the date one year before today's date. \nConfidence: 100%\n\nStep 7: To subtract 176 days from March 20, 2020, we will count backward from that date, 176 days. February 24, 2020, is the 177th day before today, so the date one year before today is February 24, 2020. \nConfidence: 100%\n\nThe final answer is 02/24/2020, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/24/2020",
                 "confidence": "100",
                 "valid": true
             },
@@ -984,9 +984,9 @@
         {
             "index": 101,
             "question": "2015 is coming in 36 hours. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: We know that 36 hours is equal to one day and 12 hours. Therefore, we need to subtract one day and convert the remaining 12 hours to hours in order to determine the date yesterday. This means that we need to subtract 24 hours from 36 hours, which leaves us with 12 hours in MM/DD/YYYY.\nConfidence: 100%\n\nStep 2: The question does not specify a time zone, so we assume that the time zone is UTC (Coordinated Universal Time). UTC is ahead of PST by 8 hours, EST by 5 hours, and IST by 5 hours and 30 minutes. We need to keep this in mind when calculating the date yesterday, as the date could be different depending on the time zone.\nConfidence: 80%\n\nStep 3: We need to determine the current date in UTC. We can do this by converting the current date and time in our own time zone to UTC. As an example, let's assume that it is currently 9:00 AM on December 31, 2015, in PST. This means that it is 5:00 PM on December 31, 2015, in UTC. Therefore, the date yesterday in UTC would be December 30, 2015.\nConfidence: 90%\n\nStep 4: We need to convert the date yesterday in UTC to the date yesterday in the original time zone. If we continue with the example from Step 3, we know that UTC is 8 hours ahead of PST, so the date yesterday in PST would be December 29, 2015.\nConfidence: 90%\n\nStep 5: The final answer is December 29, 2015, with a confidence level of 90%.",
+            "answer": "Step 1: We know that 36 hours is equal to one day and 12 hours. Therefore, we need to subtract one day and convert the remaining 12 hours to hours in order to determine the date yesterday. This means that we need to subtract 24 hours from 36 hours, which leaves us with 12 hours in MM/DD/YYYY.\nConfidence: 100%\n\nStep 2: The question does not specify a time zone, so we assume that the time zone is UTC (Coordinated Universal Time). UTC is ahead of PST by 8 hours, EST by 5 hours, and IST by 5 hours and 30 minutes. We need to keep this in mind when calculating the date yesterday, as the date could be different depending on the time zone.\nConfidence: 80%\n\nStep 3: We need to determine the current date in UTC. We can do this by converting the current date and time in our own time zone to UTC. As an example, let's assume that it is currently 9:00 AM on December 31, 2015, in PST. This means that it is 5:00 PM on December 31, 2015, in UTC. Therefore, the date yesterday in UTC would be December 30, 2015.\nConfidence: 90%\n\nStep 4: We need to convert the date yesterday in UTC to the date yesterday in the original time zone. If we continue with the example from Step 3, we know that UTC is 8 hours ahead of PST, so the date yesterday in PST would be December 29, 2015.\nConfidence: 90%\n\nStep 5: The final answer is 12/29/2015, with a confidence level of 90%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/29/2015",
                 "confidence": "90",
                 "valid": false
             },
@@ -1053,7 +1053,7 @@
             "answer": "Step 1: We need to determine the current date before we can calculate the date 24 hours later. Assuming today's date is the 31st of December 2014, the day before the new year, we can say that the current date is 12/31/2014. Confidence: 100%\n\nStep 2: To calculate the date 24 hours later, we add one day. 24 hours is the equivalent of one day. Thus, the date 24 hours later will be 01/01/2015. Confidence: 100%\n\nStep 3: Therefore, the final answer is 01/01/2015. Confidence: 100%\n\nThe overall confidence level of this answer is also 100% as both steps are straightforward and do not leave any room for error.",
             "response": {
                 "final answer": "01/01/2015",
-                "confidence": null,
+                "confidence": "100",
                 "valid": true
             },
             "true_answer": "12/30/2014"
@@ -1129,7 +1129,7 @@
             "question": "In the UK, people usually put the day before the month when formatting the date. Therefore, today is 02/01/1987 to them. What is the date one week from today in MM/DD/YYYY?",
             "answer": "Step 1: Today's date in the UK format is 01/02/1987, Confidence: 100%\n\nStep 2: Adding one week to the date means adding 7 days to February 1st, 1987. Confidence: 100%\n\nStep 3: We need to find what day is one week after February 1st, 1987. February has 28 days in 1987, so one week from February 1st is February 8th. Confidence: 100%\n\nFinal Answer: The date one week from today in MM/DD/YYYY format is 02/08/1987 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/08/1987",
                 "confidence": "100",
                 "valid": true
             },
@@ -1171,9 +1171,9 @@
         {
             "index": 119,
             "question": "Jane booked a flight for tomorrow, Jul 29, 2002. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: We need to determine the date yesterday from the given date which is Jul 29, 2002. \n\nStep 2: We should subtract one day from the given date to get the date yesterday. \n\nStep 3: Jul 29, 2002 minus 1 day is Jul 28, 2002. \n\nThe final answer is Jul/28/2002 with a confidence level of 100%.",
+            "answer": "Step 1: We need to determine the date yesterday from the given date which is Jul 29, 2002. \n\nStep 2: We should subtract one day from the given date to get the date yesterday. \n\nStep 3: Jul 29, 2002 minus 1 day is Jul 28, 2002. \n\nThe final answer is 07/28/2002 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "07/28/2002",
                 "confidence": "100",
                 "valid": false
             },
@@ -1204,9 +1204,9 @@
         {
             "index": 122,
             "question": "Jane booked a flight for tomorrow, Jul 29, 2002. What is the date one year ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: We need to determine today's date. Today is the current date. So let's find the current date. Assuming today is July 29th, 2003. \n\nConfidence: 100%\n\nStep 2: We need to determine the date one year ago from today. We can subtract 1 year or 365 days from today's date. So, one year ago from July 29, 2003, would be July 29, 2002.\n\nConfidence: 100%\n\nStep 3: We need to convert the date format to MM/DD/YYYY. The date format of July 29, 2002, is already in MM/DD/YYYY format, so there's no need to change it.\n\nConfidence: 100%\n\nThe final answer is July 29, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: We need to determine today's date. Today is the current date. So let's find the current date. Assuming today is July 29th, 2003. \n\nConfidence: 100%\n\nStep 2: We need to determine the date one year ago from today. We can subtract 1 year or 365 days from today's date. So, one year ago from July 29, 2003, would be July 29, 2002.\n\nConfidence: 100%\n\nStep 3: We need to convert the date format to MM/DD/YYYY. The date format of July 29, 2002, is already in MM/DD/YYYY format, so there's no need to change it.\n\nConfidence: 100%\n\nThe final answer is 07/29/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "07/29/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -1226,9 +1226,9 @@
         {
             "index": 124,
             "question": "Jane booked a flight for tomorrow, Jul 29, 2002. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: Find the date for tomorrow. \n\nJuly has 31 days, and tomorrow is July 29, 2002. \n\nTherefore, the date for tomorrow is 07/29/2002. \nConfidence: 100%\n\nStep 2: Find the number of days in a week. \n\nThere are 7 days in a week. \nConfidence: 100%\n\nStep 3: Add one week to the current date. \n\nTo add one week to the current date, we need to add 7 days. \n\n29 + 7 = 36. Since July only has 31 days, we need to subtract 31 from 36. \n\n36 - 31 = 5. \n\nTherefore, one week from today is August 5, 2002. \n\nConfidence: 100%\n\nThe Final Answer is August 5, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: Find the date for tomorrow. \n\nJuly has 31 days, and tomorrow is July 29, 2002. \n\nTherefore, the date for tomorrow is 07/29/2002. \nConfidence: 100%\n\nStep 2: Find the number of days in a week. \n\nThere are 7 days in a week. \nConfidence: 100%\n\nStep 3: Add one week to the current date. \n\nTo add one week to the current date, we need to add 7 days. \n\n29 + 7 = 36. Since July only has 31 days, we need to subtract 31 from 36. \n\n36 - 31 = 5. \n\nTherefore, one week from today is August 5, 2002. \n\nConfidence: 100%\n\nThe Final Answer is 08/05/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "08/05/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -1237,9 +1237,9 @@
         {
             "index": 125,
             "question": "Jane booked a flight for tomorrow, Jul 29, 2002. What is the date 24 hours later in MM/DD/YYYY?",
-            "answer": "Step 1: Jane booked a flight on Jul 29, 2002\n\nFirst, we need to identify the date that Jane booked a flight, which is Jul 29, 2002. \n\nConfidence: 100%\n\nStep 2: We need to add 24 hours to the booked date\n\nTo find the date 24 hours later, we need to add 1 day to the booked date of Jul 29, 2002.\n\nConfidence: 100%\n\nStep 3: Add one day to the booked date\n\nWe can add one day to Jul 29, 2002, by adding 1 to the day which gives us Jul 30, 2002\n\nConfidence: 100%\n\nThe final answer is Jul 30, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: Jane booked a flight on Jul 29, 2002\n\nFirst, we need to identify the date that Jane booked a flight, which is Jul 29, 2002. \n\nConfidence: 100%\n\nStep 2: We need to add 24 hours to the booked date\n\nTo find the date 24 hours later, we need to add 1 day to the booked date of Jul 29, 2002.\n\nConfidence: 100%\n\nStep 3: Add one day to the booked date\n\nWe can add one day to Jul 29, 2002, by adding 1 to the day which gives us Jul 30, 2002\n\nConfidence: 100%\n\nThe final answer is 07/30/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "07/30/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -1248,9 +1248,9 @@
         {
             "index": 126,
             "question": "Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date today in MM/DD/YYYY?",
-            "answer": "Step 1: We know that Jane visits the bookstore on the 16th of each month starting from the October of 2009. The problem states that today is her 5th visit to the bookstore. We need to use this information to determine the current date. Confidence: 100%\n\nStep 2: If she started on October 16th, 2009 and is now making her 5th visit, we need to count 5 months from October. So, we count November, December, January, February, March. Confidence: 100%\n\nStep 3: Therefore, the current date is March 16, 2010 (MM/DD/YYYY). Confidence: 100%\n\nThe final answer is March 16, 2010 with a confidence level of 100%.",
+            "answer": "Step 1: We know that Jane visits the bookstore on the 16th of each month starting from the October of 2009. The problem states that today is her 5th visit to the bookstore. We need to use this information to determine the current date. Confidence: 100%\n\nStep 2: If she started on October 16th, 2009 and is now making her 5th visit, we need to count 5 months from October. So, we count November, December, January, February, March. Confidence: 100%\n\nStep 3: Therefore, the current date is March 16, 2010 (MM/DD/YYYY). Confidence: 100%\n\nThe final answer is 03/16/2010 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "03/16/2010",
                 "confidence": "100",
                 "valid": true
             },
@@ -1270,9 +1270,9 @@
         {
             "index": 128,
             "question": "Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: Since it is Jane's 5th visit to the bookstore today and she started visiting on October 2009, we need to determine which month she is currently visiting in. This can be achieved by subtracting the initial month from the total number of months elapsed, and taking the remainder when divided by 12.\n`Months elapsed = 9 + 12*(2010-2009) + 12*(5-1) = 57`\n`Current month = (9 + 57) % 12 = 6`, which means Jane is currently visiting in June.\nConfidence: 100%\n\nStep 2: We know Jane is visiting in June, so we need to find out the year and day of the month for yesterday's date. We know she visits on the 16th of every month, so yesterday's date was either June 15 or June 16 of a particular year. Since we don't have the year, we can assume the current year (i.e. 2014) and determine yesterday's date based on that.\nConfidence: 90%\n\nStep 3: Since yesterday's date was before June 16th, we need to subtract 1 from the day of the month to get June 15th. Therefore, yesterday's date was June 15, 2014.\nConfidence: 100%\n\nThe final answer is June 15, 2014, with a confidence level of 95%.",
+            "answer": "Step 1: Since it is Jane's 5th visit to the bookstore today and she started visiting on October 2009, we need to determine which month she is currently visiting in. This can be achieved by subtracting the initial month from the total number of months elapsed, and taking the remainder when divided by 12.\n`Months elapsed = 9 + 12*(2010-2009) + 12*(5-1) = 57`\n`Current month = (9 + 57) % 12 = 6`, which means Jane is currently visiting in June.\nConfidence: 100%\n\nStep 2: We know Jane is visiting in June, so we need to find out the year and day of the month for yesterday's date. We know she visits on the 16th of every month, so yesterday's date was either June 15 or June 16 of a particular year. Since we don't have the year, we can assume the current year (i.e. 2014) and determine yesterday's date based on that.\nConfidence: 90%\n\nStep 3: Since yesterday's date was before June 16th, we need to subtract 1 from the day of the month to get June 15th. Therefore, yesterday's date was June 15, 2014.\nConfidence: 100%\n\nThe final answer is 06/15/2014, with a confidence level of 95%.",
             "response": {
-                "final answer": null,
+                "final answer": "06/15/2014",
                 "confidence": "95",
                 "valid": true
             },
@@ -1292,9 +1292,9 @@
         {
             "index": 130,
             "question": "Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date a month ago in MM/DD/YYYY?",
-            "answer": "Step 1: Jane's 5th visit to the bookstore means she has visited the store 4 times before the current visit. Her first visit was on October 16, 2009, so her 5th visit would be on February 16, 2010. \nConfidence: 100%\n\nStep 2: We are looking for the date a month before February 16, 2010. To find it, we need to subtract a month from the current date, which brings us to January 16, 2010.\nConfidence: 100%\n\nStep 3: Now we need to subtract one more month to get to the date a month before February 16, 2010. Therefore, the date a month ago would be December 16, 2009.\nConfidence: 100%\n\nThe final answer is December 16, 2009, with a confidence level of 100%.",
+            "answer": "Step 1: Jane's 5th visit to the bookstore means she has visited the store 4 times before the current visit. Her first visit was on October 16, 2009, so her 5th visit would be on February 16, 2010. \nConfidence: 100%\n\nStep 2: We are looking for the date a month before February 16, 2010. To find it, we need to subtract a month from the current date, which brings us to January 16, 2010.\nConfidence: 100%\n\nStep 3: Now we need to subtract one more month to get to the date a month before February 16, 2010. Therefore, the date a month ago would be December 16, 2009.\nConfidence: 100%\n\nThe final answer is 12/16/2009, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/16/2009",
                 "confidence": "100",
                 "valid": true
             },
@@ -1314,9 +1314,9 @@
         {
             "index": 132,
             "question": "Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date one week ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: Today's date is the 16th of February 2010, which is the 5th visit to the bookstore for Jane. Confidence: 100%\n\nStep 2: To find out the date one week ago, we need to subtract 7 days from today's date. Confidence: 100%\n\nStep 3: One week ago from February 16, 2010, is February 9, 2010. Confidence: 100%\n\nThe final answer is February 9, 2010, with a confidence level of 100%.",
+            "answer": "Step 1: Today's date is the 16th of February 2010, which is the 5th visit to the bookstore for Jane. Confidence: 100%\n\nStep 2: To find out the date one week ago, we need to subtract 7 days from today's date. Confidence: 100%\n\nStep 3: One week ago from February 16, 2010, is February 9, 2010. Confidence: 100%\n\nThe final answer is 02/09/2010, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/09/2010",
                 "confidence": "100",
                 "valid": true
             },
@@ -1358,9 +1358,9 @@
         {
             "index": 136,
             "question": "Jane thought today is 3/11/2002, but today is in fact Mar 12, which is 1 day later. What is the date tomorrow in MM/DD/YYYY?",
-            "answer": "Step 1: Today is March 12th which is 1 day later than Jane's thought date of March 11th. Confidence: 100%\n\nStep 2: To find tomorrow's date, we need to add 1 day to March 12th. Confidence: 100%\n\nStep 3: March has 31 days and April has 30 days, so the next day after March 31 will be April 1. Hence, tomorrow's date will be March 13th, 2002. Confidence: 100%\n\nThe final answer is March 13, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: Today is March 12th which is 1 day later than Jane's thought date of March 11th. Confidence: 100%\n\nStep 2: To find tomorrow's date, we need to add 1 day to March 12th. Confidence: 100%\n\nStep 3: March has 31 days and April has 30 days, so the next day after March 31 will be April 1. Hence, tomorrow's date will be March 13th, 2002. Confidence: 100%\n\nThe final answer is 03/13/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "03/13/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -1369,9 +1369,9 @@
         {
             "index": 137,
             "question": "Jane thought today is 3/11/2002, but today is in fact Mar 12, which is 1 day later. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: Today is Mar 12, 2002, which is 1 day later than what Jane thought was today.\nConfidence: 100%\n\nStep 2: To find the date yesterday, we need to subtract 2 days from today's date.\nConfidence: 100%\n\nStep 3: March has 31 days, so yesterday's date is Mar 10, 2002.\nConfidence: 100%\n\nThe final answer is Mar 10, 2002 with a confidence level of 100%.",
+            "answer": "Step 1: Today is Mar 12, 2002, which is 1 day later than what Jane thought was today.\nConfidence: 100%\n\nStep 2: To find the date yesterday, we need to subtract 2 days from today's date.\nConfidence: 100%\n\nStep 3: March has 31 days, so yesterday's date is Mar 10, 2002.\nConfidence: 100%\n\nThe final answer is 03/10/2002 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "03/10/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -1446,9 +1446,9 @@
         {
             "index": 146,
             "question": "Today is the first day of 2007. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: We know that the year is 2007. We need to determine the date yesterday.\n        Confidence: 100%\n\nStep 2: Yesterday is one day before today. We need to subtract one from the current day to get yesterday\u2019s date. The last day of December 2006 is 31, so, we can keep subtracting one from 1 till we reach 31. Hence, yesterday is December 31, 2006.\n        Confidence: 100%\n\nStep 3: The answer is December 31, 2006.\n        Confidence: 100%\n\nThe final answer is December 31, 2006, with a confidence level of 100%.",
+            "answer": "Step 1: We know that the year is 2007. We need to determine the date yesterday.\n        Confidence: 100%\n\nStep 2: Yesterday is one day before today. We need to subtract one from the current day to get yesterday\u2019s date. The last day of December 2006 is 31, so, we can keep subtracting one from 1 till we reach 31. Hence, yesterday is December 31, 2006.\n        Confidence: 100%\n\nStep 3: The answer is December 31, 2006.\n        Confidence: 100%\n\nThe final answer is 12/31/2006, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/31/2006",
                 "confidence": "100",
                 "valid": true
             },
@@ -1468,9 +1468,9 @@
         {
             "index": 148,
             "question": "Today is the first day of 2007. What is the date a month ago in MM/DD/YYYY?",
-            "answer": "Step 1: To find the date a month ago from the given date, we need to subtract one month from January 1st, 2007. Confidence: 100%\n\nStep 2: Subtracting one month from January 1st, 2007, we get December 1st, 2006. Confidence: 100%\n\nStep 3: Since we need the date a month before January 1st, 2007, we need to find the date one month after December 1st, 2006. Confidence: 100%\n\nStep 4: Adding one month to December 1st, 2006, we get January 1st, 2007. So the date one month before January 1st, 2007, is December 1st, 2006. Confidence: 100%\n\nThe final answer is December 1st, 2006, with a confidence level of 100%.",
+            "answer": "Step 1: To find the date a month ago from the given date, we need to subtract one month from January 1st, 2007. Confidence: 100%\n\nStep 2: Subtracting one month from January 1st, 2007, we get December 1st, 2006. Confidence: 100%\n\nStep 3: Since we need the date a month before January 1st, 2007, we need to find the date one month after December 1st, 2006. Confidence: 100%\n\nStep 4: Adding one month to December 1st, 2006, we get January 1st, 2007. So the date one month before January 1st, 2007, is December 1st, 2006. Confidence: 100%\n\nThe final answer is 12/01/2006 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/01/2006",
                 "confidence": "100",
                 "valid": true
             },
@@ -1501,9 +1501,9 @@
         {
             "index": 151,
             "question": "Today is the first day of 2007. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: One week is equal to seven days. So, we need to add 7 days to the first day of 2007. Confidence: 100%\n\nStep 2: January has 31 days, so the date one week from today will still be in January. Confidence: 100%\n\nStep 3: The first day of 2007 was Monday. Adding 7 days to Monday will give us another Monday. Confidence: 100%\n\nStep 4: So, the date one week from today will be Monday, January 8, 2007. Confidence: 100%\n\nThe final answer is January 8, 2007, with a confidence level of 100%.",
+            "answer": "Step 1: One week is equal to seven days. So, we need to add 7 days to the first day of 2007. Confidence: 100%\n\nStep 2: January has 31 days, so the date one week from today will still be in January. Confidence: 100%\n\nStep 3: The first day of 2007 was Monday. Adding 7 days to Monday will give us another Monday. Confidence: 100%\n\nStep 4: So, the date one week from today will be Monday, January 8, 2007. Confidence: 100%\n\nThe final answer is 01/08/2007, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/08/2007",
                 "confidence": "100",
                 "valid": true
             },
@@ -1545,9 +1545,9 @@
         {
             "index": 155,
             "question": "Today is Apr 10, 1985. Jane's appointment will be 3 days later. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: If today is Apr 10, 1985 and Jane's appointment will be 3 days later, we need to add 3 days to Apr 10, 1985. Confidence: 100%\n\nStep 2: When we add 3 days to Apr 10, 1985, we get Apr 13, 1985. Confidence: 100%\n\nStep 3: To find yesterday's date, we need to subtract 1 day from Apr 13, 1985. Confidence: 100%\n\nStep 4: When we subtract 1 day from Apr 13, 1985, we get Apr 12, 1985. Confidence: 100%\n\nThe final answer is Apr 12, 1985 with a confidence level of 100%.",
+            "answer": "Step 1: If today is Apr 10, 1985 and Jane's appointment will be 3 days later, we need to add 3 days to Apr 10, 1985. Confidence: 100%\n\nStep 2: When we add 3 days to Apr 10, 1985, we get Apr 13, 1985. Confidence: 100%\n\nStep 3: To find yesterday's date, we need to subtract 1 day from Apr 13, 1985. Confidence: 100%\n\nStep 4: When we subtract 1 day from Apr 13, 1985, we get Apr 12, 1985. Confidence: 100%\n\nThe final answer is 04/12/1985 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "04/12/1985",
                 "confidence": "100",
                 "valid": true
             },
@@ -1589,9 +1589,9 @@
         {
             "index": 159,
             "question": "Today is Apr 10, 1985. Jane's appointment will be 3 days later. What is the date one week ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: If Jane's appointment is 3 days from Apr 10, we need to add 3 days to find the date of her appointment. Therefore, her appointment will be on Apr 13.\nConfidence: 100%\n\nStep 2: Next, we need to find the date one week ago from Apr 10, 1985. To do this, we subtract 7 days from Apr 10, 1985. \nConfidence: 100%\n\nStep 3: Apr 10 - 7 days = Apr 3. Therefore, the date one week ago from today's date is Apr 3, 1985.\nConfidence: 100%\n\nThe final answer is Apr 3, 1985, with a confidence level of 100%.",
+            "answer": "Step 1: If Jane's appointment is 3 days from Apr 10, we need to add 3 days to find the date of her appointment. Therefore, her appointment will be on Apr 13.\nConfidence: 100%\n\nStep 2: Next, we need to find the date one week ago from Apr 10, 1985. To do this, we subtract 7 days from Apr 10, 1985. \nConfidence: 100%\n\nStep 3: Apr 10 - 7 days = Apr 3. Therefore, the date one week ago from today's date is Apr 3, 1985.\nConfidence: 100%\n\nThe final answer is 04/03/1985, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "04/03/1985",
                 "confidence": "100",
                 "valid": true
             },
@@ -1732,9 +1732,9 @@
         {
             "index": 176,
             "question": "Yesterday, Jan 21, 2011, Jane ate 2 pizzas and 5 wings. What is the date one year ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: Determine the date today. \nJan 21, 2022.\n\nConfidence: 100%\n\nStep 2: Subtract one year from today's date. \nJan 21, 2021.\n\nConfidence: 100%\n\nStep 3: Find the number of days in one year. \nSince the problem asks for the date one year ago, we need to take into consideration leap years. There are 365 days in most years and 366 days in a leap year. \n\nConfidence: 90%\n\nStep 4: Determine if year 2021 was a leap year. \nLeap years are evenly divisible by 4, except for end-of-century years which must be divisible by 400. The year 2021 is not evenly divisible by 4, so it is not a leap year. \n\nConfidence: 90%\n\nStep 5: Subtract the number of days in one year from the date one year ago today. \nSince 2021 was not a leap year, we can subtract 365 days from January 21, 2022 to get January 21, 2021.\n\nConfidence: 90%\n\nThe final answer is January 21, 2021, with a confidence level of 90%.",
+            "answer": "Step 1: Determine the date today. \nJan 21, 2022.\n\nConfidence: 100%\n\nStep 2: Subtract one year from today's date. \nJan 21, 2021.\n\nConfidence: 100%\n\nStep 3: Find the number of days in one year. \nSince the problem asks for the date one year ago, we need to take into consideration leap years. There are 365 days in most years and 366 days in a leap year. \n\nConfidence: 90%\n\nStep 4: Determine if year 2021 was a leap year. \nLeap years are evenly divisible by 4, except for end-of-century years which must be divisible by 400. The year 2021 is not evenly divisible by 4, so it is not a leap year. \n\nConfidence: 90%\n\nStep 5: Subtract the number of days in one year from the date one year ago today. \nSince 2021 was not a leap year, we can subtract 365 days from January 21, 2022 to get January 21, 2021.\n\nConfidence: 90%\n\nThe final answer is 01/21/2021, with a confidence level of 90%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/21/2021",
                 "confidence": "90",
                 "valid": true
             },
@@ -1911,7 +1911,7 @@
             "answer": "Step 1: We know that Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. It means today is actually 6/19/2019. Confidence: 100%\n\nStep 2: We need to subtract 10 days from 6/19/2019. Confidence: 90%\n\nStep 3: 10 days ago means we have to subtract 10 from the day part of the date. So, the date will be 6/9/YYYY. Confidence: 85%\n\nStep 4: As we don't know what year (YYYY) it is, we can't give the final answer. Confidence: 80%\n\nStep 5: To calculate the year part, we need to know the current year and subtract the number of years that have passed since then. However, as the current year is not stated in the problem, we can't determine the year 10 days ago. Confidence: 50%\n\nThe final answer is that we cannot determine the exact date 10 days ago in MM/DD/YYYY. \nConfidence: 50%.",
             "response": {
                 "final answer": null,
-                "confidence": null,
+                "confidence": "50",
                 "valid": true
             },
             "true_answer": "06/09/2019"
@@ -1952,9 +1952,9 @@
         {
             "index": 196,
             "question": "Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: We need to determine today's date. We're given that Jane thinks it's 6/18/2019 and John thinks it's 6/19/2019. Since John is correct, today's date is 6/19/2019. Confidence: 100%\n\nStep 2: We need to determine one week from today. To do this, we can add 7 days to today's date. 6/19/2019 + 7 days = 6/26/2019. Confidence: 100%\n\nStep 3: We need to format our answer in the MM/DD/YYYY format. The date one week from today is 6/26/2019. Final Answer: The date one week from today is 6/26/2019. Confidence: 100%\n\nOverall Confidence Level: 100%",
+            "answer": "Step 1: We need to determine today's date. We're given that Jane thinks it's 6/18/2019 and John thinks it's 6/19/2019. Since John is correct, today's date is 6/19/2019. Confidence: 100%\n\nStep 2: We need to determine one week from today. To do this, we can add 7 days to today's date. 6/19/2019 + 7 days = 6/26/2019. Confidence: 100%\n\nStep 3: We need to format our answer in the MM/DD/YYYY format. The date one week from today is 6/26/2019. Final Answer: The date one week from today is 06/26/2019. Confidence: 100%\n\nOverall Confidence Level: 100%",
             "response": {
-                "final answer": null,
+                "final answer": "06/26/2019",
                 "confidence": "100",
                 "valid": true
             },
@@ -1985,9 +1985,9 @@
         {
             "index": 199,
             "question": "May 6, 1992 is like yesterday to Jane, but that is actually ten years ago. What is the date tomorrow in MM/DD/YYYY?",
-            "answer": "Step 1: We need to add ten years to May 6, 1992, to find the current date. \nWe can do this by adding 10 to the year and keeping the month and day the same.\nMay 6, 1992 + 10 years = May 6, 2002. Confidence: 100%\n\nStep 2: We need to find tomorrow's date from May 6, 2002. \nWe can do this by adding 1 day to May 6, 2002.\nMay 6, 2002 + 1 day = May 7, 2002. Confidence: 100%\n\nThe final answer is May 7, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: We need to add ten years to May 6, 1992, to find the current date. \nWe can do this by adding 10 to the year and keeping the month and day the same.\nMay 6, 1992 + 10 years = May 6, 2002. Confidence: 100%\n\nStep 2: We need to find tomorrow's date from May 6, 2002. \nWe can do this by adding 1 day to May 6, 2002.\nMay 6, 2002 + 1 day = May 7, 2002. Confidence: 100%\n\nThe final answer is 05/07/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "05/07/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -2051,9 +2051,9 @@
         {
             "index": 205,
             "question": "May 6, 1992 is like yesterday to Jane, but that is actually ten years ago. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: We need to calculate the current year. If May 6, 1992, was 10 years ago, then the current year should be 1992 + 10 = 2002. Confidence: 100%\n\nStep 2: We need to calculate the current date by adding 10 years to May 6. May 6, 2002, was ten years after May 6, 1992. Confidence: 100%\n\nStep 3: We need to determine the date a week from May 6, 2002. We can add seven days to May 6, 2002, to get May 13, 2002. Confidence: 100%\n\nThe final answer is May 13, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: We need to calculate the current year. If May 6, 1992, was 10 years ago, then the current year should be 1992 + 10 = 2002. Confidence: 100%\n\nStep 2: We need to calculate the current date by adding 10 years to May 6. May 6, 2002, was ten years after May 6, 1992. Confidence: 100%\n\nStep 3: We need to determine the date a week from May 6, 2002. We can add seven days to May 6, 2002, to get May 13, 2002. Confidence: 100%\n\nThe final answer is 05/13/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "05/13/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -2062,9 +2062,9 @@
         {
             "index": 206,
             "question": "May 6, 1992 is like yesterday to Jane, but that is actually ten years ago. What is the date 24 hours later in MM/DD/YYYY?",
-            "answer": "Step 1: We know that May 6, 1992, is ten years ago for Jane, so we need to add ten years to that date to find the current date. Confidence: 100%\n\nStep 2: Adding ten years to May 6, 1992, will give us May 6, 2002. Confidence: 100%\n\nStep 3: We need to find the date 24 hours later than May 6, 2002. Confidence: 100%\n\nStep 4: Adding 24 hours to May 6, 2002, we get May 7, 2002. Confidence: 100%\n\nThe final answer is May 7, 2002, with a confidence level of 100%.",
+            "answer": "Step 1: We know that May 6, 1992, is ten years ago for Jane, so we need to add ten years to that date to find the current date. Confidence: 100%\n\nStep 2: Adding ten years to May 6, 1992, will give us May 6, 2002. Confidence: 100%\n\nStep 3: We need to find the date 24 hours later than May 6, 2002. Confidence: 100%\n\nStep 4: Adding 24 hours to May 6, 2002, we get May 7, 2002. Confidence: 100%\n\nThe final answer is 05/07/2002, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "05/07/2002",
                 "confidence": "100",
                 "valid": true
             },
@@ -2106,9 +2106,9 @@
         {
             "index": 212,
             "question": "Today is Christmas Eve of 1937. What is the date one year ago from today in MM/DD/YYYY?",
-            "answer": "Step 1: We need to subtract one year from today's date which is December 24, 1937. Confidence: 100%\n\nStep 2: So, the year one year ago from today's date would be 1936. Confidence: 100%\n\nStep 3: We need to subtract one year from December 24, 1937, to get the date one year ago from today. Confidence: 100%\n\nStep 4: December 24, 1936. Confidence: 100%\n\nThe final answer is December 24, 1936, with a confidence level of 100%.",
+            "answer": "Step 1: We need to subtract one year from today's date which is December 24, 1937. Confidence: 100%\n\nStep 2: So, the year one year ago from today's date would be 1936. Confidence: 100%\n\nStep 3: We need to subtract one year from December 24, 1937, to get the date one year ago from today. Confidence: 100%\n\nStep 4: December 24, 1936. Confidence: 100%\n\nThe final answer is 12/24/1936, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/24/1936",
                 "confidence": "100",
                 "valid": true
             },
@@ -2120,7 +2120,7 @@
             "answer": "Step 1: We can start by subtracting 7 days from December 24th, 1937 to get the date one week ago. \n\nDecember has 31 days, so we can first subtract 7 from 24: \n\n24 - 7 = 17 \n\nThis tells us that the date one week ago should be December 17th.\n\nConfidence: 100%\n\nStep 2: We know that the year is 1937, so we just need to write the date in MM/DD/YYYY format. \n\nThe month is December, which is the 12th month. So the answer is:\n\n12/17/1937 \n\nConfidence: 100%\n\nStep 3: The final answer is 12/17/1937.\n\nConfidence: 100%",
             "response": {
                 "final answer": "12/17/1937",
-                "confidence": null,
+                "confidence": "100",
                 "valid": true
             },
             "true_answer": "12/17/1937"
@@ -2161,9 +2161,9 @@
         {
             "index": 218,
             "question": "Today is the palindrome day of 2020, because the MMDDYYYY format of the date is the same backwards as forwards. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: Today is the palindrome day of 2020, which means today\u2019s date in MMDDYYYY is the same when read forwards or backwards. \nConfidence: 100%.\n\nStep 2: We know today is a palindrome day, so let us write today\u2019s date in MM/DD/YYYY format to see the actual date. Palindrome date in 2020 is 02022020 (February 02, 2020). \nConfidence: 100%.\n\nStep 3: We need to find yesterday\u2019s date, so let us subtract one from today\u2019s date to get yesterday\u2019s date. 02022020 - 1 = 02012020 (February 01, 2020).\nConfidence: 100%.\n\nThe final answer is February 01, 2020, with a confidence level of 100%.",
+            "answer": "Step 1: Today is the palindrome day of 2020, which means today\u2019s date in MMDDYYYY is the same when read forwards or backwards. \nConfidence: 100%.\n\nStep 2: We know today is a palindrome day, so let us write today\u2019s date in MM/DD/YYYY format to see the actual date. Palindrome date in 2020 is 02022020 (February 02, 2020). \nConfidence: 100%.\n\nStep 3: We need to find yesterday\u2019s date, so let us subtract one from today\u2019s date to get yesterday\u2019s date. 02022020 - 1 = 02012020 (February 01, 2020).\nConfidence: 100%.\n\nThe final answer is 02/01/2020, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "02/01/2020",
                 "confidence": "100",
                 "valid": true
             },
@@ -2238,9 +2238,9 @@
         {
             "index": 225,
             "question": "This is the last day of 1899. What is the date today in MM/DD/YYYY?",
-            "answer": "Step 1: We know that 1900 is a leap year. Therefore, February has 29 days and all other months have their usual number of days (31 for January, 30 for April, June, September, November and 31 for the remaining months). Confidence: 100%\n\nStep 2: We know that the last day of the year is December 31st, so we count backward from December 31st, 1899. Confidence: 100%\n\nStep 3: We need to count the number of days backward from December 31st. Since December has 31 days, we don\u2019t need to count any days. So, the date is December 31st, 1899. Confidence: 100%\n\nThe final answer is December 31, 1899, with a confidence level of 100%.",
+            "answer": "Step 1: We know that 1900 is a leap year. Therefore, February has 29 days and all other months have their usual number of days (31 for January, 30 for April, June, September, November and 31 for the remaining months). Confidence: 100%\n\nStep 2: We know that the last day of the year is December 31st, so we count backward from December 31st, 1899. Confidence: 100%\n\nStep 3: We need to count the number of days backward from December 31st. Since December has 31 days, we don\u2019t need to count any days. So, the date is December 31st, 1899. Confidence: 100%\n\nThe final answer is 12/31/1899, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "12/31/1899",
                 "confidence": "100",
                 "valid": true
             },
@@ -2293,9 +2293,9 @@
         {
             "index": 232,
             "question": "This is the last day of 1899. What is the date one week from today in MM/DD/YYYY?",
-            "answer": "Step 1: We know that this is the last day of 1899, but don't have any information about the year we are moving to, so we should start from January 1, YYYY. On this day, we have the information that January 7 is seven days later, so the year will be 1900. We can write this as 01/07/1900.\nConfidence: 95%\n\nStep 2: We could verify this by counting the number of days between December 31, 1899, and January 7, 1900, since we know that January has 31 days. So, 31 - 1 = 30, which means that there are 30 days to add to December 31, 1899. Adding one week or seven days to this date will result in January 7, 1900.\nConfidence: 90%\n\nStep 3: We can double-check our answer for January 7, 1900, by subtracting one week or seven days from January 14, 1900, which should give us the same date. 31 - 7 = 24, so January 24 should be the date one week from today in MM/DD/YYYY format.\nConfidence: 85%\n\nStep 4: However, January 24 cannot be the final answer because we added 30 days to December 31, 1899, in Step 2 but forgot to add an extra day for a leap year. Therefore, 1900 is not a leap year, but 1904, 1908, 1912, etc., are leap years, and this would affect the number of days in February.\nConfidence: 70%\n\nStep 5: As we know that the year 1900 is not a leap year, February only has 28 days. So, we should count the number of days from January 1, 1900, to January 7, 1900, which is 6 days, and add 7 days to this number. Therefore, the final answer is January 14, 1900.\nConfidence: 80%\n\nThe final answer is January 14, 1900, with a confidence level of 80%.",
+            "answer": "Step 1: We know that this is the last day of 1899, but don't have any information about the year we are moving to, so we should start from January 1, YYYY. On this day, we have the information that January 7 is seven days later, so the year will be 1900. We can write this as 01/07/1900.\nConfidence: 95%\n\nStep 2: We could verify this by counting the number of days between December 31, 1899, and January 7, 1900, since we know that January has 31 days. So, 31 - 1 = 30, which means that there are 30 days to add to December 31, 1899. Adding one week or seven days to this date will result in January 7, 1900.\nConfidence: 90%\n\nStep 3: We can double-check our answer for January 7, 1900, by subtracting one week or seven days from January 14, 1900, which should give us the same date. 31 - 7 = 24, so January 24 should be the date one week from today in MM/DD/YYYY format.\nConfidence: 85%\n\nStep 4: However, January 24 cannot be the final answer because we added 30 days to December 31, 1899, in Step 2 but forgot to add an extra day for a leap year. Therefore, 1900 is not a leap year, but 1904, 1908, 1912, etc., are leap years, and this would affect the number of days in February.\nConfidence: 70%\n\nStep 5: As we know that the year 1900 is not a leap year, February only has 28 days. So, we should count the number of days from January 1, 1900, to January 7, 1900, which is 6 days, and add 7 days to this number. Therefore, the final answer is January 14, 1900.\nConfidence: 80%\n\nThe final answer is 01/14/1900, with a confidence level of 80%.",
             "response": {
-                "final answer": null,
+                "final answer": "01/14/1900",
                 "confidence": "80",
                 "valid": true
             },
@@ -2337,9 +2337,9 @@
         {
             "index": 237,
             "question": "The concert was scheduled to be on 06/01/1943, but was delayed by one day to today. What is the date 10 days ago in MM/DD/YYYY?",
-            "answer": "Step 1: The concert was scheduled for 06/01/1943 but was delayed by one day to today. \n\nSince the concert was scheduled for June 1st, and it was delayed by one day to today\u2019s date, today's date would be June 2nd, 1943. \n\nConfidence: 100%\n\nStep 2: What is the date 10 days ago in MM/DD/YYYY? \n\nTo find the date 10 days ago, we will subtract 10 days from June 2nd, 1943. \n\nJune has 30 days: 30 - 10 = 20. Therefore, the date 10 days ago would be May 23rd, 1943 in MM/DD/YYYY date format. \n\nConfidence: 100%\n\nThe final answer is May 23, 1943, with a confidence level of 100%.",
+            "answer": "Step 1: The concert was scheduled for 06/01/1943 but was delayed by one day to today. \n\nSince the concert was scheduled for June 1st, and it was delayed by one day to today\u2019s date, today's date would be June 2nd, 1943. \n\nConfidence: 100%\n\nStep 2: What is the date 10 days ago in MM/DD/YYYY? \n\nTo find the date 10 days ago, we will subtract 10 days from June 2nd, 1943. \n\nJune has 30 days: 30 - 10 = 20. Therefore, the date 10 days ago would be May 23rd, 1943 in MM/DD/YYYY date format. \n\nConfidence: 100%\n\nThe final answer is 05/23/1943, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "05/23/1943",
                 "confidence": "100",
                 "valid": true
             },
@@ -2351,7 +2351,7 @@
             "answer": "Step 1: The concert was scheduled to be on 06/01/1943. Confidence: 100%\n \nStep 2: The concert was delayed by one day to today. Confidence: 100%\n\nStep 3: We need to find the date a month ago. Confidence: 100%\n\nTo find the date a month ago, we can subtract one month from today's date. \n\nStep 4: Today's date is 06/02/1943. Confidence: 100%\n\nStep 5: Subtracting one month from today's date, we get 05/02/1943. Confidence: 100%\n\nStep 6: The final answer is 05/02/1943. Confidence: 100%\n\nThe overall confidence level is 100%.",
             "response": {
                 "final answer": "05/02/1943",
-                "confidence": null,
+                "confidence": "100",
                 "valid": true
             },
             "true_answer": "05/02/1943"
@@ -2425,9 +2425,9 @@
         {
             "index": 245,
             "question": "Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: Jane scheduled 3 appointments with 5 people for tomorrow (Tue, 7/9/1972).\nTo find the date for today, we need to add one day to Jul 9, 1972. \n\nConfidence: 100%\n\nStep 2: Adding one day to Jul 9, 1972, we get Jul 10, 1972. \n\nConfidence: 100%\n\nStep 3: To find yesterday's date, we need to subtract one day from Jul 10, 1972. \n\nConfidence: 100%\n\nStep 4: If we subtract one day from Jul 10, 1972, we get Jul 9, 1972, which is the date for yesterday.\n\nConfidence: 100%\n\nThe final answer is Jul 9, 1972 with a confidence level of 100%.",
+            "answer": "Step 1: Jane scheduled 3 appointments with 5 people for tomorrow (Tue, 7/9/1972).\nTo find the date for today, we need to add one day to Jul 9, 1972. \n\nConfidence: 100%\n\nStep 2: Adding one day to Jul 9, 1972, we get Jul 10, 1972. \n\nConfidence: 100%\n\nStep 3: To find yesterday's date, we need to subtract one day from Jul 10, 1972. \n\nConfidence: 100%\n\nStep 4: If we subtract one day from Jul 10, 1972, we get Jul 9, 1972, which is the date for yesterday.\n\nConfidence: 100%\n\nThe final answer is 07/09/1972 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "07/09/1972",
                 "confidence": "100",
                 "valid": true
             },
@@ -2438,7 +2438,7 @@
             "question": "Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date 10 days ago in MM/DD/YYYY?",
             "answer": "Step 1: If tomorrow is July 9th, 1972, we need to find out the date 10 days before that. \n\nTo do that, we subtract 10 from 9, which gives us -1. \n\nConfidence: 100%\n\nStep 2: Since the day is now negative, we need to subtract one month from July. \n\nTherefore, the month is June, and the day is 30.\n\nConfidence: 100%\n\nStep 3: We also need to subtract the year by 1 since we went back 10 days from July 9th, 1972.\n\nTherefore, the year is 1971.\n\nConfidence: 100%\n\nFinal answer: The date 10 days ago from tomorrow, Tue, 7/9/1972, is 06/30/1971.\n\nOverall confidence level: 100%, as every step was straightforward and revolved around basic math, yielding a clear and single answer.",
             "response": {
-                "final answer": null,
+                "final answer": "06/30/1971",
                 "confidence": "100",
                 "valid": true
             },
@@ -2482,7 +2482,7 @@
             "question": "Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date 24 hours later in MM/DD/YYYY?",
             "answer": "Step 1: We need to know the current date, which is Tue, 7/9/1972, Confidence: 100%\nStep 2: We need to add 24 hours to the current date, Confidence: 90%\n(There is daylight saving time and leap years to consider, which can make the calculation more complex. However, for a one-day addition, the current date plus 24 hours should suffice.)\nStep 3: Add 24 hours to Tue, 7/9/1972, Confidence: 90%\nThe final answer is Wed, 7/10/1972, with a confidence level of 90%.",
             "response": {
-                "final answer": null,
+                "final answer": "7/10/1972",
                 "confidence": "90",
                 "valid": true
             },
@@ -2502,9 +2502,9 @@
         {
             "index": 254,
             "question": "The current local time is 3:02 pm of 5/4/2004. What is the date yesterday in MM/DD/YYYY?",
-            "answer": "Step 1: To find yesterday's date, we need to subtract one day from today's date. Confidence: 100%\n\nStep 2: We know that one day contains 24 hours, so to subtract one day, we need to subtract 24 hours from the current time. Confidence: 100%\n\nStep 3: So, yesterday's time was 3:02 pm - 24 hours = 3:02 pm of 5/3/2004. Confidence: 100%\n\nStep 4: Therefore, yesterday's date was May 3, 2004, in the MM/DD/YYYY format. Confidence: 100%\n\nThe final answer is May 3, 2004, with a confidence level of 100%.",
+            "answer": "Step 1: To find yesterday's date, we need to subtract one day from today's date. Confidence: 100%\n\nStep 2: We know that one day contains 24 hours, so to subtract one day, we need to subtract 24 hours from the current time. Confidence: 100%\n\nStep 3: So, yesterday's time was 3:02 pm - 24 hours = 3:02 pm of 5/3/2004. Confidence: 100%\n\nStep 4: Therefore, yesterday's date was May 3, 2004, in the MM/DD/YYYY format. Confidence: 100%\n\nThe final answer is 05/03/2004, with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "05/03/2004",
                 "confidence": "100",
                 "valid": true
             },
@@ -2711,9 +2711,9 @@
         {
             "index": 274,
             "question": "Today is 9/7. Jane is watching NFL 2003. What is the date a month ago in MM/DD/YYYY?",
-            "answer": "Step 1: Today's date is 9/7. Confidence: 100%\nStep 2: To find the date a month ago, we need to subtract 1 month from today's date. Confidence: 100%\nStep 3: Subtracting 1 month from September will give us August. Confidence: 100%\nStep 4: To know the date a month ago, we need to figure out what was the date 1 month ago. Confidence: 100%\nStep 5: 1 month ago, the date was August 7th, 2003. Confidence: 100%\n\nThe final answer is August 7, 2003 with a confidence level of 100%.",
+            "answer": "Step 1: Today's date is 9/7. Confidence: 100%\nStep 2: To find the date a month ago, we need to subtract 1 month from today's date. Confidence: 100%\nStep 3: Subtracting 1 month from September will give us August. Confidence: 100%\nStep 4: To know the date a month ago, we need to figure out what was the date 1 month ago. Confidence: 100%\nStep 5: 1 month ago, the date was August 7th, 2003. Confidence: 100%\n\nThe final answer is 08/07/2003 with a confidence level of 100%.",
             "response": {
-                "final answer": null,
+                "final answer": "08/07/2003",
                 "confidence": "100",
                 "valid": true
             },

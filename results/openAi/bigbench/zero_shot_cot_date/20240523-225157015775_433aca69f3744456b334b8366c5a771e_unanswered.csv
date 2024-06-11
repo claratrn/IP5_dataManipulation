@@ -1,0 +1,100 @@
+index,question,answer,provided answer,expected true answer,response details
+239,"The concert was scheduled to be on 06/01/1943, but was delayed by one day to today. What is the date one year ago from today in MM/DD/YYYY?","Explanation: 
+
+The original concert date was 06/01/1943, but it was delayed by one day, so the actual concert date is 06/02/1943. 
+
+To find the date one year ago from today, we need to subtract one year from today's date and get the corresponding date. 
+
+Since today's date is not given in the question, we cannot come up with the answer. 
+
+Final Answer is: N/A, With a Confidence of N/A%.","Explanation: 
+
+The original concert date was 06/01/1943, but it was delayed by one day, so the actual concert date is 06/02/1943. 
+
+To find the date one year ago from today, we need to subtract one year from today's date and get the corresponding date. 
+
+Since today's date is not given in the question, we cannot come up with the answer. 
+
+Final Answer is: N/A, With a Confidence of N/A%.",06/02/1942,"{""final answer"": null, ""confidence"": null}"
+256,The current local time is 3:02 pm of 5/4/2004. What is the date a month ago in MM/DD/YYYY?,"Explanation: 
+To find the date a month ago, we need to subtract one month from the current date. We must first account for the fact that the number of days in each month varies. 
+
+1. Recall that the current date is 5/4/2004 at 3:02 pm. 
+
+2. We subtract one month from the current month of May to obtain April. Therefore, the month a month ago was April. 
+
+3. Now, we need to consider how many days to subtract from April 4, 2004, to get to the date a month ago. We subtract the number of days in May (31) from April 4 to give us April 4 minus 31 days, which is March 4. 
+
+Final Answer: 03/04/2004, With a Confidence of 100%.","Explanation: 
+To find the date a month ago, we need to subtract one month from the current date. We must first account for the fact that the number of days in each month varies. 
+
+1. Recall that the current date is 5/4/2004 at 3:02 pm. 
+
+2. We subtract one month from the current month of May to obtain April. Therefore, the month a month ago was April. 
+
+3. Now, we need to consider how many days to subtract from April 4, 2004, to get to the date a month ago. We subtract the number of days in May (31) from April 4 to give us April 4 minus 31 days, which is March 4. 
+
+Final Answer: 03/04/2004, With a Confidence of 100%.",04/04/2004,"{""final answer"": null, ""confidence"": ""100""}"
+274,Today is 9/7. Jane is watching NFL 2003. What is the date a month ago in MM/DD/YYYY?,"Explanation:
+We need to subtract one month from today's date, 9/7. 
+To do that, we have to go back to August. 
+So, the month before 9/7 is 8/7.
+But we have to count back a full month, so we have to subtract one from the month, giving us 7/7.
+
+Final Answer: 7/7/2003, With a Confidence of 100%","Explanation:
+We need to subtract one month from today's date, 9/7. 
+To do that, we have to go back to August. 
+So, the month before 9/7 is 8/7.
+But we have to count back a full month, so we have to subtract one from the month, giving us 7/7.
+
+Final Answer: 7/7/2003, With a Confidence of 100%",08/07/2003,"{""final answer"": null, ""confidence"": ""100""}"
+337,"Jane and John married on Jan 2, 1958. It is their 5-year anniversary today. What is the date a month ago in MM/DD/YYYY?","Explanation: 
+
+Their 5-year anniversary is on Jan 2, 1963. To determine the date a month ago, we need to subtract one month from Jan 2, 1963. However, since Feb only has 28 or 29 days, we need to consider the number of days in the month.
+
+Since it is not specified whether we should consider a leap year, we will assume it is not a leap year.
+
+Jan has 31 days, so Feb will have 28 days. Subtracting 28 days from Jan 2, 1963, we get:
+
+Jan 2, 1963 - 28 days = <b>Dec 5, 1962</b>
+
+Final Answer is: <b>12/5/1962</b>, With a Confidence of <b>100%</b>","Explanation: 
+
+Their 5-year anniversary is on Jan 2, 1963. To determine the date a month ago, we need to subtract one month from Jan 2, 1963. However, since Feb only has 28 or 29 days, we need to consider the number of days in the month.
+
+Since it is not specified whether we should consider a leap year, we will assume it is not a leap year.
+
+Jan has 31 days, so Feb will have 28 days. Subtracting 28 days from Jan 2, 1963, we get:
+
+Jan 2, 1963 - 28 days = <b>Dec 5, 1962</b>
+
+Final Answer is: <b>12/5/1962</b>, With a Confidence of <b>100%</b>",12/02/1960,"{""final answer"": ""12"", ""confidence"": null}"
+349,"On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date one week from today in MM/DD/YYYY?","Explanation: 
+
+Since Jane ate an egg per day after May 9th, 2017, she ate 7 eggs in a week. 
+
+So, she has 40 minus 7 eggs left.
+
+Therefore, she has 33 eggs now.
+
+The date one week from today is 7 days from now.
+
+Therefore, we need to add 7 days to today’s date.
+
+Hence, the final answer is:
+
+05/16/2017, With a Confidence of 100%.","Explanation: 
+
+Since Jane ate an egg per day after May 9th, 2017, she ate 7 eggs in a week. 
+
+So, she has 40 minus 7 eggs left.
+
+Therefore, she has 33 eggs now.
+
+The date one week from today is 7 days from now.
+
+Therefore, we need to add 7 days to today’s date.
+
+Hence, the final answer is:
+
+05/16/2017, With a Confidence of 100%.",06/25/2017,"{""final answer"": null, ""confidence"": ""100""}"
