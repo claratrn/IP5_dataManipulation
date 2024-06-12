@@ -10,8 +10,8 @@ np.float = np.float64
 from tools.compute_metrics import compute_conf_metrics, manual_ece
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/llama2/temp"
-output_dir = "result_metrics/llama2/temp"
+directory_path = "cleaned_data/openAi/commonsense_qa"
+output_dir = "result_metrics/openAi/commonsense_qa"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -214,9 +214,9 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
 
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
     y_true = np.array([1 if x else 0 for x in y_true])
-    # plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    # plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    # plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     print("All visualisations saved to: ", visual_dir)
 
@@ -280,7 +280,7 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'all_metrics_llama2_mmlu.csv')
+output_path = os.path.join(output_dir, 'all_metrics_GPT_commonsense.csv')
 all_metrics.to_csv(output_path, index=False)
 
 

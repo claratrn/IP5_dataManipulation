@@ -63,25 +63,45 @@ def compute_conf_metrics(y_true, y_confs, elicitation_method):
 
     # Convert  to numpy arrays
     y_confs, y_true = np.array(y_confs), np.array(y_true)
+    try:
+        # Compute AUROC
+        roc_auc = roc_auc_score(y_true, y_confs)
+        print(f"ROC AUC score: {roc_auc}")
+        result_metrics['auroc'] = roc_auc
+    except ValueError as e:
+        print(f"Error computing ROC AUC score: {e}")
 
-    # Compute AUROC
-    roc_auc = roc_auc_score(y_true, y_confs)
-    print("ROC AUC score:", roc_auc)
-    result_metrics['auroc'] = roc_auc
+    try:
+        # Compute AUPRC
+        auprc = average_precision_score(y_true, y_confs)
+        print(f"AUC PRC score: {auprc}")
+        result_metrics['auprc'] = auprc
+    except ValueError as e:
+        print(f"Error computing AUC PRC score: {e}")
 
-    # Compute AUPRC
-    auprc = average_precision_score(y_true, y_confs)
-    print("AUC PRC score:", auprc)
-    result_metrics['auprc'] = auprc
+    try:
+        # AUPRC-Positive
+        auprc_p = average_precision_score(y_true, y_confs)
+        print(f"AUC PRC Positive score: {auprc_p}")
+        result_metrics['auprc_p'] = auprc_p
+    except ValueError as e:
+        print(f"Error computing AUC PRC Positive score: {e}")
 
-    # AUPRC-Positive
-    auprc_p = average_precision_score(y_true, y_confs)
-    print("AUC PRC Positive score:", auprc_p)
-    result_metrics['auprc_p'] = auprc_p
+    try:
+        # AUPRC-Negative
+        auprc_n = average_precision_score(1 - y_true, 1 - y_confs)
+        print(f"AUC PRC Negative score: {auprc_n}")
+        result_metrics['auprc_n'] = auprc_n
+    except ValueError as e:
+        print(f"Error computing AUC PRC Negative score: {e}")
 
-    auprc_n = average_precision_score(1- y_true, 1 - y_confs)
-    print("AUC PRC Negative score:", auprc_n)
-    result_metrics['auprc_n'] = auprc_n
+    try:
+        # Compute ECE
+        ece_score = manual_ece(y_true, y_confs, 20)
+        print(f"ECE score: {ece_score}")
+        result_metrics['ece'] = ece_score
+    except ValueError as e:
+        print(f"Error computing ECE score: {e}")
 
     # Compute ECE
     # n_bins = 20
@@ -89,11 +109,6 @@ def compute_conf_metrics(y_true, y_confs, elicitation_method):
     # ece_score = ece.measure(y_confs, y_true)
     # print("ECE score:", ece_score)
     # result_metrics['ece'] = ece_score
-
-    #Verify ECE:
-    ece_score = manual_ece(y_true, y_confs, 20)
-    print("ECE test score:", ece_score)
-    result_metrics['ece'] = ece_score
 
     result_metrics.update({'acc': accuracy, 'auroc': roc_auc, 'auprc': auprc, 'auprd-p': auprc_p, 'auprc-n': auprc_n, 'ece': ece_score})
 

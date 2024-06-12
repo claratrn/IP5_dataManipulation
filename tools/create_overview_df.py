@@ -15,12 +15,13 @@ def prepare_data(file_path):
         response = item.get("response", {})
         final_answer = response.get("final answer")
         confidence_str = response.get("confidence")
+        valid = response.get("valid", True)  # Default to True if 'valid' key is missing
 
         # Convert provided and true answers to strings and strip any extra whitespace
         provided_answer = str(item.get("answer", "")).strip()
         true_answer = str(item.get("true_answer", "")).strip()
 
-        if final_answer is None or confidence_str is None:
+        if not valid or final_answer is None or confidence_str is None:
             # Record details of unanswered questions
             unanswered_records.append({
                 "index": item["index"],
@@ -63,7 +64,9 @@ def prepare_data(file_path):
 
 
 # Example usage
-json_file_path = ("../results/openAi/gsm8k/multi_step/20240526-015646919768_73b00d18e31a47f58ef8d79f44931063.json")
+json_file_path = ("../results/openAi/commonsense_qa/vanilla/vanilla_common_fixed.json")
 prepare_data(json_file_path)
+
+
 
 #%%
