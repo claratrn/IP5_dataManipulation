@@ -10,8 +10,8 @@ np.float = np.float64
 from tools.compute_metrics import compute_conf_metrics, manual_ece
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/openAi/mmlu"
-output_dir = "result_metrics/openAi/mmlu"
+directory_path = "cleaned_data/llama2/temp"
+output_dir = "result_metrics/llama2/temp"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -181,8 +181,8 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
 
     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
     ece_score = manual_ece(y_true, y_confs, n_bins) * 100
-    plt.text(0.05, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-    plt.text(0.05, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+    plt.text(0.5, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+    plt.text(0.5, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
 
     legend_elements = [
         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
@@ -214,10 +214,10 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
 
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
     y_true = np.array([1 if x else 0 for x in y_true])
-    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     # plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
     # plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    # plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     print("All visualisations saved to: ", visual_dir)
 
 
@@ -280,7 +280,10 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'all_metrics_llama2_commonsense.csv')
+output_path = os.path.join(output_dir, 'all_metrics_llama2_mmlu.csv')
 all_metrics.to_csv(output_path, index=False)
+
+
+
 
 #%%

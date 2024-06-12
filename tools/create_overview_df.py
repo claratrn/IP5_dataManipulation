@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import os
 
+
 def prepare_data(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
@@ -60,8 +61,9 @@ def prepare_data(file_path):
     print(f"Data saved: {answered_path}, {unanswered_path}")
     return df_answered, df_unanswered
 
+
 # Example usage
-json_file_path = ("../results/openAi/mmlu/few_shot_cot_law/complete.json")
+json_file_path = ("../results/openAi/gsm8k/multi_step/20240526-015646919768_73b00d18e31a47f58ef8d79f44931063.json")
 prepare_data(json_file_path)
 
 #%%

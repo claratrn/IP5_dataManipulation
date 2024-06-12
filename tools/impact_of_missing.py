@@ -57,11 +57,12 @@ def sensitivity_analysis(df_answered, missing_data_ratios):
 
 
 df_answered = pd.read_csv(
-    "../results/openAi/mmlu/few_shot_cot_law/complete_answered.csv")
+    "../results/llama2/bigbench/zero_shot_cot_date/20240610-123534842636_7e23fc9d97d3412aa80d858b7c68fd76_answered.csv")
 df_unanswered = pd.read_csv(
-    "../results/openAi/mmlu/few_shot_cot_law/complete_unanswered.csv")
+    "../results/llama2/bigbench/zero_shot_cot_date/20240610-123534842636_7e23fc9d97d3412aa80d858b7c68fd76_unanswered.csv")
 
-summary_file = "missingVal/OpenAi/mmlu/MMLU_missing_value_few_shot_summary.csv"
+summary_file = "missingVal/Llama2/bigbench/BigBench_missing_value_zero_summary.csv"
 df_summary = quantify_missing_data(df_answered, df_unanswered, summary_file)
 
-# %%
+
+#%%

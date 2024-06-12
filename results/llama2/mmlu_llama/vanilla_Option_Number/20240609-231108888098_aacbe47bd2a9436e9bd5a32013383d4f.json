@@ -3,8 +3,7 @@
         "max_new_tokens": 600,
         "temperature": 0.6,
         "do_sample": true,
-        "top_k": 50,
-        "top_p": 0.95
+        "top_p": 0.9
     },
     "dataset": "mmlu",
     "Confidence_method": "vanilla_Option_Number",

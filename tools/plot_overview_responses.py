@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Directory containing the CSV files
-directory_path = 'missingVal/OpenAi/mmlu'  # Adjust the path if needed
+directory_path = 'missingVal/Llama2/bigbench'  # Adjust the path if needed
 
 # Initialize a list to store data
 data_list = []
@@ -73,7 +73,7 @@ bars2 = ax1.bar(index + bar_width, df_summary['Unanswered Entries'], bar_width, 
 # Adding labels
 ax1.set_xlabel('Method')
 ax1.set_ylabel('Entries')
-ax1.set_title('Comparison of Answered and Unanswered Entries in OpenAI - Professional Law')
+ax1.set_title('Comparison of Answered and Unanswered Entries in Llama2 - Date Understanding')
 ax1.set_xticks(index + bar_width / 2)
 ax1.set_xticklabels(df_summary['Method'], rotation=45, ha='right')
 
@@ -105,7 +105,7 @@ ax1.legend(handles=[bars1, bars2, missing_ratio], loc='center', bbox_to_anchor=(
 
 # Adjust the left and right padding to ensure the ratio labels are not cut off
 plt.tight_layout()
-plt.savefig('invalid_responses_openAi_MMLU.png')
+plt.savefig('invalid_responses_llama2_Bigbench.png')
 plt.show()
 
 # %%
