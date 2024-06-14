@@ -64,7 +64,7 @@ def prepare_data(file_path):
 
 
 # Example usage
-json_file_path = ("../results/openAi/commonsense_qa/vanilla/vanilla_common_fixed.json")
+json_file_path = ("../results/openAi/gsm8k_top_p/zero_shot_cot_gsm8k/zero_gsm8k_p.json")
 prepare_data(json_file_path)
 
 

@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def quantify_missing_data(df_answered, df_unanswered, output_file):
     total_entries = len(df_answered) + len(df_unanswered)
     missing_data_ratio = len(df_unanswered) / total_entries
@@ -57,11 +56,11 @@ def sensitivity_analysis(df_answered, missing_data_ratios):
 
 
 df_answered = pd.read_csv(
-    "../results/openAi/commonsense_qa/vanilla/vanilla_common_fixed_answered.csv")
+    "../results/openAi/gsm8k_top_p/zero_shot_cot_gsm8k/zero_gsm8k_p_answered.csv")
 df_unanswered = pd.read_csv(
-    "../results/openAi/commonsense_qa/vanilla/vanilla_common_fixed_unanswered.csv")
+    "../results/openAi/gsm8k_top_p/zero_shot_cot_gsm8k/zero_gsm8k_p_unanswered.csv")
 
-summary_file = "missingVal/OpenAi/CommonsenseQA/common_missing_value_vanilla_summary.csv"
+summary_file = "missingVal/OpenAi/gsm8k_p/gsm8kTrain_missing_value_zero_summary.csv"
 df_summary = quantify_missing_data(df_answered, df_unanswered, summary_file)
 
 

@@ -1,0 +1,753 @@
+index,question,answer,provided answer,expected true answer,response details
+22,Tomorrow is 11/12/2019. What is the date a month ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that tomorrow is 11/12/2019. To find the date a month ago in MM/DD/YYYY, we need to subtract one month from the current date.
+
+So, the final answer is:
+
+10/12/2019
+
+With a confidence level of 95% (confidence level = 95).","Great, let's solve this problem!
+
+The question states that tomorrow is 11/12/2019. To find the date a month ago in MM/DD/YYYY, we need to subtract one month from the current date.
+
+So, the final answer is:
+
+10/12/2019
+
+With a confidence level of 95% (confidence level = 95).",10/11/2019,"{""final answer"": null, ""confidence"": ""95""}"
+28,"Today, 8/3/1997, is a day that we will never forget. What is the date tomorrow in MM/DD/YYYY?","  The final answer is 8/4/1997, with a confidence level of 100%! 😊","The final answer is 8/4/1997, with a confidence level of 100%! 😊",08/04/1997,"{""final answer"": null, ""confidence"": ""100""}"
+29,"Today, 8/3/1997, is a day that we will never forget. What is the date yesterday in MM/DD/YYYY?","  Great! I'm happy to help you solve this problem.
+
+The final answer is 8/2/1997, with a confidence level of 95% (confidence level: 95%).","Great! I'm happy to help you solve this problem.
+
+The final answer is 8/2/1997, with a confidence level of 95% (confidence level: 95%).",08/02/1997,"{""final answer"": null, ""confidence"": ""95""}"
+30,"Today, 8/3/1997, is a day that we will never forget. What is the date 10 days ago in MM/DD/YYYY?","  The final answer is 7/31/1997, with a confidence level of 95% (100%).","The final answer is 7/31/1997, with a confidence level of 95% (100%).",07/24/1997,"{""final answer"": null, ""confidence"": ""95""}"
+31,"Today, 8/3/1997, is a day that we will never forget. What is the date a month ago in MM/DD/YYYY?","  Great, I'm happy to help you solve this problem!
+
+The final answer is 7/3/1997, with a confidence level of 95% (confidence level is based on my training data and the information provided in the question).","Great, I'm happy to help you solve this problem!
+
+The final answer is 7/3/1997, with a confidence level of 95% (confidence level is based on my training data and the information provided in the question).",07/03/1997,"{""final answer"": null, ""confidence"": ""95""}"
+32,"Today, 8/3/1997, is a day that we will never forget. What is the date one year ago from today in MM/DD/YYYY?","  The final answer is 8/3/1996 with a confidence level of 90% (8/3/1996 is the date one year ago from today, 8/3/1997).","The final answer is 8/3/1996 with a confidence level of 90% (8/3/1996 is the date one year ago from today, 8/3/1997).",08/03/1996,"{""final answer"": null, ""confidence"": ""90""}"
+35,"Today, 8/3/1997, is a day that we will never forget. What is the date 24 hours later in MM/DD/YYYY?","  The final answer is 8/4/1997, with a confidence level of 95% (100-100%).","The final answer is 8/4/1997, with a confidence level of 95% (100-100%).",08/04/1997,"{""final answer"": null, ""confidence"": ""95""}"
+40,"Today is Sep 9, 1909. What is the date a month ago in MM/DD/YYYY?","  Great, let's solve this problem!
+
+The question states that today is Sep 9, 1909. To find the date a month ago, we can simply subtract one month from the current date.
+
+So, the month ago date is: Aug 9, 1909
+
+With a confidence level of 100%!","Great, let's solve this problem!
+
+The question states that today is Sep 9, 1909. To find the date a month ago, we can simply subtract one month from the current date.
+
+So, the month ago date is: Aug 9, 1909
+
+With a confidence level of 100%!",08/09/1909,"{""final answer"": null, ""confidence"": ""100""}"
+46,It is 4/19/1969 today. What is the date tomorrow in MM/DD/YYYY?,"  Great! I'm happy to help you with this question.
+
+The final answer is 5/20/1969, with a confidence level of 95% (confidence level is between 0-100%).
+
+I hope this helps! Let me know if you have any other questions.","Great! I'm happy to help you with this question.
+
+The final answer is 5/20/1969, with a confidence level of 95% (confidence level is between 0-100%).
+
+I hope this helps! Let me know if you have any other questions.",04/20/1969,"{""final answer"": null, ""confidence"": ""95""}"
+49,It is 4/19/1969 today. What is the date a month ago in MM/DD/YYYY?,"  The final answer is 3/19/1969 with a confidence level of 95% (confidence level of 85-95%).
+
+Explanation:
+A month ago from 4/19/1969 would be 3/19/1969.","The final answer is 3/19/1969 with a confidence level of 95% (confidence level of 85-95%).
+
+Explanation:
+A month ago from 4/19/1969 would be 3/19/1969.",03/19/1969,"{""final answer"": null, ""confidence"": ""95""}"
+52,It is 4/19/1969 today. What is the date one week from today in MM/DD/YYYY?,"  The final answer is 4/26/1969, with a confidence level of 95%.","The final answer is 4/26/1969, with a confidence level of 95%.",04/26/1969,"{""final answer"": null, ""confidence"": ""95""}"
+53,It is 4/19/1969 today. What is the date 24 hours later in MM/DD/YYYY?,"  The final answer is 5/19/1969, with a confidence level of 90% (100-10).","The final answer is 5/19/1969, with a confidence level of 90% (100-10).",04/20/1969,"{""final answer"": null, ""confidence"": ""90""}"
+60,Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date one week ago from today in MM/DD/YYYY?,"  Great! Let's solve this problem.
+
+The question states that Jane was born on the last day of February in 2000, and today is her 16th birthday. We can use this information to calculate the date one week ago from today.
+
+One week ago from today would be the day before today, so we need to find the date that is one week ago from February 28th, 2000.
+
+Using the Gregorian calendar, we can determine that February 28th, 2000 is actually February 21st, 2000.
+
+Therefore, the final answer is:
+The date one week ago from today is February 21st, 2000 with a confidence level of 95% (confidence level: 95%).","Great! Let's solve this problem.
+
+The question states that Jane was born on the last day of February in 2000, and today is her 16th birthday. We can use this information to calculate the date one week ago from today.
+
+One week ago from today would be the day before today, so we need to find the date that is one week ago from February 28th, 2000.
+
+Using the Gregorian calendar, we can determine that February 28th, 2000 is actually February 21st, 2000.
+
+Therefore, the final answer is:
+The date one week ago from today is February 21st, 2000 with a confidence level of 95% (confidence level: 95%).",02/22/2016,"{""final answer"": null, ""confidence"": ""95""}"
+61,Jane was born on the last day of Feburary in 2000. Today is her 16-year-old birthday. What is the date one week from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2000, and today is her 16-year-old birthday. To find the date one week from today, we need to add 7 days to the current date.
+
+So, the final answer is:
+
+The date one week from today is [03/10/2022], with a confidence level of 90% (meaning I am very confident that this is the correct answer).","Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2000, and today is her 16-year-old birthday. To find the date one week from today, we need to add 7 days to the current date.
+
+So, the final answer is:
+
+The date one week from today is [03/10/2022], with a confidence level of 90% (meaning I am very confident that this is the correct answer).",03/07/2016,"{""final answer"": null, ""confidence"": ""90""}"
+64,Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date tomorrow in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16th birthday. We can use this information to calculate the date of her next birthday.
+
+The last day of February is 28th, so if today is her 16th birthday, then the date tomorrow would be 28th of March.
+
+Therefore, the final answer is:
+March 28, 2023
+with a confidence level of 95% (confidence level = 95).","Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16th birthday. We can use this information to calculate the date of her next birthday.
+
+The last day of February is 28th, so if today is her 16th birthday, then the date tomorrow would be 28th of March.
+
+Therefore, the final answer is:
+March 28, 2023
+with a confidence level of 95% (confidence level = 95).",03/01/2017,"{""final answer"": null, ""confidence"": ""95""}"
+67,Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date a month ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16-year-old birthday. To find the date a month ago, we can subtract one month from the current date.
+
+The current date is [TODAY'S DATE], so the date a month ago is [LAST MONTH'S DATE].
+
+My answer is: The final answer is [LAST MONTH'S DATE], with a confidence level of 95% (confidence level: 95%).","Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16-year-old birthday. To find the date a month ago, we can subtract one month from the current date.
+
+The current date is [TODAY'S DATE], so the date a month ago is [LAST MONTH'S DATE].
+
+My answer is: The final answer is [LAST MONTH'S DATE], with a confidence level of 95% (confidence level: 95%).",01/28/2017,"{""final answer"": null, ""confidence"": ""95""}"
+69,Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date one week ago from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16th birthday. To find the date one week ago from today, we can subtract 7 days from the current date.
+
+The current date is [TODAY'S DATE], with a confidence level of [100%].
+
+Therefore, the final answer is [LAST WEEK'S DATE], with a confidence level of [100%].","Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16th birthday. To find the date one week ago from today, we can subtract 7 days from the current date.
+
+The current date is [TODAY'S DATE], with a confidence level of [100%].
+
+Therefore, the final answer is [LAST WEEK'S DATE], with a confidence level of [100%].",02/21/2017,"{""final answer"": null, ""confidence"": null}"
+70,Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date one week from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16-year-old birthday. To find the date one week from today, we can simply add 7 days to the current date.
+
+The current date is [TODAY'S DATE], with a confidence level of 95% (very confident).
+
+Therefore, the final answer is [ONE WEEK FROM TODAY], with a confidence level of 95% (very confident).","Great, let's solve this problem!
+
+The question states that Jane was born on the last day of February in 2001, and today is her 16-year-old birthday. To find the date one week from today, we can simply add 7 days to the current date.
+
+The current date is [TODAY'S DATE], with a confidence level of 95% (very confident).
+
+Therefore, the final answer is [ONE WEEK FROM TODAY], with a confidence level of 95% (very confident).",03/07/2017,"{""final answer"": null, ""confidence"": ""95""}"
+79,"Jane and John married on Jan 2, 1958. Today is their golden wedding anniversary. What is the date one week from today in MM/DD/YYYY?","  The question is asking for the date one week from today, given that Jane and John married on January 2, 1958. I will provide my answer and confidence level.
+
+The final answer is: [02/09/2023]
+with a confidence level of 95% (very confident).
+
+Explanation:
+One week from today would be the following Monday. We can use the date of the couple's anniversary, January 2, 1958, as the starting point. To find the date one week later, we can add 7 days to the starting date:
+
+January 2, 1958 + 7 days = January 9, 1958
+
+Therefore, the date one week from today is January 9, 1958.","The question is asking for the date one week from today, given that Jane and John married on January 2, 1958. I will provide my answer and confidence level.
+
+The final answer is: [02/09/2023]
+with a confidence level of 95% (very confident).
+
+Explanation:
+One week from today would be the following Monday. We can use the date of the couple's anniversary, January 2, 1958, as the starting point. To find the date one week later, we can add 7 days to the starting date:
+
+January 2, 1958 + 7 days = January 9, 1958
+
+Therefore, the date one week from today is January 9, 1958.",01/09/2008,"{""final answer"": null, ""confidence"": ""95""}"
+84,"Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date 10 days ago in MM/DD/YYYY?","  Great, let's solve this problem!
+
+The question states that Jane got her job in 2016, and today is her 3-year work anniversary. If she spilled coffee on her laptop on her second day at work, which was December 2, then 10 days ago would be December 1.
+
+Therefore, the final answer is:
+
+December 1, 2016 (with a confidence level of 90% or 9 out of 10)","Great, let's solve this problem!
+
+The question states that Jane got her job in 2016, and today is her 3-year work anniversary. If she spilled coffee on her laptop on her second day at work, which was December 2, then 10 days ago would be December 1.
+
+Therefore, the final answer is:
+
+December 1, 2016 (with a confidence level of 90% or 9 out of 10)",11/21/2019,"{""final answer"": null, ""confidence"": ""90""}"
+90,"Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date today in MM/DD/YYYY?","  The final answer is:
+March 20, 2023
+with a confidence level of 95% (confidence level of 85-100%).
+
+Explanation:
+Jane quit her job on March 20, 2020, which means 176 days have passed since then. To find the current date, we can simply add the number of days that have passed to the date of her quit date. In this case, the current date is March 20, 2023.","The final answer is:
+March 20, 2023
+with a confidence level of 95% (confidence level of 85-100%).
+
+Explanation:
+Jane quit her job on March 20, 2020, which means 176 days have passed since then. To find the current date, we can simply add the number of days that have passed to the date of her quit date. In this case, the current date is March 20, 2023.",09/12/2020,"{""final answer"": null, ""confidence"": ""95""}"
+92,"Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date yesterday in MM/DD/YYYY?","  Sure, I'd be happy to help you solve this problem! Here's my answer:
+
+The final answer is Mar/20/2020, with a confidence level of 95% (confidence level = 95%).
+
+Explanation:
+Jane quit her job on March 20, 2020, which means that 176 days have passed since then. To find the date yesterday, we can subtract 176 days from the current date. Since the current date is not specified, I will assume it is March 20, 2023 (one year after the date Jane quit her job). Therefore, yesterday's date is March 19, 2023.","Sure, I'd be happy to help you solve this problem! Here's my answer:
+
+The final answer is Mar/20/2020, with a confidence level of 95% (confidence level = 95%).
+
+Explanation:
+Jane quit her job on March 20, 2020, which means that 176 days have passed since then. To find the date yesterday, we can subtract 176 days from the current date. Since the current date is not specified, I will assume it is March 20, 2023 (one year after the date Jane quit her job). Therefore, yesterday's date is March 19, 2023.",09/11/2020,"{""final answer"": null, ""confidence"": ""95""}"
+93,"Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date 10 days ago in MM/DD/YYYY?","  The final answer is Mar/11/2020, with a confidence level of 90% (10-100).","The final answer is Mar/11/2020, with a confidence level of 90% (10-100).",09/02/2020,"{""final answer"": null, ""confidence"": ""90""}"
+106,2015 is coming in 36 hours. What is the date one week from today in MM/DD/YYYY?,"  The final answer is March 3/12/2015, with a confidence level of 95% (100%).","The final answer is March 3/12/2015, with a confidence level of 95% (100%).",01/05/2015,"{""final answer"": null, ""confidence"": ""95""}"
+126,Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is her 5th visit, that means she has visited the bookstore 4 times before today.
+
+So, the date today is:
+
+The final answer is 16/MM/YYYY, with a confidence level of 95% (100-5=95).
+
+Explanation: Since we know that Jane visits the bookstore on the 16th of each month, and today is her 5th visit, the only possible date today is the 16th of the current month.","Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is her 5th visit, that means she has visited the bookstore 4 times before today.
+
+So, the date today is:
+
+The final answer is 16/MM/YYYY, with a confidence level of 95% (100-5=95).
+
+Explanation: Since we know that Jane visits the bookstore on the 16th of each month, and today is her 5th visit, the only possible date today is the 16th of the current month.",02/16/2010,"{""final answer"": null, ""confidence"": ""95""}"
+130,Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date a month ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is her 5th visit, that means she has made 5 visits to the bookstore.
+
+To find the date a month ago, we can subtract 1 month from the current date.
+
+So, the final answer is:
+The date a month ago is [10/16/2009], with a confidence level of 80% (based on the information provided).","Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is her 5th visit, that means she has made 5 visits to the bookstore.
+
+To find the date a month ago, we can subtract 1 month from the current date.
+
+So, the final answer is:
+The date a month ago is [10/16/2009], with a confidence level of 80% (based on the information provided).",01/16/2010,"{""final answer"": null, ""confidence"": ""80""}"
+132,Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date one week ago from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is the 22nd, one week ago from today would be the 15th.
+
+Therefore, the final answer is:
+
+The date one week ago from today is 15/MM/YYYY, with a confidence level of 95% (I'm very confident in my answer).","Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. Since today is the 22nd, one week ago from today would be the 15th.
+
+Therefore, the final answer is:
+
+The date one week ago from today is 15/MM/YYYY, with a confidence level of 95% (I'm very confident in my answer).",02/09/2010,"{""final answer"": null, ""confidence"": ""95""}"
+133,Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date one week from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. We can use this information to find the date one week from today.
+
+So, today's date is [MM/DD/YYYY].
+
+With a confidence level of 90% (please note that this is an approximate value, and the actual confidence level may vary depending on the specific details of the problem), the final answer is:
+
+The final answer is [MM/DD/YYYY], with a confidence level of 90% (i.e., 90% sure that the answer is correct).","Great, let's solve this problem!
+
+The question states that Jane visits the bookstore on the 16th of each month starting from October 2009. We can use this information to find the date one week from today.
+
+So, today's date is [MM/DD/YYYY].
+
+With a confidence level of 90% (please note that this is an approximate value, and the actual confidence level may vary depending on the specific details of the problem), the final answer is:
+
+The final answer is [MM/DD/YYYY], with a confidence level of 90% (i.e., 90% sure that the answer is correct).",02/23/2010,"{""final answer"": null, ""confidence"": ""90""}"
+153,"Today is Apr 10, 1985. Jane's appointment will be 3 days later. What is the date today in MM/DD/YYYY?","  Sure, I can help you solve this problem!
+
+The question states that today is Apr 10, 1985, and Jane's appointment will be 3 days later. To find the date of Jane's appointment, we can add 3 days to Apr 10, 1985.
+
+The final answer is:
+Apr 13, 1985
+with a confidence level of 95% (confidence level of 85-95%).","Sure, I can help you solve this problem!
+
+The question states that today is Apr 10, 1985, and Jane's appointment will be 3 days later. To find the date of Jane's appointment, we can add 3 days to Apr 10, 1985.
+
+The final answer is:
+Apr 13, 1985
+with a confidence level of 95% (confidence level of 85-95%).",04/10/1985,"{""final answer"": null, ""confidence"": ""95""}"
+164,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date yesterday in MM/DD/YYYY?","  Great, let's solve this problem!
+
+Question: Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date yesterday in MM/DD/YYYY?
+
+Answer: The final answer is 3/4, with a confidence level of 90% (i.e., 90-100%).
+
+Explanation:
+
+Let's analyze the given information:
+
+* Today is 3/5, which means it's March 5th.
+* Jane has seen a meteor shower twice in the year 1973. This means that the meteor shower occurred on two different dates in 1973.
+
+Now, let's find the date yesterday in MM/DD/YYYY. Since Jane saw the meteor shower twice in 1973, the meteor shower must have occurred on two different dates. Therefore, the date yesterday in MM/DD/YYYY is 3/4.
+
+Confidence level: 90% (i.e., 90-100%) because the information provided is consistent with the answer.","Great, let's solve this problem!
+
+Question: Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date yesterday in MM/DD/YYYY?
+
+Answer: The final answer is 3/4, with a confidence level of 90% (i.e., 90-100%).
+
+Explanation:
+
+Let's analyze the given information:
+
+* Today is 3/5, which means it's March 5th.
+* Jane has seen a meteor shower twice in the year 1973. This means that the meteor shower occurred on two different dates in 1973.
+
+Now, let's find the date yesterday in MM/DD/YYYY. Since Jane saw the meteor shower twice in 1973, the meteor shower must have occurred on two different dates. Therefore, the date yesterday in MM/DD/YYYY is 3/4.
+
+Confidence level: 90% (i.e., 90-100%) because the information provided is consistent with the answer.",03/04/1973,"{""final answer"": null, ""confidence"": ""90""}"
+166,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date a month ago in MM/DD/YYYY?","  The final answer is 2/12/1973, with a confidence level of 80% (very likely).","The final answer is 2/12/1973, with a confidence level of 80% (very likely).",02/05/1973,"{""final answer"": null, ""confidence"": ""80""}"
+167,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date one year ago from today in MM/DD/YYYY?","  Great, let's solve this problem!
+
+The question states that today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. To find the date one year ago from today, we can use the information provided in the question.
+
+Let's break it down:
+
+* Today is 3/5, which means the date is March 5th.
+* It is Jane's second time in the year 1973 to see a meteor shower. This means that the previous year was 1972.
+
+So, one year ago from today would be March 5th, 1972.
+
+The final answer is 3/5/1972, with a confidence level of 95% (based on the information provided in the question).","Great, let's solve this problem!
+
+The question states that today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. To find the date one year ago from today, we can use the information provided in the question.
+
+Let's break it down:
+
+* Today is 3/5, which means the date is March 5th.
+* It is Jane's second time in the year 1973 to see a meteor shower. This means that the previous year was 1972.
+
+So, one year ago from today would be March 5th, 1972.
+
+The final answer is 3/5/1972, with a confidence level of 95% (based on the information provided in the question).",03/05/1972,"{""final answer"": null, ""confidence"": ""95""}"
+168,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date one week ago from today in MM/DD/YYYY?","  Sure, I can help you solve this problem!
+
+The question states that today is 3/5, which means the date is March 5th. Since Jane has seen a meteor shower twice in the year 1973, that means the year is 1973.
+
+One week ago from today would be the previous Thursday, which is March 1st, 1973.
+
+Therefore, the final answer is 3/1/1973, with a confidence level of 95% (confidence level of 95-100%).","Sure, I can help you solve this problem!
+
+The question states that today is 3/5, which means the date is March 5th. Since Jane has seen a meteor shower twice in the year 1973, that means the year is 1973.
+
+One week ago from today would be the previous Thursday, which is March 1st, 1973.
+
+Therefore, the final answer is 3/1/1973, with a confidence level of 95% (confidence level of 95-100%).",02/26/1973,"{""final answer"": null, ""confidence"": ""95""}"
+170,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date 24 hours later in MM/DD/YYYY?","  The final answer is 3/6/1973, with a confidence level of 95% (confidence level of 95-100%).
+
+To solve this problem, we can use the information given in the question:
+
+* Today is 3/5, which means 3 days have passed since the beginning of the year 1973 (which is 1/1/1973).
+* It is Jane's second time in the year 1973 to see a meteor shower, which means she has already seen one meteor shower in the year 1973.
+
+By using these two pieces of information, we can calculate the date 24 hours later in MM/DD/YYYY format:
+
+3/5 + 24 hours = 3/6 + 24 hours = 4/6/1973
+
+Therefore, the final answer is 4/6/1973.","The final answer is 3/6/1973, with a confidence level of 95% (confidence level of 95-100%).
+
+To solve this problem, we can use the information given in the question:
+
+* Today is 3/5, which means 3 days have passed since the beginning of the year 1973 (which is 1/1/1973).
+* It is Jane's second time in the year 1973 to see a meteor shower, which means she has already seen one meteor shower in the year 1973.
+
+By using these two pieces of information, we can calculate the date 24 hours later in MM/DD/YYYY format:
+
+3/5 + 24 hours = 3/6 + 24 hours = 4/6/1973
+
+Therefore, the final answer is 4/6/1973.",03/06/1973,"{""final answer"": null, ""confidence"": ""95""}"
+183,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date 10 days ago in MM/DD/YYYY?","  The final answer is 6/11/2019, with a confidence level of 95% (100-100%).","The final answer is 6/11/2019, with a confidence level of 95% (100-100%).",06/08/2019,"{""final answer"": null, ""confidence"": ""95""}"
+184,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date a month ago in MM/DD/YYYY?","  The final answer is 5/17/2019, with a confidence level of 95% (confidence level of 85-95%).","The final answer is 5/17/2019, with a confidence level of 95% (confidence level of 85-95%).",05/18/2019,"{""final answer"": null, ""confidence"": ""95""}"
+186,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date one week ago from today in MM/DD/YYYY?","  The final answer is 6/11/2019, with a confidence level of 90% (confidence level = 90).","The final answer is 6/11/2019, with a confidence level of 90% (confidence level = 90).",06/11/2019,"{""final answer"": null, ""confidence"": ""90""}"
+188,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date 24 hours later in MM/DD/YYYY?","  The final answer is 6/20/2019, with a confidence level of 95% (100-100).","The final answer is 6/20/2019, with a confidence level of 95% (100-100).",06/19/2019,"{""final answer"": null, ""confidence"": ""95""}"
+190,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date tomorrow in MM/DD/YYYY?","  The final answer is 6/20/2019, with a confidence level of 95% (100-95=5%).","The final answer is 6/20/2019, with a confidence level of 95% (100-95=5%).",06/20/2019,"{""final answer"": null, ""confidence"": ""95""}"
+192,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date 10 days ago in MM/DD/YYYY?","  The final answer is 6/11/2019, with a confidence level of 90% (confidence level: 90).","The final answer is 6/11/2019, with a confidence level of 90% (confidence level: 90).",06/09/2019,"{""final answer"": null, ""confidence"": ""90""}"
+193,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date a month ago in MM/DD/YYYY?","  Great! I'm happy to help you solve this problem. Here's my answer and confidence level:
+
+The final answer is 5/18/2019, with a confidence level of 95% (i.e., 95 out of 100).
+
+Explanation:
+
+If John is correct that today is 6/19/2019, then a month ago was 5/19/2019.","Great! I'm happy to help you solve this problem. Here's my answer and confidence level:
+
+The final answer is 5/18/2019, with a confidence level of 95% (i.e., 95 out of 100).
+
+Explanation:
+
+If John is correct that today is 6/19/2019, then a month ago was 5/19/2019.",05/19/2019,"{""final answer"": null, ""confidence"": ""95""}"
+194,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one year ago from today in MM/DD/YYYY?","  Great! Let's solve this problem.
+
+The question states that Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Since John is correct, we can assume that today's date is 6/19/2019.
+
+One year ago from today was 6/19/2018.
+
+Therefore, the final answer is 6/19/2018, with a confidence level of 100% (based on the information provided).
+
+The answer is: The final answer is 6/19/2018, with a confidence level of 100% (based on the information provided).","Great! Let's solve this problem.
+
+The question states that Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Since John is correct, we can assume that today's date is 6/19/2019.
+
+One year ago from today was 6/19/2018.
+
+Therefore, the final answer is 6/19/2018, with a confidence level of 100% (based on the information provided).
+
+The answer is: The final answer is 6/19/2018, with a confidence level of 100% (based on the information provided).",06/19/2018,"{""final answer"": null, ""confidence"": ""100""}"
+195,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week ago from today in MM/DD/YYYY?","  The final answer is 6/11/2019, with a confidence level of 90% (100-10%).","The final answer is 6/11/2019, with a confidence level of 90% (100-10%).",06/12/2019,"{""final answer"": null, ""confidence"": ""90""}"
+196,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week from today in MM/DD/YYYY?","  The final answer is 6/26/2019, with a confidence level of 90% (the highest level of confidence).","The final answer is 6/26/2019, with a confidence level of 90% (the highest level of confidence).",06/26/2019,"{""final answer"": null, ""confidence"": ""90""}"
+197,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date 24 hours later in MM/DD/YYYY?","  The final answer is 6/20/2019, with a confidence level of 100% (the highest level of confidence).","The final answer is 6/20/2019, with a confidence level of 100% (the highest level of confidence).",06/20/2019,"{""final answer"": null, ""confidence"": ""100""}"
+210,Today is Christmas Eve of 1937. What is the date 10 days ago in MM/DD/YYYY?,"  Great, I'm ready to solve the problem!
+
+The final answer is:
+December 17, 1937
+with a confidence level of 90% (i.e., 90-100%).
+
+To arrive at this answer, I used the information provided in the question that today is Christmas Eve of 1937. Ten days ago would have been before December 17, so the date 10 days ago is December 7, 1937.","Great, I'm ready to solve the problem!
+
+The final answer is:
+December 17, 1937
+with a confidence level of 90% (i.e., 90-100%).
+
+To arrive at this answer, I used the information provided in the question that today is Christmas Eve of 1937. Ten days ago would have been before December 17, so the date 10 days ago is December 7, 1937.",12/14/1937,"{""final answer"": null, ""confidence"": ""90""}"
+213,Today is Christmas Eve of 1937. What is the date one week ago from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The final answer is:
+
+December 21, 1937
+
+with a confidence level of 95% (confidence level is a numerical value between 0-100%).
+
+Explanation:
+One week before Christmas Eve is always one week before December 25th. Since today is December 24th, 1937, one week ago would be December 17th, 1937.","Great, let's solve this problem!
+
+The final answer is:
+
+December 21, 1937
+
+with a confidence level of 95% (confidence level is a numerical value between 0-100%).
+
+Explanation:
+One week before Christmas Eve is always one week before December 25th. Since today is December 24th, 1937, one week ago would be December 17th, 1937.",12/17/1937,"{""final answer"": null, ""confidence"": ""95""}"
+239,"The concert was scheduled to be on 06/01/1943, but was delayed by one day to today. What is the date one year ago from today in MM/DD/YYYY?","  Great, let's solve this problem!
+
+The question states that the concert was scheduled for 06/01/1943, but was delayed by one day, which means the concert is actually taking place today. To find the date one year ago from today, we can simply subtract one year from the current date.
+
+So, the final answer is:
+
+The date one year ago from today is 05/31/1942.
+
+With a confidence level of 95%.","Great, let's solve this problem!
+
+The question states that the concert was scheduled for 06/01/1943, but was delayed by one day, which means the concert is actually taking place today. To find the date one year ago from today, we can simply subtract one year from the current date.
+
+So, the final answer is:
+
+The date one year ago from today is 05/31/1942.
+
+With a confidence level of 95%.",06/02/1942,"{""final answer"": null, ""confidence"": ""95""}"
+243,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date today in MM/DD/YYYY?","  The final answer is 7/9/1972, with a confidence level of 100% (9/10).","The final answer is 7/9/1972, with a confidence level of 100% (9/10).",07/08/1972,"{""final answer"": null, ""confidence"": ""100""}"
+244,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date tomorrow in MM/DD/YYYY?","  The final answer is 7/10/1972, with a confidence level of 90% (10/10).","The final answer is 7/10/1972, with a confidence level of 90% (10/10).",07/09/1972,"{""final answer"": null, ""confidence"": ""90""}"
+247,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date a month ago in MM/DD/YYYY?","  The final answer is 6/11/1972, with a confidence level of 80% (confidence level of 80-100%).","The final answer is 6/11/1972, with a confidence level of 80% (confidence level of 80-100%).",06/08/1972,"{""final answer"": null, ""confidence"": ""80""}"
+248,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date one year ago from today in MM/DD/YYYY?","  Sure, I'd be happy to help you solve this problem! Here's my answer and my confidence level:
+
+The final answer is 8/31/1971, with a confidence level of 90% (i.e., 90-100%).
+
+Explanation:
+Jane scheduled appointments with 5 people for tomorrow (Tuesday, 7/9/1972). One year ago today was Monday, August 31, 1971.","Sure, I'd be happy to help you solve this problem! Here's my answer and my confidence level:
+
+The final answer is 8/31/1971, with a confidence level of 90% (i.e., 90-100%).
+
+Explanation:
+Jane scheduled appointments with 5 people for tomorrow (Tuesday, 7/9/1972). One year ago today was Monday, August 31, 1971.",07/08/1971,"{""final answer"": null, ""confidence"": ""90""}"
+250,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date one week from today in MM/DD/YYYY?","  The final answer is 7/16/1972, with a confidence level of 95% (100-100%).","The final answer is 7/16/1972, with a confidence level of 95% (100-100%).",07/15/1972,"{""final answer"": null, ""confidence"": ""95""}"
+253,The current local time is 3:02 pm of 5/4/2004. What is the date tomorrow in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, which means today is May 4, 2004.
+
+The date tomorrow in MM/DD/YYYY is:
+
+The final answer is 5/5/2004, with a confidence level of 100%!","Great, let's solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, which means today is May 4, 2004.
+
+The date tomorrow in MM/DD/YYYY is:
+
+The final answer is 5/5/2004, with a confidence level of 100%!",05/05/2004,"{""final answer"": null, ""confidence"": ""100""}"
+254,The current local time is 3:02 pm of 5/4/2004. What is the date yesterday in MM/DD/YYYY?,"  The final answer is 4/3/2004, with a confidence level of 95% (confidence level of 85-100%).","The final answer is 4/3/2004, with a confidence level of 95% (confidence level of 85-100%).",05/03/2004,"{""final answer"": null, ""confidence"": ""95""}"
+255,The current local time is 3:02 pm of 5/4/2004. What is the date 10 days ago in MM/DD/YYYY?,"  Great! Let's solve this problem.
+
+The current local time is 3:02 pm on 5/4/2004, which means 10 days ago it was 2:02 pm on 4/3/2004.
+
+The final answer is 4/3/2004, with a confidence level of 95% (confidence level = 95%).","Great! Let's solve this problem.
+
+The current local time is 3:02 pm on 5/4/2004, which means 10 days ago it was 2:02 pm on 4/3/2004.
+
+The final answer is 4/3/2004, with a confidence level of 95% (confidence level = 95%).",04/24/2004,"{""final answer"": null, ""confidence"": ""95""}"
+256,The current local time is 3:02 pm of 5/4/2004. What is the date a month ago in MM/DD/YYYY?,"  Sure, I can help you solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, so we can calculate the date a month ago as follows:
+
+A month ago would be 30 days ago, so the date would be:
+
+The final answer is 4/5/2004, with a confidence level of 95% (confidence level of 95-100%).","Sure, I can help you solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, so we can calculate the date a month ago as follows:
+
+A month ago would be 30 days ago, so the date would be:
+
+The final answer is 4/5/2004, with a confidence level of 95% (confidence level of 95-100%).",04/04/2004,"{""final answer"": null, ""confidence"": ""95""}"
+257,The current local time is 3:02 pm of 5/4/2004. What is the date one year ago from today in MM/DD/YYYY?,  The final answer is 4/3/2003 with a confidence level of 95%.,The final answer is 4/3/2003 with a confidence level of 95%.,05/04/2003,"{""final answer"": null, ""confidence"": ""95""}"
+258,The current local time is 3:02 pm of 5/4/2004. What is the date one week ago from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, which means today's date is May 4, 2004.
+
+One week ago from today would be the previous Monday, so the date one week ago is:
+
+The final answer is 4/26/2004, with a confidence level of 95% (confidence level of 95-100%).","Great, let's solve this problem!
+
+The current local time is 3:02 pm of 5/4/2004, which means today's date is May 4, 2004.
+
+One week ago from today would be the previous Monday, so the date one week ago is:
+
+The final answer is 4/26/2004, with a confidence level of 95% (confidence level of 95-100%).",04/27/2004,"{""final answer"": null, ""confidence"": ""95""}"
+260,The current local time is 3:02 pm of 5/4/2004. What is the date 24 hours later in MM/DD/YYYY?,"  The final answer is 5/5/2004, with a confidence level of 95% (confidence level of 85-95%).
+
+Explanation:
+
+To find the date 24 hours later, we simply add 24 hours to the current local time:
+
+3:02 PM + 24 hours = 3:02 PM + 1 day = 5:02 PM
+
+Therefore, the date 24 hours later is May 5, 2004.","The final answer is 5/5/2004, with a confidence level of 95% (confidence level of 85-95%).
+
+Explanation:
+
+To find the date 24 hours later, we simply add 24 hours to the current local time:
+
+3:02 PM + 24 hours = 3:02 PM + 1 day = 5:02 PM
+
+Therefore, the date 24 hours later is May 5, 2004.",05/05/2004,"{""final answer"": null, ""confidence"": ""95""}"
+262,Today is the second day of the third month of 1966. What is the date tomorrow in MM/DD/YYYY?,"  Great, I'm ready to solve the problem!
+
+The question states that today is the second day of the third month of 1966. Let's break this down:
+
+* Today's date is February 2nd (2/02/1966)
+* The third month from February is May (5/05/1966)
+
+Therefore, the date tomorrow is May 6th (5/06/1966).
+
+With a confidence level of 95% (0-100%)","Great, I'm ready to solve the problem!
+
+The question states that today is the second day of the third month of 1966. Let's break this down:
+
+* Today's date is February 2nd (2/02/1966)
+* The third month from February is May (5/05/1966)
+
+Therefore, the date tomorrow is May 6th (5/06/1966).
+
+With a confidence level of 95% (0-100%)",03/03/1966,"{""final answer"": null, ""confidence"": ""95""}"
+270,Today is 9/7. Jane is watching NFL 2003. What is the date today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that today is 9/7, which means that the date is September 7th.
+
+The NFL season for 2003 started on September 7th, so Jane must be watching a game from that season.
+
+Therefore, the final answer is 9/7/2003, with a confidence level of 100% (as it is the only possible answer based on the information provided).
+
+The final answer is 9/7/2003, with a confidence level of 100% (as it is the only possible answer based on the information provided).","Great, let's solve this problem!
+
+The question states that today is 9/7, which means that the date is September 7th.
+
+The NFL season for 2003 started on September 7th, so Jane must be watching a game from that season.
+
+Therefore, the final answer is 9/7/2003, with a confidence level of 100% (as it is the only possible answer based on the information provided).
+
+The final answer is 9/7/2003, with a confidence level of 100% (as it is the only possible answer based on the information provided).",09/07/2003,"{""final answer"": null, ""confidence"": ""100""}"
+271,Today is 9/7. Jane is watching NFL 2003. What is the date tomorrow in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The final answer is 9/8/YYYY with a confidence level of 95% (very confident).","Great, let's solve this problem!
+
+The final answer is 9/8/YYYY with a confidence level of 95% (very confident).",09/08/2003,"{""final answer"": null, ""confidence"": ""95""}"
+273,Today is 9/7. Jane is watching NFL 2003. What is the date 10 days ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that today is 9/7, which means that 10 days ago was 8/7.
+
+Therefore, the final answer is 8/7/2003, with a confidence level of 90% (confidence level of 80-100%).","Great, let's solve this problem!
+
+The question states that today is 9/7, which means that 10 days ago was 8/7.
+
+Therefore, the final answer is 8/7/2003, with a confidence level of 90% (confidence level of 80-100%).",08/28/2003,"{""final answer"": null, ""confidence"": ""90""}"
+274,Today is 9/7. Jane is watching NFL 2003. What is the date a month ago in MM/DD/YYYY?,"  Great! I'm happy to help you solve this problem.
+
+The final answer is 8/14/2003, with a confidence level of 90% (i.e., 90 out of 100).
+
+Here's how I arrived at this answer:
+
+If today is 9/7/2023, then a month ago would have been 8/7/2023.
+
+I hope this helps! Let me know if you have any other questions.","Great! I'm happy to help you solve this problem.
+
+The final answer is 8/14/2003, with a confidence level of 90% (i.e., 90 out of 100).
+
+Here's how I arrived at this answer:
+
+If today is 9/7/2023, then a month ago would have been 8/7/2023.
+
+I hope this helps! Let me know if you have any other questions.",08/07/2003,"{""final answer"": null, ""confidence"": ""90""}"
+275,Today is 9/7. Jane is watching NFL 2003. What is the date one year ago from today in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that today is 9/7, which means the current date is September 7, 2023.
+
+Now, we need to find out what the date was one year ago. To do this, we can simply add one year to the current date:
+
+The final answer is 9/7/2022, with a confidence level of 95% (confidence level is a numerical value between 0-100%).","Great, let's solve this problem!
+
+The question states that today is 9/7, which means the current date is September 7, 2023.
+
+Now, we need to find out what the date was one year ago. To do this, we can simply add one year to the current date:
+
+The final answer is 9/7/2022, with a confidence level of 95% (confidence level is a numerical value between 0-100%).",09/07/2002,"{""final answer"": null, ""confidence"": ""95""}"
+276,Today is 9/7. Jane is watching NFL 2003. What is the date one week ago from today in MM/DD/YYYY?,"  The final answer is 9/3/2003, with a confidence level of 95% (confidence level: 95%).","The final answer is 9/3/2003, with a confidence level of 95% (confidence level: 95%).",08/31/2003,"{""final answer"": null, ""confidence"": ""95""}"
+277,Today is 9/7. Jane is watching NFL 2003. What is the date one week from today in MM/DD/YYYY?,"  The final answer is 9/14/2003, with a confidence level of 90% (confidence level of 81-90%).
+
+Explanation:
+
+Jane is watching NFL 2003, which means the program is being aired on a Sunday. Since today is September 7th, one week from today would be September 14th.","The final answer is 9/14/2003, with a confidence level of 90% (confidence level of 81-90%).
+
+Explanation:
+
+Jane is watching NFL 2003, which means the program is being aired on a Sunday. Since today is September 7th, one week from today would be September 14th.",09/14/2003,"{""final answer"": null, ""confidence"": ""90""}"
+278,Today is 9/7. Jane is watching NFL 2003. What is the date 24 hours later in MM/DD/YYYY?,"  The final answer is 9/8/YYYY with a confidence level of 95% (or 95%).
+
+Explanation:
+
+Jane is watching NFL 2003, which means the program started at 20:00 (8:00 PM) on 9/7/2003. 24 hours later, the program would still be ongoing, so the date would be 9/8/2003.","The final answer is 9/8/YYYY with a confidence level of 95% (or 95%).
+
+Explanation:
+
+Jane is watching NFL 2003, which means the program started at 20:00 (8:00 PM) on 9/7/2003. 24 hours later, the program would still be ongoing, so the date would be 9/8/2003.",09/08/2003,"{""final answer"": null, ""confidence"": ""95""}"
+291,The day before yesterday was 11/23/1933. What is the date 10 days ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that the day before yesterday was 11/23/1933. To find the date 10 days ago, we can subtract 10 days from the day before yesterday.
+
+11/23/1933 - 10 days = 11/13/1933
+
+With a confidence level of 90%!","Great, let's solve this problem!
+
+The question states that the day before yesterday was 11/23/1933. To find the date 10 days ago, we can subtract 10 days from the day before yesterday.
+
+11/23/1933 - 10 days = 11/13/1933
+
+With a confidence level of 90%!",11/15/1933,"{""final answer"": null, ""confidence"": ""90""}"
+340,"Jane and John married on Jan 2, 1958. It is their 5-year anniversary today. What is the date one week from today in MM/DD/YYYY?","  Great, let's solve this problem!
+
+The question states that Jane and John married on January 2, 1958, and it is their 5-year anniversary today. To find the date one week from today, we need to add 7 days to the current date.
+
+The current date is [current date].
+
+Therefore, the final answer is [next week's date], with a confidence level of 95% (confidence level of 95-100%).","Great, let's solve this problem!
+
+The question states that Jane and John married on January 2, 1958, and it is their 5-year anniversary today. To find the date one week from today, we need to add 7 days to the current date.
+
+The current date is [current date].
+
+Therefore, the final answer is [next week's date], with a confidence level of 95% (confidence level of 95-100%).",01/09/1961,"{""final answer"": null, ""confidence"": ""95""}"
+347,"On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date one year ago from today in MM/DD/YYYY?","  The final answer is:
+
+May 9th, 2016
+
+with a confidence level of 90% (confidence level is a numerical value between 0-100%).
+
+Explanation:
+Jane ate one egg per day, so she ate 360 eggs in total (40 eggs x 90 days). Since she ran out of eggs today, one year ago she must have had enough eggs to last her until today. Therefore, the date one year ago is May 9th, 2016.","The final answer is:
+
+May 9th, 2016
+
+with a confidence level of 90% (confidence level is a numerical value between 0-100%).
+
+Explanation:
+Jane ate one egg per day, so she ate 360 eggs in total (40 eggs x 90 days). Since she ran out of eggs today, one year ago she must have had enough eggs to last her until today. Therefore, the date one year ago is May 9th, 2016.",06/18/2016,"{""final answer"": null, ""confidence"": ""90""}"
+354,Today is the last day of the first quarter of 2008. What is the date 10 days ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that today is the last day of the first quarter of 2008. If today is March 31st, 2008, then 10 days ago would be March 21st, 2008.
+
+Therefore, the final answer is:
+March 21, 2008
+with a confidence level of 100% (confidence level = 100).","Great, let's solve this problem!
+
+The question states that today is the last day of the first quarter of 2008. If today is March 31st, 2008, then 10 days ago would be March 21st, 2008.
+
+Therefore, the final answer is:
+March 21, 2008
+with a confidence level of 100% (confidence level = 100).",03/21/2008,"{""final answer"": null, ""confidence"": ""100""}"
+355,Today is the last day of the first quarter of 2008. What is the date a month ago in MM/DD/YYYY?,"  Great, let's solve this problem!
+
+The question states that today is the last day of the first quarter of 2008. We can use this information to calculate the date a month ago.
+
+A month ago from today would be March 31, 2008.
+
+Therefore, the final answer is:
+
+March 31, 2008
+
+With a confidence level of 95% (confidence level of 85-95%).","Great, let's solve this problem!
+
+The question states that today is the last day of the first quarter of 2008. We can use this information to calculate the date a month ago.
+
+A month ago from today would be March 31, 2008.
+
+Therefore, the final answer is:
+
+March 31, 2008
+
+With a confidence level of 95% (confidence level of 85-95%).",02/29/2008,"{""final answer"": null, ""confidence"": ""95""}"
+361,"The first day of 2019 is a Tuesday, and today is the first Monday of 2019. What is the date tomorrow in MM/DD/YYYY?","  The question states that the first day of 2019 is a Tuesday, and today is the first Monday of 2019. Based on this information, I can determine the date of tomorrow as follows:
+
+If the first day of 2019 is a Tuesday, and today is the first Monday of 2019, then tomorrow will be the second day of the week. Since the first day of the week is Monday, tomorrow's date must be Tuesday.
+
+Therefore, the final answer is:
+The date tomorrow is Tuesday, March 5, 2019
+with a confidence level of 95% (confidence level = 95).","The question states that the first day of 2019 is a Tuesday, and today is the first Monday of 2019. Based on this information, I can determine the date of tomorrow as follows:
+
+If the first day of 2019 is a Tuesday, and today is the first Monday of 2019, then tomorrow will be the second day of the week. Since the first day of the week is Monday, tomorrow's date must be Tuesday.
+
+Therefore, the final answer is:
+The date tomorrow is Tuesday, March 5, 2019
+with a confidence level of 95% (confidence level = 95).",01/08/2019,"{""final answer"": null, ""confidence"": ""95""}"
+364,"The first day of 2019 is a Tuesday, and today is the first Monday of 2019. What is the date a month ago in MM/DD/YYYY?","  The question is asking for the date a month ago from the current date, which we know is the first Monday of 2019.
+
+The final answer is:
+
+[01/07/2019]
+
+with a confidence level of 95% (i.e., 95 out of 100).
+
+Explanation:
+
+If the first day of 2019 is a Tuesday (which we know), then today (the first Monday of 2019) is one month ago from that date. Therefore, the date a month ago is the previous Tuesday, which is January 7, 2019.","The question is asking for the date a month ago from the current date, which we know is the first Monday of 2019.
+
+The final answer is:
+
+[01/07/2019]
+
+with a confidence level of 95% (i.e., 95 out of 100).
+
+Explanation:
+
+If the first day of 2019 is a Tuesday (which we know), then today (the first Monday of 2019) is one month ago from that date. Therefore, the date a month ago is the previous Tuesday, which is January 7, 2019.",12/07/2018,"{""final answer"": null, ""confidence"": ""95""}"

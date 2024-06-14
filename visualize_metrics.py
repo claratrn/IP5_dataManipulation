@@ -10,8 +10,8 @@ np.float = np.float64
 from tools.compute_metrics import compute_conf_metrics, manual_ece
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/openAi/commonsense_qa"
-output_dir = "result_metrics/openAi/commonsense_qa"
+directory_path = "cleaned_data/openAi/gsm8k_p"
+output_dir = "result_metrics/openAi/gsm8k_p"
 visual_dir = os.path.join(output_dir, "visuals")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -73,7 +73,7 @@ def plot_roc_curve(y_true, y_scores, method, model, dataset, file_name):
     plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title(f'Receiver Operating Characteristic - {method} {dataset} {model}')
+    plt.title(f'AUROC - {method} {dataset} {model}')
     plt.legend(loc="lower right")
     plt.xticks(np.arange(0, 1.1, 0.1))
     roc_dir = os.path.join(visual_dir, "Auroc")
@@ -90,7 +90,7 @@ def plot_precision_recall_curve(y_true, y_scores, method, model, dataset, file_n
     plt.plot(recall, precision, color='blue', lw=2, label=f'Precision-Recall curve (area = {pr_auc:.2f})')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
-    plt.title(f'Precision-Recall Curve - {method} {dataset} {model}')
+    plt.title(f'AUPRC - {method} {dataset} {model}')
     plt.legend(loc="lower left")
     plt.xticks(np.arange(0, 1.1, 0.1))
     plt.yticks(np.arange(0, 1.1, 0.1))
@@ -175,14 +175,14 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         if not np.isnan(accuracy_per_bin[i]) and bin_counts[i] > 0:
             color = 'tab:blue' if bin_counts[i] >= sparse_threshold else 'tab:orange'
             plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=1 / n_bins, color=color, edgecolor='black', alpha=0.7)
-            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=8)
+            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=6)
     # Plot perfect calibration line
     plt.plot([0, 1], [0, 1], 'r--')
 
     plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
     ece_score = manual_ece(y_true, y_confs, n_bins) * 100
-    plt.text(0.5, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-    plt.text(0.5, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+    plt.text(0.3, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
+    plt.text(0.3, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
 
     legend_elements = [
         plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
@@ -190,7 +190,7 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         plt.Rectangle((0, 0), 1, 1, color='tab:orange', label='Sparse Bins (< 10 samples)'),
 
     ]
-    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True,
+    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.2), fancybox=True, shadow=True,
                ncol=3)
 
     tick_positions = np.linspace(0, 1, n_bins + 1)
@@ -280,7 +280,7 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'all_metrics_GPT_commonsense.csv')
+output_path = os.path.join(output_dir, 'p_gsm8k_GPT.csv')
 all_metrics.to_csv(output_path, index=False)
 
 

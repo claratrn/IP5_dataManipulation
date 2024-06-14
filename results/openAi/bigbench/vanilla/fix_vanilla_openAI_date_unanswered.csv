@@ -1,0 +1,297 @@
+index,question,answer,provided answer,expected true answer,response details
+28,"Today, 8/3/1997, is a day that we will never forget. What is the date tomorrow in MM/DD/YYYY?","The final answer is 8/4/1997, with a confidence level of 100%.","The final answer is 8/4/1997, with a confidence level of 100%.",08/04/1997,"{""final answer"": null, ""confidence"": ""100""}"
+30,"Today, 8/3/1997, is a day that we will never forget. What is the date 10 days ago in MM/DD/YYYY?","The final answer is 7/24/1997 with a confidence level of 100%. 
+
+To find the date 10 days ago, we just need to subtract 10 from the day part of the given date, keeping the month and year the same. 
+
+8/3/1997 - 10 days = 7/24/1997.","The final answer is 7/24/1997 with a confidence level of 100%. 
+
+To find the date 10 days ago, we just need to subtract 10 from the day part of the given date, keeping the month and year the same. 
+
+8/3/1997 - 10 days = 7/24/1997.",07/24/1997,"{""final answer"": null, ""confidence"": ""100""}"
+32,"Today, 8/3/1997, is a day that we will never forget. What is the date one year ago from today in MM/DD/YYYY?","The final answer is 8/3/1996, with a confidence level of 100%. 
+
+To find the date one year ago from today, we simply subtract one year from the current year, which gives us 1996. The month and day remain the same, so the date one year ago from today is 8/3/1996.","The final answer is 8/3/1996, with a confidence level of 100%. 
+
+To find the date one year ago from today, we simply subtract one year from the current year, which gives us 1996. The month and day remain the same, so the date one year ago from today is 8/3/1996.",08/03/1996,"{""final answer"": null, ""confidence"": ""100""}"
+33,"Today, 8/3/1997, is a day that we will never forget. What is the date one week ago from today in MM/DD/YYYY?","The final answer is 7/27/1997 with a confidence level of 100%. 
+
+To determine the date one week ago from 8/3/1997, we need to subtract 7 days from the current date: 
+
+8/3/1997 - 7 days = 7/27/1997","The final answer is 7/27/1997 with a confidence level of 100%. 
+
+To determine the date one week ago from 8/3/1997, we need to subtract 7 days from the current date: 
+
+8/3/1997 - 7 days = 7/27/1997",07/27/1997,"{""final answer"": null, ""confidence"": ""100""}"
+34,"Today, 8/3/1997, is a day that we will never forget. What is the date one week from today in MM/DD/YYYY?","The final answer is 8/10/1997, with a confidence level of 100%. 
+
+To find the date one week from today, we just need to add 7 days to the current date of 8/3/1997. Therefore, 8/10/1997 is the date one week from today.","The final answer is 8/10/1997, with a confidence level of 100%. 
+
+To find the date one week from today, we just need to add 7 days to the current date of 8/3/1997. Therefore, 8/10/1997 is the date one week from today.",08/10/1997,"{""final answer"": null, ""confidence"": ""100""}"
+48,It is 4/19/1969 today. What is the date 10 days ago in MM/DD/YYYY?,"We can find the date 10 days ago by subtracting 10 from the day (4) and then adjusting the month and year if necessary.
+
+Starting with 4/19/1969, we subtract 10 days to get 4/9/1969.
+
+Therefore, the final answer is 4/9/1969 with a confidence level of 100%.","We can find the date 10 days ago by subtracting 10 from the day (4) and then adjusting the month and year if necessary.
+
+Starting with 4/19/1969, we subtract 10 days to get 4/9/1969.
+
+Therefore, the final answer is 4/9/1969 with a confidence level of 100%.",04/09/1969,"{""final answer"": null, ""confidence"": ""100""}"
+50,It is 4/19/1969 today. What is the date one year ago from today in MM/DD/YYYY?,"The final answer is 4/19/1968 with a confidence level of 100%. 
+
+To find the date one year ago from 4/19/1969, we can simply subtract one year from the given date. Since there are 365 days in a year, we just need to subtract 365 from 4/19/1969:
+ 
+4/19/1969 - 365 days = 4/19/1968","The final answer is 4/19/1968 with a confidence level of 100%. 
+
+To find the date one year ago from 4/19/1969, we can simply subtract one year from the given date. Since there are 365 days in a year, we just need to subtract 365 from 4/19/1969:
+ 
+4/19/1969 - 365 days = 4/19/1968",04/19/1968,"{""final answer"": null, ""confidence"": ""100""}"
+51,It is 4/19/1969 today. What is the date one week ago from today in MM/DD/YYYY?,"The final answer is 4/12/1969 with a confidence level of 100%. 
+
+To find the date one week ago from today, we need to subtract 7 days from the given date of 4/19/1969. 
+
+4/19/1969 - 7 days = 4/12/1969","The final answer is 4/12/1969 with a confidence level of 100%. 
+
+To find the date one week ago from today, we need to subtract 7 days from the given date of 4/19/1969. 
+
+4/19/1969 - 7 days = 4/12/1969",04/12/1969,"{""final answer"": null, ""confidence"": ""100""}"
+52,It is 4/19/1969 today. What is the date one week from today in MM/DD/YYYY?,"The final answer is 4/26/1969 with a confidence level of 100%. 
+
+Adding one week to 4/19/1969 would result in 4/26/1969 since there are seven days in a week. Therefore, one week from today would be April 26, 1969.","The final answer is 4/26/1969 with a confidence level of 100%. 
+
+Adding one week to 4/19/1969 would result in 4/26/1969 since there are seven days in a week. Therefore, one week from today would be April 26, 1969.",04/26/1969,"{""final answer"": null, ""confidence"": ""100""}"
+83,"Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date yesterday in MM/DD/YYYY?","To calculate the date of Jane's 3-year work anniversary, we need to add 3 years to the year she started, which is 2016. 
+
+Therefore, her 3-year work anniversary is on December 2, 2019 (12/2/2019).
+
+To find the date yesterday, we need to subtract one day from December 2, 2019.
+
+The final answer is 12/1/2019, with a confidence level of 100%.","To calculate the date of Jane's 3-year work anniversary, we need to add 3 years to the year she started, which is 2016. 
+
+Therefore, her 3-year work anniversary is on December 2, 2019 (12/2/2019).
+
+To find the date yesterday, we need to subtract one day from December 2, 2019.
+
+The final answer is 12/1/2019, with a confidence level of 100%.",11/30/2019,"{""final answer"": null, ""confidence"": ""100""}"
+88,"Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date one week from today in MM/DD/YYYY?","Today's date is the 3rd anniversary of Jane's job which means she started working on the same day three years ago. Her second day at work would be 1 day after she started, which is 3 years ago + 1 day, 12/02/2016. 
+
+To find the date one week from today, we need to add 7 days to today's date:
+
+The final answer is: 
+12/09/2019
+
+with a confidence level of 100%.","Today's date is the 3rd anniversary of Jane's job which means she started working on the same day three years ago. Her second day at work would be 1 day after she started, which is 3 years ago + 1 day, 12/02/2016. 
+
+To find the date one week from today, we need to add 7 days to today's date:
+
+The final answer is: 
+12/09/2019
+
+with a confidence level of 100%.",12/08/2019,"{""final answer"": null, ""confidence"": ""100""}"
+98,"Jane quited her job on Mar 20, 2020. 176 days have passed since then. What is the date 24 hours later in MM/DD/YYYY?","The final answer is 9/12/2020 with a confidence level of 100%. 
+
+To calculate the date 24 hours (1 day) after Mar 20, 2020, we can add 1 day to the given date. Thus, we can start by finding the number of days between Mar 20 and Sep 12 (the final answer). 
+
+From Mar 20 to Apr 20, we have 31 days.
+From Apr 20 to May 20, we have 30 days.
+From May 20 to Jun 20, we have 31 days.
+From Jun 20 to Jul 20, we have 30 days.
+From Jul 20 to Aug 20, we have 31 days.
+From Aug 20 to Sep 12, we have 23 days.
+
+Adding up the number of days, we get 31+30+31+30+31+23 = 176 days, which is the number of days that have passed since Jane quit her job. Therefore, the date 24 hours later would be Sep 13, 2020. However, we are asked to give the answer in MM/DD/YYYY format, so the final answer is 9/12/2020. My confidence is 100% in this answer.","The final answer is 9/12/2020 with a confidence level of 100%. 
+
+To calculate the date 24 hours (1 day) after Mar 20, 2020, we can add 1 day to the given date. Thus, we can start by finding the number of days between Mar 20 and Sep 12 (the final answer). 
+
+From Mar 20 to Apr 20, we have 31 days.
+From Apr 20 to May 20, we have 30 days.
+From May 20 to Jun 20, we have 31 days.
+From Jun 20 to Jul 20, we have 30 days.
+From Jul 20 to Aug 20, we have 31 days.
+From Aug 20 to Sep 12, we have 23 days.
+
+Adding up the number of days, we get 31+30+31+30+31+23 = 176 days, which is the number of days that have passed since Jane quit her job. Therefore, the date 24 hours later would be Sep 13, 2020. However, we are asked to give the answer in MM/DD/YYYY format, so the final answer is 9/12/2020. My confidence is 100% in this answer.",09/13/2020,"{""final answer"": null, ""confidence"": ""100""}"
+123,"Jane booked a flight for tomorrow, Jul 29, 2002. What is the date one week ago from today in MM/DD/YYYY?","The final answer is 7/22/2002, with a confidence level of 100%. 
+
+One week ago from today's date (7/29/2021) would be 7/22/2021. Therefore, one week ago from Jul 29, 2002 would be Jul 22, 2002, which can be written in MM/DD/YYYY format as 07/22/2002.","The final answer is 7/22/2002, with a confidence level of 100%. 
+
+One week ago from today's date (7/29/2021) would be 7/22/2021. Therefore, one week ago from Jul 29, 2002 would be Jul 22, 2002, which can be written in MM/DD/YYYY format as 07/22/2002.",07/21/2002,"{""final answer"": null, ""confidence"": ""100""}"
+124,"Jane booked a flight for tomorrow, Jul 29, 2002. What is the date one week from today in MM/DD/YYYY?","The final answer is 8/5/2002, with a confidence level of 100%. 
+
+If today is Jul 29, 2002, then one week from today is Aug 5, 2002. The date format is MM/DD/YYYY, so the answer is 08/05/2002.","The final answer is 8/5/2002, with a confidence level of 100%. 
+
+If today is Jul 29, 2002, then one week from today is Aug 5, 2002. The date format is MM/DD/YYYY, so the answer is 08/05/2002.",08/04/2002,"{""final answer"": null, ""confidence"": ""100""}"
+163,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date tomorrow in MM/DD/YYYY?","Jane's second time in the year 1973 to see a meteor shower is likely to refer to the second time a meteor shower occurred that year. One such meteor shower was the Perseids, which occurred on August 11-13, 1973. As such, today's date of 3/5 must be unrelated to the meteor shower. Therefore, the date tomorrow in MM/DD/YYYY will be 3/6, assuming there are no other contextual clues provided.
+
+The final answer is 3/6/1973 with a confidence level of 95%.","Jane's second time in the year 1973 to see a meteor shower is likely to refer to the second time a meteor shower occurred that year. One such meteor shower was the Perseids, which occurred on August 11-13, 1973. As such, today's date of 3/5 must be unrelated to the meteor shower. Therefore, the date tomorrow in MM/DD/YYYY will be 3/6, assuming there are no other contextual clues provided.
+
+The final answer is 3/6/1973 with a confidence level of 95%.",03/06/1973,"{""final answer"": null, ""confidence"": ""95""}"
+164,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date yesterday in MM/DD/YYYY?","If today is 3/5 then yesterday's date was 3/4/YYYY. 
+
+The final answer is 3/4/YYYY, with a confidence level of 100%.","If today is 3/5 then yesterday's date was 3/4/YYYY. 
+
+The final answer is 3/4/YYYY, with a confidence level of 100%.",03/04/1973,"{""final answer"": null, ""confidence"": ""100""}"
+165,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date 10 days ago in MM/DD/YYYY?","If today is 3/5, and Jane saw a meteor shower for the second time in 1973, it means she saw the first meteor shower in 1973 sometime before 3/5. Therefore, we need to calculate the date 10 days ago from 3/5, which would be 2/24/1973.
+
+The final answer is 2/24/1973, with a confidence level of 100%.","If today is 3/5, and Jane saw a meteor shower for the second time in 1973, it means she saw the first meteor shower in 1973 sometime before 3/5. Therefore, we need to calculate the date 10 days ago from 3/5, which would be 2/24/1973.
+
+The final answer is 2/24/1973, with a confidence level of 100%.",02/23/1973,"{""final answer"": null, ""confidence"": ""100""}"
+167,"Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date one year ago from today in MM/DD/YYYY?","One year ago from today's date of 3/5 would be 3/5 of the year 1972 (since 1972 was a leap year). 
+
+Therefore, the date one year ago from today in MM/DD/YYYY format would be:
+
+3/5/1972
+
+The final answer is 3/5/1972, with a confidence level of 100%.","One year ago from today's date of 3/5 would be 3/5 of the year 1972 (since 1972 was a leap year). 
+
+Therefore, the date one year ago from today in MM/DD/YYYY format would be:
+
+3/5/1972
+
+The final answer is 3/5/1972, with a confidence level of 100%.",03/05/1972,"{""final answer"": null, ""confidence"": ""100""}"
+177,"Yesterday, Jan 21, 2011, Jane ate 2 pizzas and 5 wings. What is the date one week ago from today in MM/DD/YYYY?","The final answer is 1/14/2011 with a confidence level of 100%. 
+
+To get to the date one week ago from today, we need to subtract seven days from today's date. Today is MM/DD/YYYY, so if we subtract 7 days, we get MM/(DD-7)/YYYY. 
+
+Using the information given in the problem, we know that January 21, 2011, was yesterday. Therefore, to get to one week ago, we can subtract seven days from January 21, 2011, to get January 14, 2011. 
+
+Thus, one week ago from today in MM/DD/YYYY is 1/14/2011.","The final answer is 1/14/2011 with a confidence level of 100%. 
+
+To get to the date one week ago from today, we need to subtract seven days from today's date. Today is MM/DD/YYYY, so if we subtract 7 days, we get MM/(DD-7)/YYYY. 
+
+Using the information given in the problem, we know that January 21, 2011, was yesterday. Therefore, to get to one week ago, we can subtract seven days from January 21, 2011, to get January 14, 2011. 
+
+Thus, one week ago from today in MM/DD/YYYY is 1/14/2011.",01/15/2011,"{""final answer"": null, ""confidence"": ""100""}"
+181,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date tomorrow in MM/DD/YYYY?","The final answer is 6/19/2019, with a confidence level of 100%. 
+
+Since Jane is correct, today's date is 6/18/2019. Therefore, tomorrow's date would be 6/19/2019.","The final answer is 6/19/2019, with a confidence level of 100%. 
+
+Since Jane is correct, today's date is 6/18/2019. Therefore, tomorrow's date would be 6/19/2019.",06/19/2019,"{""final answer"": null, ""confidence"": ""100""}"
+182,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date yesterday in MM/DD/YYYY?","If Jane thinks today is 6/18/2019, then yesterday must have been 6/17/2019, regardless of what John thinks. 
+
+Therefore, the final answer is 6/17/2019, with a confidence level of 100%.","If Jane thinks today is 6/18/2019, then yesterday must have been 6/17/2019, regardless of what John thinks. 
+
+Therefore, the final answer is 6/17/2019, with a confidence level of 100%.",06/17/2019,"{""final answer"": null, ""confidence"": ""100""}"
+187,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date one week from today in MM/DD/YYYY?","If Jane is correct and today is 6/18/2019, then one week from today will be:
+6/18/2019 + 7 days = 6/25/2019
+
+Therefore, the date one week from today in MM/DD/YYYY is 6/25/2019.
+
+The final answer is 6/25/2019, with a confidence level of 100%.","If Jane is correct and today is 6/18/2019, then one week from today will be:
+6/18/2019 + 7 days = 6/25/2019
+
+Therefore, the date one week from today in MM/DD/YYYY is 6/25/2019.
+
+The final answer is 6/25/2019, with a confidence level of 100%.",06/25/2019,"{""final answer"": null, ""confidence"": ""100""}"
+188,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. Jane is correct. What is the date 24 hours later in MM/DD/YYYY?","If Jane thinks that today is 6/18/2019, and she is correct, then John is wrong and today is not 6/19/2019. In this case, the date 24 hours later in MM/DD/YYYY would be 6/19/2019.
+
+Therefore, the final answer is 6/19/2019 with a confidence level of 100%.","If Jane thinks that today is 6/18/2019, and she is correct, then John is wrong and today is not 6/19/2019. In this case, the date 24 hours later in MM/DD/YYYY would be 6/19/2019.
+
+Therefore, the final answer is 6/19/2019 with a confidence level of 100%.",06/19/2019,"{""final answer"": null, ""confidence"": ""100""}"
+189,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date today in MM/DD/YYYY?","The final answer is 6/19/2019, with a confidence level of 100%.","The final answer is 6/19/2019, with a confidence level of 100%.",06/19/2019,"{""final answer"": null, ""confidence"": ""100""}"
+192,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date 10 days ago in MM/DD/YYYY?","The final answer is 6/9/2019 with a confidence level of 100%. 
+
+If today is actually 6/19/2019, then 10 days ago would be 6/9/2019.","The final answer is 6/9/2019 with a confidence level of 100%. 
+
+If today is actually 6/19/2019, then 10 days ago would be 6/9/2019.",06/09/2019,"{""final answer"": null, ""confidence"": ""100""}"
+193,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date a month ago in MM/DD/YYYY?","If John is correct that today is 6/19/2019, then a month ago the date would be 5/19/2019. 
+
+The final answer is 5/19/2019, with a confidence level of 100%.","If John is correct that today is 6/19/2019, then a month ago the date would be 5/19/2019. 
+
+The final answer is 5/19/2019, with a confidence level of 100%.",05/19/2019,"{""final answer"": null, ""confidence"": ""100""}"
+195,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week ago from today in MM/DD/YYYY?","The final answer is 6/12/2019, with a confidence level of 100%. 
+
+Since John is correct, today's date is 6/19/2019. Going back one week from today, we subtract 7 days from the date. 
+
+6/19/2019 - 7 days = 6/12/2019","The final answer is 6/12/2019, with a confidence level of 100%. 
+
+Since John is correct, today's date is 6/19/2019. Going back one week from today, we subtract 7 days from the date. 
+
+6/19/2019 - 7 days = 6/12/2019",06/12/2019,"{""final answer"": null, ""confidence"": ""100""}"
+196,"Jane thinks today is 6/18/2019, but John thinks today is 6/19/2019. John is correct. What is the date one week from today in MM/DD/YYYY?","The final answer is 6/26/2019, with a confidence level of 100%. 
+
+If today is 6/19/2019 and we want to find the date one week from now, we can add 7 days to 6/19/2019.
+
+6/19/2019 + 7 days = 6/26/2019
+
+Therefore, the date one week from today in MM/DD/YYYY is 6/26/2019.","The final answer is 6/26/2019, with a confidence level of 100%. 
+
+If today is 6/19/2019 and we want to find the date one week from now, we can add 7 days to 6/19/2019.
+
+6/19/2019 + 7 days = 6/26/2019
+
+Therefore, the date one week from today in MM/DD/YYYY is 6/26/2019.",06/26/2019,"{""final answer"": null, ""confidence"": ""100""}"
+249,"Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date one week ago from today in MM/DD/YYYY?","One week ago from today depends on what the current date is. As an AI language model, I do not have access to the current date. Therefore, I cannot provide the final answer to this problem.","One week ago from today depends on what the current date is. As an AI language model, I do not have access to the current date. Therefore, I cannot provide the final answer to this problem.",07/01/1972,"{""final answer"": null, ""confidence"": null}"
+252,The current local time is 3:02 pm of 5/4/2004. What is the date today in MM/DD/YYYY?,"The final answer is 5/4/2004, with a confidence level of 100%. Since the question states that the current local time is 3:02 pm of 5/4/2004, the date must be 5/4/2004.","The final answer is 5/4/2004, with a confidence level of 100%. Since the question states that the current local time is 3:02 pm of 5/4/2004, the date must be 5/4/2004.",05/04/2004,"{""final answer"": null, ""confidence"": ""100""}"
+255,The current local time is 3:02 pm of 5/4/2004. What is the date 10 days ago in MM/DD/YYYY?,"The final answer is 4/25/2004, with a confidence level of 100%. 
+
+To calculate the date that was 10 days ago, we need to subtract 10 days from 5/4/2004. 
+
+If we subtract 10 days from the 4th of May, we go back to the 24th of April. However, since we are asked for the date in MM/DD/YYYY format, the final answer is 4/25/2004, which means 25th April 2004.","The final answer is 4/25/2004, with a confidence level of 100%. 
+
+To calculate the date that was 10 days ago, we need to subtract 10 days from 5/4/2004. 
+
+If we subtract 10 days from the 4th of May, we go back to the 24th of April. However, since we are asked for the date in MM/DD/YYYY format, the final answer is 4/25/2004, which means 25th April 2004.",04/24/2004,"{""final answer"": null, ""confidence"": ""100""}"
+258,The current local time is 3:02 pm of 5/4/2004. What is the date one week ago from today in MM/DD/YYYY?,"The final answer is 4/28/2004, with a confidence level of 100%. 
+
+To find the date one week ago from today, we need to subtract 7 days from 5/4/2004. 
+
+5/4/2004 - 7 days = 4/27/2004 
+
+However, the question is asking for the date in MM/DD/YYYY format, so the final answer is 4/28/2004 (month/day/year).","The final answer is 4/28/2004, with a confidence level of 100%. 
+
+To find the date one week ago from today, we need to subtract 7 days from 5/4/2004. 
+
+5/4/2004 - 7 days = 4/27/2004 
+
+However, the question is asking for the date in MM/DD/YYYY format, so the final answer is 4/28/2004 (month/day/year).",04/27/2004,"{""final answer"": null, ""confidence"": ""100""}"
+259,The current local time is 3:02 pm of 5/4/2004. What is the date one week from today in MM/DD/YYYY?,"The final answer is 5/11/2004, with a confidence level of 100%. 
+
+To arrive at this answer, we add seven days to the current date (5/4/2004) which gives us 5/11/2004.","The final answer is 5/11/2004, with a confidence level of 100%. 
+
+To arrive at this answer, we add seven days to the current date (5/4/2004) which gives us 5/11/2004.",05/11/2004,"{""final answer"": null, ""confidence"": ""100""}"
+268,Today is the second day of the third month of 1966. What is the date one week from today in MM/DD/YYYY?,"The final answer is 3/9/1966 with a confidence level of 100%. 
+
+To determine the date one week from today we need to add 7 days to the current date (2/3/1966). This gives us 2/10/1966. However, we can't leave it in this format as the month and day still need to be incremented by 1 to find the date one week from today. Therefore, the final answer is 3/9/1966.","The final answer is 3/9/1966 with a confidence level of 100%. 
+
+To determine the date one week from today we need to add 7 days to the current date (2/3/1966). This gives us 2/10/1966. However, we can't leave it in this format as the month and day still need to be incremented by 1 to find the date one week from today. Therefore, the final answer is 3/9/1966.",03/09/1966,"{""final answer"": null, ""confidence"": ""100""}"
+270,Today is 9/7. Jane is watching NFL 2003. What is the date today in MM/DD/YYYY?,"The final answer is 9/7/2003, with a confidence level of 100%.","The final answer is 9/7/2003, with a confidence level of 100%.",09/07/2003,"{""final answer"": null, ""confidence"": ""100""}"
+271,Today is 9/7. Jane is watching NFL 2003. What is the date tomorrow in MM/DD/YYYY?,The final answer is 9/8/2003 with a confidence level of 100%.,The final answer is 9/8/2003 with a confidence level of 100%.,09/08/2003,"{""final answer"": null, ""confidence"": ""100""}"
+272,Today is 9/7. Jane is watching NFL 2003. What is the date yesterday in MM/DD/YYYY?,"The final answer is 9/6/2003 with a confidence level of 100%. Yesterday's date is one day before today's date, so we just need to subtract 1 from the day of today's date, which gives us 9/6/2003.","The final answer is 9/6/2003 with a confidence level of 100%. Yesterday's date is one day before today's date, so we just need to subtract 1 from the day of today's date, which gives us 9/6/2003.",09/06/2003,"{""final answer"": null, ""confidence"": ""100""}"
+273,Today is 9/7. Jane is watching NFL 2003. What is the date 10 days ago in MM/DD/YYYY?,"To determine the date that was 10 days ago, we need to subtract 10 from the current day, which is September 7th.
+
+The final answer is 8/28/2021, with a confidence level of 100%.","To determine the date that was 10 days ago, we need to subtract 10 from the current day, which is September 7th.
+
+The final answer is 8/28/2021, with a confidence level of 100%.",08/28/2003,"{""final answer"": null, ""confidence"": ""100""}"
+274,Today is 9/7. Jane is watching NFL 2003. What is the date a month ago in MM/DD/YYYY?,"A month ago from 9/7 would be 8/7.
+
+The final answer is 8/7/2003, with a confidence level of 100%.","A month ago from 9/7 would be 8/7.
+
+The final answer is 8/7/2003, with a confidence level of 100%.",08/07/2003,"{""final answer"": null, ""confidence"": ""100""}"
+275,Today is 9/7. Jane is watching NFL 2003. What is the date one year ago from today in MM/DD/YYYY?,"The final answer is 9/7/2002 with a confidence level of 100%. 
+
+One year ago from 9/7/2003 would be 9/7/2002.","The final answer is 9/7/2002 with a confidence level of 100%. 
+
+One year ago from 9/7/2003 would be 9/7/2002.",09/07/2002,"{""final answer"": null, ""confidence"": ""100""}"
+276,Today is 9/7. Jane is watching NFL 2003. What is the date one week ago from today in MM/DD/YYYY?,"One week ago from 9/7 would be 8/31.
+
+The final answer is 8/31/2021, with a confidence level of 100%.","One week ago from 9/7 would be 8/31.
+
+The final answer is 8/31/2021, with a confidence level of 100%.",08/31/2003,"{""final answer"": null, ""confidence"": ""100""}"
+277,Today is 9/7. Jane is watching NFL 2003. What is the date one week from today in MM/DD/YYYY?,"The final answer is 9/14/2003, with a confidence level of 100%. 
+
+Adding one week to 9/7/2003 gives us 9/14/2003.","The final answer is 9/14/2003, with a confidence level of 100%. 
+
+Adding one week to 9/7/2003 gives us 9/14/2003.",09/14/2003,"{""final answer"": null, ""confidence"": ""100""}"
+278,Today is 9/7. Jane is watching NFL 2003. What is the date 24 hours later in MM/DD/YYYY?,"The final answer is 9/8/2003 with a confidence level of 100%. 
+
+Adding 24 hours to September 7th, 2003 will give us September 8th, 2003. Therefore, the date 24 hours later in MM/DD/YYYY format is 9/8/2003.","The final answer is 9/8/2003 with a confidence level of 100%. 
+
+Adding 24 hours to September 7th, 2003 will give us September 8th, 2003. Therefore, the date 24 hours later in MM/DD/YYYY format is 9/8/2003.",09/08/2003,"{""final answer"": null, ""confidence"": ""100""}"
+309,"Today's meeting is rescheduled to 11 am tomorrow, 10/16/1924. What is the date 10 days ago in MM/DD/YYYY?","The final answer is 10/6/1924 with a confidence level of 100%. 
+
+To find the date 10 days ago from 10/16/1924, we simply subtract 10 days from the date:
+10/16/1924 - 10 days = 10/6/1924.","The final answer is 10/6/1924 with a confidence level of 100%. 
+
+To find the date 10 days ago from 10/16/1924, we simply subtract 10 days from the date:
+10/16/1924 - 10 days = 10/6/1924.",10/05/1924,"{""final answer"": null, ""confidence"": ""100""}"

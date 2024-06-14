@@ -1,0 +1,2 @@
+index,question,answer,provided answer,expected true answer,response details
+79,"John adopts a dog.  He takes the dog to the groomer, which costs $100.  The groomer offers him a 30% discount for being a new customer.  How much does the grooming cost?",,None,70,"{""final answer"": null, ""confidence"": null}"

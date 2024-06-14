@@ -10,8 +10,8 @@ np.float = np.float64
 from tools.compute_metrics import compute_conf_metrics, manual_ece
 
 # Read CSV data into DataFrame
-directory_path = "cleaned_data/openAi/gsm8k_trainSet"
-output_dir = "result_metrics/openAi/gsm8k_trainSet"
+directory_path = "cleaned_data/openAi/gsm8k_p"
+output_dir = "result_metrics/openAi/gsm8k_p"
 visual_dir = os.path.join(output_dir, "visuals_as_svg")
 os.makedirs(visual_dir, exist_ok=True)
 
@@ -28,7 +28,7 @@ def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name
     wrong_confs = [conf for conf, true in zip(y_confs, y_true) if not true]
     correct_confs = [conf for conf, true in zip(y_confs, y_true) if true]
 
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(6, 4))
 
     # to add a buffer around the histogram
     bins = np.linspace(-2.5, 102.5, 22)
@@ -52,6 +52,7 @@ def plot_confidence_histogram(y_true, y_confs, method, model, dataset, file_name
     plt.savefig(os.path.join(histogram_dir, f'{file_name}_histogram_{method}.svg'))
     plt.close()
 
+
 def get_ece_from_all_metrics(all_metrics, method):
     print("Columns in all_metrics DataFrame:", all_metrics.columns)  # Debugging line
     print("Contents of all_metrics DataFrame:", all_metrics)  # Debugging line
@@ -68,12 +69,12 @@ def plot_roc_curve(y_true, y_scores, method, model, dataset, file_name):
     fpr, tpr, thresholds = roc_curve(y_true, y_scores)
     roc_auc = auc(fpr, tpr)
 
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(5.5, 4))
     plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')
-    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', label='Random (AUROC = 0.5)')
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title(f'Receiver Operating Characteristic - {method} {dataset} {model}')
+    plt.title(f'AUROC - {method} {dataset} {model}')
     plt.legend(loc="lower right")
     plt.xticks(np.arange(0, 1.1, 0.1))
     roc_dir = os.path.join(visual_dir, "Auroc")
@@ -86,7 +87,7 @@ def plot_precision_recall_curve(y_true, y_scores, method, model, dataset, file_n
     precision, recall, thresholds = precision_recall_curve(y_true, y_scores)
     pr_auc = auc(recall, precision)
 
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(5.5, 4))
     plt.plot(recall, precision, color='blue', lw=2, label=f'Precision-Recall curve (area = {pr_auc:.2f})')
     plt.xlabel('Recall')
     plt.ylabel('Precision')
@@ -111,7 +112,7 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
     print("DataFrame passed to plot_metric_boxplots:")
     print(metrics_df.head())
 
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(6.5, 4))
     methods = metrics_df['method'].unique()
     data_to_plot = [metrics_df[metrics_df['method'] == method][metric_name] for method in methods]
 
@@ -131,10 +132,8 @@ def plot_metric_boxplots(metrics_df, output_dir, metric_name):
 
 
 def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
-    print(method)
     n_bins = 20
-    plt.figure(figsize=(14, 8), dpi=300)
-    plt.gca().set_position([0.1, 0.1, 0.8, 0.8])
+    plt.figure(figsize=(6.4, 4.8), dpi=300)
 
     # Create histogram bins for y_confidences
     bin_edges = np.linspace(0, 1, n_bins + 1)
@@ -143,11 +142,6 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
     accuracy_per_bin = np.zeros(n_bins)
     avg_confidence_per_bin = np.zeros(n_bins)
     total_samples = np.sum(bin_counts)
-
-    print("Bin counts from visualisation:", bin_counts)
-    print("Bin edges:", bin_edges)
-    print("Total samples from bin counts:", total_samples)
-
 
     # Calculate the accuracy per bin only if there are elements in the bin
     for i in range(n_bins):
@@ -158,77 +152,76 @@ def plot_ece_diagram(y_true, y_confs, method, model, dataset, file_name):
         else:
             in_bin = (y_confs >= bin_edges[i]) & (y_confs < bin_edges[i + 1])
 
-        print(f"Bin {i+1} ({bin_edges[i]:.2f} - {bin_edges[i+1]:.2f}): {in_bin.sum()} samples")
-
         if in_bin.any():  # Check if there are any elements in the bin
             accuracy_per_bin[i] = np.mean(y_true[in_bin])
             avg_confidence_per_bin[i] = np.mean(y_confs[in_bin])
         else:
             accuracy_per_bin[i] = np.nan  # Assign NaN for empty bins
             avg_confidence_per_bin[i] = np.nan
-    print("Accuracy per bin:", accuracy_per_bin)
-    print("Average confidence per bin:", avg_confidence_per_bin)
 
     sparse_threshold = 10
     # Plot the reliability diagram
+    bar_width = 1 / (n_bins + 7)  # Increase the bar width slightly
     for i in range(n_bins):
         if not np.isnan(accuracy_per_bin[i]) and bin_counts[i] > 0:
             color = 'tab:blue' if bin_counts[i] >= sparse_threshold else 'tab:orange'
-            plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=1 / n_bins, color=color, edgecolor='black', alpha=0.7)
-            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center', fontsize=8)
+            plt.bar(float(bin_centers[i]), float(accuracy_per_bin[i]), width=bar_width, color=color, edgecolor='black',
+                    alpha=0.7)
+            plt.text(float(bin_centers[i]), float(accuracy_per_bin[i]) + 0.02, f'{bin_counts[i]}', ha='center',
+                     fontsize=5)
     # Plot perfect calibration line
     plt.plot([0, 1], [0, 1], 'r--')
 
-    plt.title(f'Expected Calibration Error - {method} {dataset} {model}')
+    plt.title(f'Expected Calibration Error - {method} {dataset} {model}', fontsize=10)
     ece_score = manual_ece(y_true, y_confs, n_bins) * 100
-    plt.text(0.5, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-    plt.text(0.5, 0.90, f'Total samples: {total_samples}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top')
-
+    plt.text(0.05, 0.95, f'ECE: {ece_score:.2f}%', transform=plt.gca().transAxes, fontsize=8, verticalalignment='top')
+    plt.text(0.05, 0.90, f'Total samples:{total_samples}', transform=plt.gca().transAxes, fontsize=8,
+             verticalalignment='top')
     legend_elements = [
-        plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration'),
-        plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output'),
-        plt.Rectangle((0, 0), 1, 1, color='tab:orange', label='Sparse Bins (< 10 samples)'),
-
+        plt.Line2D([], [], color='red', linestyle='--', label='Perfect Calibration', linewidth=1),
+        plt.Rectangle((0, 0), 1, 1, color='tab:blue', label='Output', linewidth=1),
+        plt.Rectangle((0, 0), 1, 1, color='tab:orange', label='Sparse Bins (< 10 samples)', linewidth=1)
     ]
-    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.15), fancybox=True, shadow=True,
-               ncol=3)
-
+    plt.legend(handles=legend_elements, loc='upper center', bbox_to_anchor=(0.5, -0.16), fancybox=True, shadow=True,
+               ncol=3, fontsize=6)
     tick_positions = np.linspace(0, 1, n_bins + 1)
     tick_labels = [f"{pos:.2f}" for pos in tick_positions]
-    plt.xticks(tick_positions, tick_labels, rotation=45)
+    plt.xticks(tick_positions, tick_labels, rotation=-45, ha='left', fontsize=6)
 
     plt.gca().set_aspect('equal', adjustable='box')
 
     # Add buffer around the plot
     plt.xlim(-0.05, 1.05)
     plt.ylim(0, 1.05)
-    plt.subplots_adjust(bottom=0.25, hspace=0.5)
-    plt.xlabel("Confidence")
-    plt.ylabel("Accuracy")
+    plt.subplots_adjust(bottom=0.3, top=0.9)
+    plt.xlabel("Confidence", fontsize=10)
+    plt.ylabel("Accuracy", fontsize=10)
 
     ece_dir = os.path.join(visual_dir, "ECE")
     os.makedirs(ece_dir, exist_ok=True)
-    plt.savefig(os.path.join(ece_dir, f'{file_name}_ECE_{method}.svg'))
+    plt.tight_layout()
+    # plt.savefig(os.path.join(ece_dir, f'{file_name}_ECE_{method}.svg'))
+    plt.savefig(os.path.join(ece_dir, f'ECE_GSM8K_{method}.svg'))
     plt.close()
 
 
 def plot_all_visualisations(y_true, y_confs, elicitation_method, model, dataset, file_name):
     y_true = np.array([1 if x else 0 for x in y_true])
-    plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
-    plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_confidence_histogram(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_roc_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
+    # plot_precision_recall_curve(y_true, y_confs, elicitation_method, model, dataset, file_name)
     plot_ece_diagram(y_true, y_confs, elicitation_method, model, dataset, file_name)
     print("All visualisations saved to: ", visual_dir)
 
 
 def determine_method(file_name):
-    if "few_shot" in file_name:
+    if "few" in file_name:
         return "few shot cot"
-    elif "multi_step" in file_name:
+    elif "multi" in file_name:
         return "multi step"
     elif "vanilla" in file_name:
         return "vanilla"
-    elif "zero_shot" in file_name:
+    elif "zero" in file_name:
         return "zero shot cot"
     else:
         return "unknown"
@@ -252,6 +245,8 @@ def determine_dataset(file_name):
         return "gsm8k"
     elif "mmlu" in file_name:
         return "Professional Law"
+    elif "date" in file_name:
+        return "Date Understanding"
     else:
         return "unknown"
 
@@ -280,10 +275,7 @@ for file_name in os.listdir(directory_path):
 
         print(all_metrics.head())
 
-output_path = os.path.join(output_dir, 'ignore.csv')
+output_path = os.path.join(output_dir, 'top_p_gsm8k.csv')
 all_metrics.to_csv(output_path, index=False)
 
-
-
-
-#%%
+# %%

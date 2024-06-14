@@ -1,0 +1,128 @@
+index,question,answer,provided answer,expected true answer,response details
+252,Last night Rick killed ten wolves and 15 cougars while hunting. Today Rick killed three times as many wolves as cougars and three fewer cougars than the previous night. How many animals did Rick kill?,"Explanation: 
+
+Let's start by assigning variables to the unknowns in the problem. 
+
+Let's call the number of cougars Rick killed today ""c"". 
+
+Since Rick killed three fewer cougars than the previous night, the number of cougars he killed the previous night was ""c + 3"". 
+
+We know that Rick killed three times as many wolves as cougars today, so the number of wolves he killed today is ""3c"". 
+
+Finally, we know that Rick killed 10 wolves and 15 cougars the previous night. 
+
+Putting all of this together, we can create an equation: 
+
+10 + 15 + 3c + 3c + 3 = 10 + 15 + 10c 
+
+Simplifying this equation: 
+
+6c + 3 = 10c + 25 
+
+Subtracting 6c from both sides: 
+
+3 = 4c + 25 
+
+Subtracting 25 from both sides: 
+
+-22 = 4c 
+
+Dividing by 4: 
+
+c = -5.5 
+
+This answer doesn't make sense, as Rick can't have killed a negative number of animals. Therefore, there must be an error in the problem statement. 
+
+The Final Answer is: There is an error in the problem statement. 
+
+With a Confidence Level of 100%.","Explanation: 
+
+Let's start by assigning variables to the unknowns in the problem. 
+
+Let's call the number of cougars Rick killed today ""c"". 
+
+Since Rick killed three fewer cougars than the previous night, the number of cougars he killed the previous night was ""c + 3"". 
+
+We know that Rick killed three times as many wolves as cougars today, so the number of wolves he killed today is ""3c"". 
+
+Finally, we know that Rick killed 10 wolves and 15 cougars the previous night. 
+
+Putting all of this together, we can create an equation: 
+
+10 + 15 + 3c + 3c + 3 = 10 + 15 + 10c 
+
+Simplifying this equation: 
+
+6c + 3 = 10c + 25 
+
+Subtracting 6c from both sides: 
+
+3 = 4c + 25 
+
+Subtracting 25 from both sides: 
+
+-22 = 4c 
+
+Dividing by 4: 
+
+c = -5.5 
+
+This answer doesn't make sense, as Rick can't have killed a negative number of animals. Therefore, there must be an error in the problem statement. 
+
+The Final Answer is: There is an error in the problem statement. 
+
+With a Confidence Level of 100%.",73,"{""final answer"": null, ""confidence"": ""100""}"
+508,The farm has 30 cows and the zoo has 20 sheep.  The zoo has twice as many cows as the farm does.  The farm has half as many sheep as the zoo does.  How many animals do the farm and zoo have combined?,"Explanation: 
+
+Let's start by using algebra to represent the problem:
+
+Let x be the number of cows on the farm.
+Let y be the number of sheep at the zoo.
+
+From the problem, we know that:
+- The zoo has 20 sheep.
+- The zoo has twice as many cows as the farm does. So, the zoo has 2x cows.
+- The farm has half as many sheep as the zoo does. So, the farm has y/2 sheep.
+
+To find the total number of animals, we need to add the number of cows and sheep from both places:
+Total = x + y/2 + 2x + 20
+
+Simplifying the equation:
+Total = 3x + y/2 + 20
+
+We don't have enough information to solve for x or y, but we can find the total number of animals if we are given one of the variables.
+
+The Final Answer is: We cannot determine the total number of animals without more information.
+
+With a Confidence Level of 100%.","Explanation: 
+
+Let's start by using algebra to represent the problem:
+
+Let x be the number of cows on the farm.
+Let y be the number of sheep at the zoo.
+
+From the problem, we know that:
+- The zoo has 20 sheep.
+- The zoo has twice as many cows as the farm does. So, the zoo has 2x cows.
+- The farm has half as many sheep as the zoo does. So, the farm has y/2 sheep.
+
+To find the total number of animals, we need to add the number of cows and sheep from both places:
+Total = x + y/2 + 2x + 20
+
+Simplifying the equation:
+Total = 3x + y/2 + 20
+
+We don't have enough information to solve for x or y, but we can find the total number of animals if we are given one of the variables.
+
+The Final Answer is: We cannot determine the total number of animals without more information.
+
+With a Confidence Level of 100%.",120,"{""final answer"": null, ""confidence"": ""100""}"
+1031,"Apple High School is holding graduation in their Fine Arts Center this year which has space for 6000 people.  After accounting for 950 seats for graduates and 300 seats for faculty attending, how many tickets would each graduate receive to give to their friends and family if the tickets are split equally?","Explanation: 
+The Fine Arts Center has a capacity of 6000 people, and 950 seats are reserved for graduates and 300 seats for faculty attending. Therefore, the number of tickets available for friends and family is 6000 - 950 - 300 = 4750. 
+To find out how many tickets each graduate would receive, we need to divide the total number of tickets available by the number of graduates. However, we are not given the number of graduates in the problem. Therefore, we cannot solve the problem with the given information. 
+
+The Final Answer is N/A, With a Confidence Level of N/A%.","Explanation: 
+The Fine Arts Center has a capacity of 6000 people, and 950 seats are reserved for graduates and 300 seats for faculty attending. Therefore, the number of tickets available for friends and family is 6000 - 950 - 300 = 4750. 
+To find out how many tickets each graduate would receive, we need to divide the total number of tickets available by the number of graduates. However, we are not given the number of graduates in the problem. Therefore, we cannot solve the problem with the given information. 
+
+The Final Answer is N/A, With a Confidence Level of N/A%.",5,"{""final answer"": ""4750"", ""confidence"": null}"

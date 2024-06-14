@@ -1,6 +1,25 @@
 # Sample data
 import pandas as pd
 import matplotlib.pyplot as plt
+#
+# L_gsm8k_df = pd.read_csv('directory of all experiments with bigbench dataset in llama')
+# L_date_df = pd.read_csv('directory of all experiments with date dataset in llama')
+# L_commonsense_df = pd.read_csv('directory of all commonsense with bigbench dataset in llama')
+# L_law_df = pd.read_csv('directory of all experiments with law dataset in llama')
+#
+# G_gsm8k_df = pd.read_csv('directory of all experiments with bigbench dataset in GPT')
+# G_date_df = pd.read_csv('directory of all experiments with date dataset in GPT')
+# G_commonsense_df = pd.read_csv('directory of all commonsense with bigbench dataset in GPT')
+# G_law_df = pd.read_csv('directory of all experiments with law dataset in GPT')
+#
+# G_gsm8k_df['dataset'] = 'GSM8K'
+# G_date_df['dataset'] = 'Date'
+# G_commonsense_df['dataset'] = 'Common'
+# G_law_df['dataset'] = 'Law'
+#
+# combined_df_GPT = pd.concat([G_gsm8k_df, G_date_df, G_commonsense_df, G_law_df])
+# combined_df_Law = pd.concat([L_gsm8k_df, L_date_df, L_commonsense_df, L_law_df])
+#
 
 # Function to read CSV and extract relevant columns
 def read_and_extract(filepath):

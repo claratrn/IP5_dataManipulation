@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Directory containing the CSV files
-directory_path = 'missingVal/OpenAi/CommonsenseQA'  # Adjust the path if needed
+directory_path = 'missingVal/OpenAi/BigBench'  # Adjust the path if needed
 
 # Initialize a list to store data
 data_list = []
@@ -13,7 +13,7 @@ data_list = []
 def determine_method(file_name):
     if "few_shot" in file_name:
         return "few shot cot"
-    elif "multi_step" in file_name:
+    elif "multi" in file_name:
         return "multi step"
     elif "vanilla" in file_name:
         return "vanilla"
@@ -73,7 +73,7 @@ bars2 = ax1.bar(index + bar_width, df_summary['Unanswered Entries'], bar_width, 
 # Adding labels
 ax1.set_xlabel('Method')
 ax1.set_ylabel('Entries')
-ax1.set_title('Comparison of Answered and Unanswered Entries in GPT-3.5 - Commonsense QA')
+ax1.set_title('Comparison of Answered and Unanswered Entries in GPT-3.5 - Date Understanding')
 ax1.set_xticks(index + bar_width / 2)
 ax1.set_xticklabels(df_summary['Method'], rotation=45, ha='right')
 
@@ -105,6 +105,8 @@ ax1.legend(handles=[bars1, bars2, missing_ratio], loc='center', bbox_to_anchor=(
 
 # Adjust the left and right padding to ensure the ratio labels are not cut off
 plt.tight_layout()
-plt.savefig('invalid_ratio_openAI_common.svg')
+plt.savefig('invalid_ratio_openAI_date.svg')
 plt.show()
 
+
+#%%
